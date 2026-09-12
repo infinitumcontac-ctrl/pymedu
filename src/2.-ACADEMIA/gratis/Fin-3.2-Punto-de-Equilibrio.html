@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.2 — Flujo proyectado y punto de equilibrio</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.2</span>
+    <h1>Flujo proyectado y punto de equilibrio</h1>
+    <p>Anticipa el futuro de tu caja y descubre desde cuántas ventas tu negocio empieza a ganar. Dos herramientas para dejar de improvisar.</p>
+    <div class="meta"><span>⏱️ 45 min</span><span>📶 Nivel avanzado</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>3.1 Contabilidad</a><a class="actual">3.2 Punto de equilibrio</a><a>3.3 VAN/TIR/ROI</a><a>3.4 Fuentes financiamiento</a><a>3.5 Inversión</a><a>3.6 KPIs</a><a>3.7 Escalar</a><a>3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Elaborar un <strong>flujo de caja proyectado</strong> y revisarlo periódicamente.</li>
+      <li>Aplicar <strong>análisis de sensibilidad</strong> (optimista/conservador/pesimista).</li>
+      <li>Calcular el <strong>punto de equilibrio</strong> en unidades y en pesos.</li>
+      <li>Proponer estrategias para <strong>reducir tu punto de equilibrio</strong>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈7–9 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "¿Desde cuántas ventas tu negocio deja de perder y empieza a ganar? Ese número tiene nombre: punto de equilibrio."</p>
+      <p><strong>1:00 Flujo proyectado.</strong> Estimar ingresos y egresos a futuro; usar escenarios. Errores: subestimar gastos, no actualizar.</p>
+      <p><strong>3:00 Punto de equilibrio.</strong> Costos fijos / (precio − costo variable). Ejemplo cafetería. Mostrar el simulador.</p>
+      <p><strong>5:00 Bajar el punto de equilibrio.</strong> Subir precio, bajar costo variable, reducir fijos. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Flujo de caja proyectado</h2>
+    <p>Es una estimación de los ingresos y egresos futuros. Permite anticipar necesidades de capital y evitar crisis de liquidez. Pasos: reunir datos históricos, proyectar ingresos (con estacionalidad), estimar gastos realistas, considerar factores externos, elegir el período y <strong>actualizarlo continuamente</strong> (es un documento vivo).</p>
+    <div class="recuadro"><h4>🔭 Análisis de sensibilidad</h4><p>Prueba tres escenarios: <strong>optimista</strong>, <strong>conservador</strong> y <strong>pesimista</strong>. Si incluso el pesimista sobrevive, vas bien encaminado.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Punto de equilibrio (breakeven)</h2>
+    <p>Es el nivel de ventas donde los ingresos cubren <strong>exactamente</strong> los costos totales (fijos + variables). A partir de ahí, empiezas a ganar. La fórmula:</p>
+    <div class="recuadro dato"><p><strong>Punto de equilibrio (unidades) = Costos fijos / (Precio unitario − Costo variable unitario)</strong></p><p style="margin-top:8px">El denominador es el <strong>margen de contribución unitario</strong>. En pesos: unidades × precio.</p></div>
+    <p>Ejemplo: una cafetería con costos fijos de $25.000, café a $100 y costo variable de $50 por taza → punto de equilibrio = 25.000 / (100 − 50) = <strong>500 tazas</strong>. Desde la taza 501, gana.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Cómo reducir tu punto de equilibrio</h2>
+    <ul class="limpia">
+      <li><strong>Subir el precio</strong> (si el mercado lo permite): sube el margen de contribución.</li>
+      <li><strong>Bajar el costo variable:</strong> renegociar insumos, mejorar procesos.</li>
+      <li><strong>Reducir costos fijos:</strong> renegociar arriendo, eliminar gastos prescindibles.</li>
+      <li><strong>Combinar productos</strong> de mayor margen.</li>
+    </ul>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>Calcula tu punto de equilibrio</h2>
+    <div class="tool">
+      <h3><span class="icono">⚖️</span> Breakeven</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="pe-fijos">Costos fijos del mes (CLP)</label><input type="number" id="pe-fijos" value="900000" step="50000"></div>
+        <div class="campo"><label for="pe-precio">Precio unitario (CLP)</label><input type="number" id="pe-precio" value="3000" step="100"></div>
+        <div class="campo"><label for="pe-cv">Costo variable unitario (CLP)</label><input type="number" id="pe-cv" value="1200" step="100"></div>
+      </div>
+      <button class="btn" onclick="puntoEq()">Calcular</button>
+      <div class="resultado" id="pe-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Flujo proyectado</dt><dd>Estimación futura de ingresos y egresos.</dd>
+      <dt>Análisis de sensibilidad</dt><dd>Probar distintos escenarios para medir el riesgo.</dd>
+      <dt>Punto de equilibrio</dt><dd>Ventas donde ingresos = costos totales.</dd>
+      <dt>Margen de contribución unitario</dt><dd>Precio menos costo variable por unidad.</dd>
+      <dt>Costo fijo</dt><dd>No varía con las ventas (arriendo, sueldos base).</dd>
+      <dt>Costo variable</dt><dd>Varía con cada unidad producida/vendida.</dd>
+      <dt>Estacionalidad</dt><dd>Variación de ventas según la época del año.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Cafetería "El Grano"</h2>
+    <p>Costos fijos $900.000 al mes, café a $3.000, costo variable $1.200. Su margen de contribución es $1.800 y su punto de equilibrio es 500 cafés al mes (≈$1.500.000 en ventas). Si renegocia los insumos y baja el costo variable a $1.000, su punto de equilibrio cae. Pruébalo en el simulador.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Subestimar los gastos</strong> en la proyección.</li>
+      <li><strong>No actualizar el flujo</strong> cuando cambia la realidad.</li>
+      <li><strong>Ignorar la estacionalidad.</strong></li>
+      <li><strong>No conocer tu punto de equilibrio:</strong> vendes sin saber si ganas.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">Sercotec — Planificación financiera</a>
+    <a href="https://www.corfo.cl" target="_blank" rel="noopener">CORFO — Herramientas para pymes</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Proyectar tu flujo te deja anticipar; conocer tu punto de equilibrio te dice desde cuántas ventas ganas. Y puedes bajarlo subiendo el margen, reduciendo el costo variable o recortando fijos.</p>
+    <p><strong>Siguiente módulo →</strong> 3.3 VAN, TIR, Payback y ROI sin miedo.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function puntoEq(){const cf=+document.getElementById('pe-fijos').value,p=+document.getElementById('pe-precio').value,cv=+document.getElementById('pe-cv').value;const mc=p-cv;const r=document.getElementById('pe-res');r.style.display='block';if(mc<=0){r.innerHTML='⚠️ El precio no supera al costo variable: con estos números <strong>nunca</strong> alcanzas el equilibrio. Sube el precio o baja el costo variable.';return;}const unidades=cf/mc,ventas=unidades*p;r.innerHTML='Margen de contribución unitario: <strong>'+fmtCLP(mc)+'</strong><div class="cifra">'+Math.ceil(unidades)+' unidades / mes</div>Equivale a ventas por <strong>'+fmtCLP(ventas)+'</strong>. Desde la unidad '+(Math.ceil(unidades)+1)+' empiezas a ganar.';}
+
+const preguntas=[
+ {q:'El flujo de caja proyectado sirve para…',op:['Pagar el IVA','Anticipar necesidades de capital y evitar crisis de liquidez','Calcular el patrimonio','Registrar el pasado'],correcta:1,exp:'Estima ingresos y egresos futuros para anticiparse.'},
+ {q:'El análisis de sensibilidad consiste en…',op:['Usar un solo escenario','Probar escenarios optimista, conservador y pesimista','Ignorar el riesgo','Copiar al competidor'],correcta:1,exp:'Evalúa distintos escenarios para medir el riesgo.'},
+ {q:'El punto de equilibrio es el nivel de ventas donde…',op:['Ganas el máximo','Ingresos = costos totales','No vendes nada','Pagas impuestos'],correcta:1,exp:'Los ingresos cubren exactamente los costos; desde ahí, ganas.'},
+ {q:'La fórmula del punto de equilibrio (unidades) es…',op:['Costos fijos / margen de contribución unitario','Ventas / costos','Precio × cantidad','Costos variables / precio'],correcta:0,exp:'Costos fijos divididos por (precio − costo variable unitario).'},
+ {q:'El margen de contribución unitario es…',op:['Precio + costo variable','Precio − costo variable unitario','Costos fijos / ventas','Ventas − impuestos'],correcta:1,exp:'Es lo que aporta cada unidad para cubrir los fijos.'},
+ {q:'Con costos fijos 40.000, precio 200 y costo variable 80, el punto de equilibrio es…',op:['200 unidades','333 unidades','250 unidades','400 unidades'],correcta:1,exp:'40.000 / (200 − 80) = 333,3 ≈ 334 unidades.'},
+ {q:'Para reducir tu punto de equilibrio puedes…',op:['Subir costos fijos','Bajar el costo variable o subir el precio','Bajar el precio','Aumentar gastos'],correcta:1,exp:'Mejorar el margen de contribución o reducir fijos baja el breakeven.'},
+ {q:'Un error común al proyectar es…',op:['Actualizar el flujo','Subestimar los gastos','Usar escenarios','Considerar la estacionalidad'],correcta:1,exp:'Subestimar gastos lleva a sorpresas de caja.'},
+ {q:'Si el precio es menor o igual al costo variable…',op:['Ganas siempre','Nunca alcanzas el equilibrio','El punto de equilibrio es 0','No importa'],correcta:1,exp:'Sin margen de contribución positivo, no hay punto de equilibrio.'},
+ {q:'El flujo proyectado es un documento…',op:['Que se hace una vez','Vivo, que se actualiza','Inútil','Solo para bancos'],correcta:1,exp:'Debe actualizarse a medida que cambia la realidad.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L1.3 — Patentes y permisos</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 1 · Módulo L1.3</span>
+    <h1>Patentes y permisos para operar</h1>
+    <p>Tener RUT no basta para abrir las puertas. Según tu rubro y comuna necesitarás patente municipal, resolución sanitaria y otros permisos. Aquí ves cuáles y cómo.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel inicial</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L1.1 Forma legal</a><a>L1.2 Constituir</a><a class="actual">L1.3 Patentes y permisos</a><a>L1.4 RUT y firma digital</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Los permisos y montos <strong>varían por comuna y rubro</strong>. Esto es una guía general; confirma siempre en tu municipalidad y en la SEREMI de Salud correspondiente.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar qué es la <strong>patente municipal</strong> y sus tipos.</li>
+      <li>Identificar cuándo necesitas <strong>resolución sanitaria</strong>.</li>
+      <li>Reconocer permisos especiales (alcoholes, zonificación, publicidad).</li>
+      <li>Saber dónde y cómo tramitarlos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Puedes tener tu empresa lista en el SII y aun así no poder abrir si te falta un permiso. Veamos cuáles necesitas."</p>
+      <p><strong>1:00 Patente municipal.</strong> Permiso para ejercer una actividad en una comuna. Tipos: comercial, industrial, profesional, de alcoholes.</p>
+      <p><strong>2:30 Resolución sanitaria.</strong> Obligatoria para manipular alimentos y ciertos rubros; la otorga la SEREMI de Salud.</p>
+      <p><strong>3:30 Otros.</strong> Zonificación (uso de suelo), patente de alcoholes, permisos de publicidad. Usa la actividad de arrastrar.</p>
+      <p><strong>5:00 Cierre.</strong> Dónde tramitar. Quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>La patente municipal</h2>
+    <p>Es el permiso que entrega la <strong>municipalidad</strong> para ejercer una actividad económica en su comuna. Se paga (su valor depende del capital propio declarado y de la comuna, con topes legales) y suele renovarse periódicamente. Tipos principales:</p>
+    <ul class="limpia">
+      <li><strong>Comercial:</strong> tiendas, almacenes, servicios.</li>
+      <li><strong>Industrial:</strong> fábricas y producción.</li>
+      <li><strong>Profesional:</strong> profesionales independientes.</li>
+      <li><strong>De alcoholes:</strong> para vender bebidas alcohólicas (permiso especial y limitado).</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Resolución sanitaria</h2>
+    <p>La <strong>resolución sanitaria</strong>, otorgada por la <strong>SEREMI de Salud</strong>, es obligatoria para actividades que afectan la salud pública: <strong>elaboración y venta de alimentos</strong>, cosmética, ciertos servicios. Sin ella no puedes operar legalmente ese rubro, aunque tengas patente. Incluye requisitos de infraestructura e higiene.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Otros permisos frecuentes</h2>
+    <ul class="limpia">
+      <li><strong>Zonificación / uso de suelo:</strong> el Plan Regulador define si en esa dirección se permite tu actividad (clave antes de arrendar un local).</li>
+      <li><strong>Patente de alcoholes:</strong> adicional y limitada por comuna.</li>
+      <li><strong>Permiso de publicidad:</strong> para letreros y avisos en la vía pública.</li>
+      <li><strong>Microempresa Familiar (MEF):</strong> régimen simplificado para emprender desde la casa, con requisitos.</li>
+    </ul>
+    <div class="recuadro"><h4>💡 Orden recomendado</h4><p>Antes de arrendar un local, verifica la <strong>zonificación</strong>. Luego saca la <strong>patente</strong> y, si manipulas alimentos, la <strong>resolución sanitaria</strong>.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Conecta</span>
+    <h2>¿Qué permiso necesita cada negocio?</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="sanitaria">Resolución sanitaria</div>
+          <div class="ficha" draggable="true" data-id="alcoholes">Patente de alcoholes</div>
+          <div class="ficha" draggable="true" data-id="zonificacion">Revisar zonificación</div>
+          <div class="ficha" draggable="true" data-id="comercial">Patente comercial</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="sanitaria"><div class="titulo">Una cocina que vende almuerzos</div></div>
+          <div class="zona" data-acepta="alcoholes"><div class="titulo">Una botillería</div></div>
+          <div class="zona" data-acepta="zonificacion"><div class="titulo">Antes de arrendar un local nuevo</div></div>
+          <div class="zona" data-acepta="comercial"><div class="titulo">Una tienda de ropa</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Patente municipal</dt><dd>Permiso de la municipalidad para ejercer una actividad.</dd>
+      <dt>Resolución sanitaria</dt><dd>Autorización de la SEREMI de Salud para rubros que afectan la salud.</dd>
+      <dt>SEREMI de Salud</dt><dd>Secretaría regional ministerial que fiscaliza la salud pública.</dd>
+      <dt>Zonificación / uso de suelo</dt><dd>Define qué actividades se permiten en cada zona (Plan Regulador).</dd>
+      <dt>Patente de alcoholes</dt><dd>Permiso especial y limitado para vender bebidas alcohólicas.</dd>
+      <dt>Microempresa Familiar (MEF)</dt><dd>Régimen simplificado para emprender desde el hogar.</dd>
+      <dt>Plan Regulador</dt><dd>Instrumento comunal que ordena el uso del territorio.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El local de comida de Rosa</h2>
+    <p>Rosa quiere abrir una cocina de almuerzos. Antes de firmar el arriendo, revisa la <strong>zonificación</strong>: el Plan Regulador permite comercio en esa calle. Saca su <strong>patente comercial</strong> y tramita la <strong>resolución sanitaria</strong> ante la SEREMI (con requisitos de cocina e higiene). Recién entonces abre. Practica con la actividad de conectar.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Arrendar sin revisar la zonificación</strong> y descubrir que tu rubro no está permitido.</li>
+      <li><strong>Vender alimentos sin resolución sanitaria.</strong></li>
+      <li><strong>Creer que la patente sirve en cualquier comuna:</strong> es por comuna.</li>
+      <li><strong>Olvidar renovar</strong> la patente.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.chileatiende.gob.cl" target="_blank" rel="noopener">ChileAtiende — Patentes y permisos</a>
+    <a href="https://www.minsal.cl" target="_blank" rel="noopener">SEREMI de Salud — Resolución sanitaria</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Giro y actividades</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Para abrir las puertas no basta el RUT: necesitas patente municipal (por comuna), y según el rubro, resolución sanitaria y otros permisos. Revisa la zonificación antes de arrendar y confirma todo en tu municipalidad y SEREMI.</p>
+    <p><strong>Siguiente módulo →</strong> L1.4 Tu RUT, tu firma y la identidad digital.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial · Permisos y montos varían por comuna (2026).</footer>
+</article>
+
+<script>
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'La patente municipal la entrega…',op:['El SII','La municipalidad','La SEREMI','El banco'],correcta:1,exp:'Es el permiso municipal para ejercer una actividad en la comuna.'},
+ {q:'Para vender alimentos preparados necesitas…',op:['Solo patente','Resolución sanitaria','Patente de alcoholes','Nada extra'],correcta:1,exp:'La resolución sanitaria (SEREMI de Salud) es obligatoria.'},
+ {q:'La resolución sanitaria la otorga…',op:['La municipalidad','La SEREMI de Salud','El SII','Carabineros'],correcta:1,exp:'La Secretaría Regional Ministerial de Salud.'},
+ {q:'Antes de arrendar un local conviene revisar…',op:['El color','La zonificación / uso de suelo','El wifi','La vereda'],correcta:1,exp:'El Plan Regulador define si tu actividad está permitida ahí.'},
+ {q:'La patente de alcoholes es…',op:['Automática','Un permiso especial y limitado por comuna','Gratis','Nacional'],correcta:1,exp:'Es adicional, especial y limitada según la comuna.'},
+ {q:'La patente municipal sirve…',op:['En todo Chile','Solo en la comuna que la emite','Solo un día','Para siempre sin renovar'],correcta:1,exp:'Es por comuna y suele renovarse periódicamente.'},
+ {q:'Tener RUT e inicio de actividades…',op:['Basta para abrir cualquier negocio','No siempre basta: pueden faltar permisos','Reemplaza la patente','Incluye la resolución sanitaria'],correcta:1,exp:'Según el rubro faltan patente, resolución sanitaria, etc.'},
+ {q:'El uso de suelo lo define…',op:['El SII','El Plan Regulador comunal','El Banco Central','La AFP'],correcta:1,exp:'El Plan Regulador ordena qué actividades se permiten por zona.'},
+ {q:'La Microempresa Familiar (MEF) permite…',op:['Operar una fábrica grande','Emprender desde el hogar con requisitos','Vender alcohol sin permiso','No pagar nunca patente'],correcta:1,exp:'Es un régimen simplificado para emprender desde la casa.'},
+ {q:'Un letrero publicitario en la vía pública suele requerir…',op:['Nada','Permiso de publicidad municipal','Resolución sanitaria','Patente de alcoholes'],correcta:1,exp:'Los avisos en la vía pública requieren permiso municipal.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

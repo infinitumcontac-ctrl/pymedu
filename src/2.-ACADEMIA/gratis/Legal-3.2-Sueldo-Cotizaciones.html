@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L3.2 — Sueldo, cotizaciones y liquidación</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 3 · Módulo L3.2</span>
+    <h1>Sueldo, cotizaciones y liquidación</h1>
+    <p>Entre lo que ofreces y lo que recibe el trabajador hay descuentos legales; y lo que te cuesta a ti es más que el líquido. Aquí desarmas una liquidación de sueldo.</p>
+    <div class="meta"><span>⏱️ 45 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L3.1 Contrato de trabajo</a><a class="actual">L3.2 Sueldo y cotizaciones</a><a>L3.3 Término y finiquito</a><a>L3.4 Honorarios vs dependiente</a><a>L3.5 Prevención y seguridad</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. Los porcentajes (AFP, salud, topes, sueldo mínimo) <strong>cambian</strong>; el simulador es referencial. Confirma valores vigentes en la DT, la Superintendencia de Pensiones y Previred.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Distinguir <strong>sueldo bruto, imponible y líquido</strong>.</li>
+      <li>Identificar las <strong>cotizaciones</strong> (AFP, salud, seguro de cesantía).</li>
+      <li>Entender qué es el <strong>costo empresa</strong>.</li>
+      <li>Leer una <strong>liquidación de sueldo</strong> básica.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈7–9 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Ofreces $600.000 y el trabajador recibe menos, y a ti te cuesta más. ¿Por qué? Por las cotizaciones."</p>
+      <p><strong>1:00 Bruto, imponible, líquido.</strong> De qué se descuenta y qué llega al bolsillo.</p>
+      <p><strong>2:30 Cotizaciones.</strong> AFP (~10% + comisión), salud (7% o Isapre), seguro de cesantía. Mostrar el simulador.</p>
+      <p><strong>4:00 Costo empresa.</strong> Lo que pagas tú además del líquido (SIS, cesantía empleador, mutual).</p>
+      <p><strong>5:30 Liquidación.</strong> Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Bruto, imponible y líquido</h2>
+    <ul class="limpia">
+      <li><strong>Sueldo bruto:</strong> el total pactado antes de descuentos.</li>
+      <li><strong>Imponible:</strong> la base sobre la que se calculan las cotizaciones (con topes).</li>
+      <li><strong>Líquido:</strong> lo que el trabajador recibe tras los descuentos legales.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Las cotizaciones (descuentos del trabajador)</h2>
+    <ul class="limpia">
+      <li><strong>AFP:</strong> ~10% para la pensión + una <strong>comisión</strong> de la administradora (variable).</li>
+      <li><strong>Salud:</strong> 7% a Fonasa, o el plan de la Isapre (puede ser más).</li>
+      <li><strong>Seguro de cesantía:</strong> aporte del trabajador (en indefinido) y también del empleador.</li>
+    </ul>
+    <p>Estos descuentos se enteran mensualmente (por ejemplo, vía <strong>Previred</strong>). No pagarlos es una falta grave.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>El costo empresa</h2>
+    <p>Además del líquido, <strong>tú</strong> pagas aportes: <strong>seguro de cesantía</strong> (parte empleador), el <strong>SIS</strong> (seguro de invalidez y sobrevivencia) y la <strong>mutualidad</strong> (accidentes del trabajo). Por eso el <strong>costo empresa</strong> es mayor que el sueldo líquido o incluso que el bruto. Planifícalo (lo viste en el módulo financiero 3.7).</p>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>Desarma una liquidación (estimación)</h2>
+    <div class="tool">
+      <h3><span class="icono">🧾</span> Bruto → líquido y costo empresa</h3>
+      <div class="campo"><label for="s-bruto">Sueldo bruto imponible (CLP)</label><input type="number" id="s-bruto" value="700000" step="10000"></div>
+      <div class="fila tres">
+        <div class="campo"><label for="s-afp">AFP + comisión (%)</label><input type="number" id="s-afp" value="11.5" step="0.1"></div>
+        <div class="campo"><label for="s-salud">Salud (%)</label><input type="number" id="s-salud" value="7" step="0.1"></div>
+        <div class="campo"><label for="s-cesantia">Cesantía trabajador (%)</label><input type="number" id="s-cesantia" value="0.6" step="0.1"></div>
+      </div>
+      <button class="btn" onclick="liquidacion()">Calcular</button>
+      <div class="resultado" id="s-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Sueldo bruto</dt><dd>Total pactado antes de descuentos.</dd>
+      <dt>Imponible</dt><dd>Base de cálculo de las cotizaciones (con topes).</dd>
+      <dt>Sueldo líquido</dt><dd>Lo que recibe el trabajador tras descuentos.</dd>
+      <dt>AFP</dt><dd>Administradora de fondos de pensiones; cotización ~10% + comisión.</dd>
+      <dt>Fonasa / Isapre</dt><dd>Sistemas de salud; cotización del 7% o el plan respectivo.</dd>
+      <dt>Seguro de cesantía</dt><dd>Aporte para el caso de quedar sin trabajo.</dd>
+      <dt>SIS</dt><dd>Seguro de invalidez y sobrevivencia (lo paga el empleador).</dd>
+      <dt>Costo empresa</dt><dd>Total que paga el empleador por el trabajador.</dd>
+      <dt>Previred</dt><dd>Plataforma para declarar y pagar cotizaciones.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>La liquidación de Pía</h2>
+    <p>Pía ofrece $700.000 brutos. Tras AFP (~11,5%), salud (7%) y cesantía (0,6%), el trabajador recibe alrededor de $570.000 líquidos. Y a Pía le cuesta más que eso por sus aportes de empleador. Con el simulador entiende cuánto debe presupuestar realmente.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Prometer un líquido sin calcular</strong> las cotizaciones.</li>
+      <li><strong>No pagar las cotizaciones</strong> (falta grave: multas y "deuda previsional").</li>
+      <li><strong>Olvidar el costo empresa</strong> al planificar.</li>
+      <li><strong>Pagar bajo el sueldo mínimo</strong> vigente.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.previred.com" target="_blank" rel="noopener">Previred — Cotizaciones</a>
+    <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo</a>
+    <a href="https://www.spensiones.cl" target="_blank" rel="noopener">Superintendencia de Pensiones</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Del sueldo bruto se descuentan AFP, salud y cesantía para llegar al líquido; y tú pagas además aportes de empleador, por eso el costo empresa es mayor. Paga las cotizaciones a tiempo (Previred) y respeta el sueldo mínimo.</p>
+    <p><strong>Siguiente módulo →</strong> L3.3 Término de contrato y finiquito.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial · Porcentajes y topes cambian; verifica valores vigentes (2026).</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function liquidacion(){const b=+document.getElementById('s-bruto').value,afp=+document.getElementById('s-afp').value/100,sal=+document.getElementById('s-salud').value/100,ces=+document.getElementById('s-cesantia').value/100;const dAfp=b*afp,dSal=b*sal,dCes=b*ces,totalDesc=dAfp+dSal+dCes,liquido=b-totalDesc;
+  // costo empresa aprox: + cesantía empleador 2.4%, SIS ~1.5%, mutual ~0.95%
+  const aporteEmp=b*(0.024+0.015+0.0095),costoEmpresa=b+aporteEmp;
+  const r=document.getElementById('s-res');r.style.display='block';
+  r.innerHTML='Descuentos del trabajador:<br>AFP: '+fmtCLP(dAfp)+' · Salud: '+fmtCLP(dSal)+' · Cesantía: '+fmtCLP(dCes)+' = <strong>'+fmtCLP(totalDesc)+'</strong>'+
+    '<div class="cifra">Líquido ≈ '+fmtCLP(liquido)+'</div>'+
+    'Costo empresa (con aportes del empleador) ≈ <strong>'+fmtCLP(costoEmpresa)+'</strong>.<br><small>Estimación referencial; los porcentajes y topes varían. Verifica en Previred.</small>';}
+
+const preguntas=[
+ {q:'El sueldo líquido es…',op:['El total antes de descuentos','Lo que recibe el trabajador tras descuentos','El costo empresa','El imponible'],correcta:1,exp:'Es lo que llega al bolsillo después de las cotizaciones.'},
+ {q:'La cotización de AFP es aproximadamente…',op:['7%','10% + comisión','19%','2%'],correcta:1,exp:'Cerca de 10% para la pensión más la comisión de la AFP.'},
+ {q:'La cotización de salud (Fonasa) es…',op:['7%','10%','0%','20%'],correcta:0,exp:'7% (o el plan de la Isapre, que puede ser mayor).'},
+ {q:'El "costo empresa" es…',op:['Igual al líquido','Mayor que el bruto por los aportes del empleador','Menor que el líquido','El IVA'],correcta:1,exp:'Suma aportes del empleador (cesantía, SIS, mutual) al bruto.'},
+ {q:'Las cotizaciones se pagan habitualmente vía…',op:['SERNAC','Previred','CMF','Municipalidad'],correcta:1,exp:'Previred es la plataforma típica de pago de cotizaciones.'},
+ {q:'No pagar las cotizaciones es…',op:['Opcional','Una falta grave con multas','Recomendable','Sin consecuencias'],correcta:1,exp:'Genera deuda previsional, multas y problemas legales.'},
+ {q:'El seguro de cesantía…',op:['Solo lo paga el trabajador','Tiene aporte del trabajador y del empleador','No existe','Lo paga el SII'],correcta:1,exp:'En contrato indefinido aportan ambos.'},
+ {q:'El "imponible" es…',op:['El líquido','La base sobre la que se calculan las cotizaciones','El costo empresa','La utilidad'],correcta:1,exp:'Es la base de cálculo de las cotizaciones (con topes).'},
+ {q:'Pagar bajo el sueldo mínimo vigente…',op:['Es legal','Es una infracción','Lo permite la AFP','Depende del rubro'],correcta:1,exp:'Debe respetarse el ingreso mínimo legal.'},
+ {q:'Al ofrecer un sueldo conviene calcular…',op:['Solo el líquido','El líquido y el costo empresa completo','Solo el bruto','Nada'],correcta:1,exp:'Para presupuestar bien debes considerar el costo empresa total.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

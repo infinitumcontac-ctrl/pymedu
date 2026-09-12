@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 1.4 — Ahorro con metas</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 1 · Módulo 1.4</span>
+    <h1>Ahorro con metas e interés compuesto</h1>
+    <p>Cómo transformar "ojalá pudiera ahorrar" en un plan concreto: define una meta, calcula tu cuota mensual y deja que el interés compuesto trabaje por ti.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel inicial</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>1.1 Dinero e inflación</a><a>1.2 Presupuesto</a><a>1.3 Tarjetas</a><a class="actual">1.4 Ahorro</a><a>1.5 Sobreendeudamiento</a><a>1.6 Sistema financiero</a><a>1.7 Fraudes</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar por qué ahorrar y diferenciar ahorro <strong>informal</strong> de <strong>formal</strong>.</li>
+      <li>Conocer los instrumentos de ahorro en Chile (cuenta de ahorro, <strong>depósito a plazo</strong>, fondos mutuos, ahorro en UF).</li>
+      <li>Planificar una <strong>meta de ahorro</strong> (objetivo, plazo y cuota).</li>
+      <li>Entender el <strong>interés compuesto</strong> y el efecto "bola de nieve".</li>
+      <li>Aplicar "<strong>págate primero</strong>" para sostener el ahorro en el tiempo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈5–7 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Ahorrar no es cuánto te sobra, es cuánto apartas primero. Y con una meta clara, ahorrar se vuelve fácil."</p>
+      <p><strong>1:00 Por qué y cómo.</strong> Emergencias, proyectos, el negocio. Informal (alcancía) vs formal (cuenta, DAP, fondos).</p>
+      <p><strong>2:30 Plan de meta.</strong> Objetivo + plazo + cuota = meta/n. Mostrar la calculadora de meta.</p>
+      <p><strong>4:00 Interés compuesto.</strong> "Interés sobre interés". Mostrar el simulador y el efecto del tiempo.</p>
+      <p><strong>5:30 Págate primero + cierre.</strong> Automatizar la transferencia el día de pago. Invitar al quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>¿Por qué y cómo ahorrar?</h2>
+    <p>Ahorrar te permite enfrentar imprevistos sin endeudarte, financiar proyectos y darle respaldo a tu negocio. La clave es separar el ahorro <strong>al inicio</strong> del mes ("págate primero"), no esperar a ver "qué sobra".</p>
+    <h3>Informal vs. formal</h3>
+    <ul class="limpia">
+      <li><strong>Ahorro informal:</strong> dinero en casa o alcancía. Riesgos: robo y, sobre todo, que la inflación lo desvalorice.</li>
+      <li><strong>Ahorro formal:</strong> cuentas de ahorro, depósitos a plazo, fondos mutuos. Algunos instrumentos en UF protegen el poder adquisitivo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Instrumentos de ahorro en Chile</h2>
+    <div class="cmp-wrap"><table class="cmp">
+      <tr><th>Instrumento</th><th>Cómo funciona</th><th>Liquidez</th><th>Ojo con…</th></tr>
+      <tr><td>Cuenta de ahorro</td><td>Cuenta bancaria que paga un interés bajo</td><td>Alta</td><td>Rendimiento suele ir bajo la inflación</td></tr>
+      <tr><td>Depósito a plazo (DAP)</td><td>Inmovilizas un monto por un plazo a tasa fija</td><td>Media (vence en X días)</td><td>Comparar la tasa con la inflación</td></tr>
+      <tr><td>Fondos mutuos</td><td>Pool administrado que invierte en distintos activos</td><td>Variable</td><td>Rentabilidad no garantizada; comisiones</td></tr>
+      <tr><td>Ahorro en UF</td><td>Instrumentos indexados a la inflación</td><td>Variable</td><td>Protege valor real, no "gana" por sí solo</td></tr>
+    </table></div>
+    <div class="recuadro dato"><h4>📊 Referencia</h4><p>Las mejores tasas de depósitos a 30 días suelen rondar décimas de % mensual. Anualizadas, muchas veces apenas empatan con la inflación: por eso conviene diversificar.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>El interés compuesto: tu mejor aliado</h2>
+    <p>El <strong>interés compuesto</strong> es ganar interés <em>sobre los intereses</em> ya acumulados. Mientras más tiempo dejes crecer tu ahorro, más se acelera (efecto "bola de nieve"). El tiempo importa tanto como el monto: empezar temprano, aunque sea poco, rinde más que empezar tarde con mucho.</p>
+    <div class="recuadro"><h4>💡 Idea fuerza</h4><p>$50.000 mensuales durante 10 años no son solo $6.000.000: con un rendimiento razonable, el interés compuesto los hace crecer bastante más. Pruébalo abajo.</p></div>
+  </section>
+
+  <!-- INTERACTIVOS -->
+  <section>
+    <span class="tag">Actividad 1 · Calculadora</span>
+    <h2>Plan de meta de ahorro</h2>
+    <div class="tool">
+      <h3><span class="icono">🎯</span> ¿Cuánto debo ahorrar al mes?</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="m-meta">Meta (CLP)</label><input type="number" id="m-meta" value="1200000" step="50000"></div>
+        <div class="campo"><label for="m-plazo">Plazo (meses)</label><input type="number" id="m-plazo" value="12" min="1"></div>
+        <div class="campo"><label for="m-tasa">Rendimiento (% anual)</label><input type="number" id="m-tasa" value="3" step="0.5"></div>
+      </div>
+      <button class="btn" onclick="calcMeta()">Calcular cuota</button>
+      <div class="resultado" id="meta-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Simulador</span>
+    <h2>El poder del interés compuesto</h2>
+    <div class="tool">
+      <h3><span class="icono">❄️</span> Bola de nieve</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="c-aporte">Aporte mensual (CLP)</label><input type="number" id="c-aporte" value="50000" step="5000"></div>
+        <div class="campo"><label for="c-anios">Años</label><input type="number" id="c-anios" value="10" min="1" max="40"></div>
+        <div class="campo"><label for="c-tasa">Rendimiento (% anual)</label><input type="number" id="c-tasa" value="5" step="0.5"></div>
+      </div>
+      <button class="btn" onclick="calcCompuesto()">Calcular</button>
+      <div class="resultado" id="comp-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Ahorro formal</dt><dd>Guardar en instrumentos regulados (cuenta, DAP, fondos).</dd>
+      <dt>Depósito a plazo (DAP)</dt><dd>Inmovilizas un monto por un período a cambio de una tasa fija.</dd>
+      <dt>Fondo mutuo</dt><dd>Vehículo que reúne aportes de muchas personas e invierte de forma diversificada.</dd>
+      <dt>Liquidez</dt><dd>Facilidad para convertir un ahorro en efectivo sin perder valor.</dd>
+      <dt>Interés compuesto</dt><dd>Interés que se calcula sobre el capital más los intereses ya ganados.</dd>
+      <dt>Cuota de ahorro</dt><dd>Monto periódico que apartas para alcanzar una meta.</dd>
+      <dt>Págate primero</dt><dd>Apartar el ahorro apenas recibes ingresos.</dd>
+      <dt>Diversificar</dt><dd>Repartir el ahorro en distintos instrumentos para reducir riesgo.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Marcela junta para su capital de trabajo</h2>
+    <p>Marcela quiere reunir <strong>$1.200.000</strong> en 12 meses para comprar insumos al por mayor. Sin rendimiento son $100.000 al mes; con un DAP que rinde algo, la cuota baja un poco. Además abre una transferencia automática el día que le pagan ("págate primero"). Usa la calculadora de meta con sus cifras y el simulador de interés compuesto para ver cuánto tendría si mantuviera el hábito por 5 años.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Ahorrar sin meta.</strong> Sin objetivo claro, el ahorro se diluye.</li>
+      <li><strong>Dejar todo en efectivo en casa.</strong> La inflación lo erosiona.</li>
+      <li><strong>Esperar a "tener más" para empezar.</strong> El tiempo es el factor más poderoso del interés compuesto.</li>
+      <li><strong>Mirar solo la rentabilidad y olvidar la liquidez</strong> y las comisiones.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.cmfchile.cl" target="_blank" rel="noopener">CMF — Comparador de depósitos y fondos</a>
+    <a href="https://www.cmfeduca.cl" target="_blank" rel="noopener">CMF Educa — Ahorro e inversión</a>
+    <a href="https://www.bancoestado.cl" target="_blank" rel="noopener">BancoEstado — Cuentas de ahorro</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Ahorrar con meta, en instrumentos formales y de forma automática, convierte el deseo en plan. Y el interés compuesto premia al que empieza temprano: el tiempo hace el trabajo pesado.</p>
+    <p><strong>Siguiente módulo →</strong> 1.5 Evitar el sobreendeudamiento: señales de alerta y cómo salir.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function calcMeta(){const M=+document.getElementById('m-meta').value,n=+document.getElementById('m-plazo').value,ia=+document.getElementById('m-tasa').value/100,im=Math.pow(1+ia,1/12)-1;const cuotaSimple=M/n;let cuotaCI;if(im>0){cuotaCI=M*im/(Math.pow(1+im,n)-1);}else{cuotaCI=cuotaSimple;}const r=document.getElementById('meta-res');r.style.display='block';r.innerHTML='Para juntar <strong>'+fmtCLP(M)+'</strong> en <strong>'+n+' meses</strong>:<div class="cifra">'+fmtCLP(cuotaCI)+' al mes</div>(con rendimiento de '+fmtNum(ia*100,1)+'% anual). Sin rendimiento serían '+fmtCLP(cuotaSimple)+' al mes.<br><small>El rendimiento reduce levemente la cuota porque tus aportes también ganan intereses.</small>';}
+
+function calcCompuesto(){const A=+document.getElementById('c-aporte').value,y=+document.getElementById('c-anios').value,ia=+document.getElementById('c-tasa').value/100,im=Math.pow(1+ia,1/12)-1,n=y*12;let saldo=0;for(let k=0;k<n;k++){saldo=(saldo+A)*(1+im);}const aportado=A*n,ganado=saldo-aportado;const r=document.getElementById('comp-res');r.style.display='block';r.innerHTML='Aportando <strong>'+fmtCLP(A)+'</strong> al mes durante <strong>'+y+' años</strong> a '+fmtNum(ia*100,1)+'% anual:<div class="cifra">'+fmtCLP(saldo)+'</div>Tú pusiste <strong>'+fmtCLP(aportado)+'</strong> y el interés compuesto agregó <strong>'+fmtCLP(ganado)+'</strong>.<div class="barra"><span style="width:'+Math.min(ganado/saldo*100,100)+'%"></span></div><small>La barra muestra qué parte del total la generó el interés, no tu bolsillo.</small>';}
+
+const preguntas=[
+ {q:'"Págate primero" significa…',op:['Pagar deudas primero','Apartar el ahorro al inicio del mes','Gastar antes de ahorrar','Cobrarte un sueldo'],correcta:1,exp:'Apartas el ahorro apenas recibes el ingreso, no lo que sobre.'},
+ {q:'El principal riesgo de guardar dinero en casa es…',op:['Pagar impuestos','Que la inflación lo desvalorice (y el robo)','Que el banco lo congele','Perder puntos'],correcta:1,exp:'El efectivo quieto pierde poder de compra con la inflación, además del riesgo de robo.'},
+ {q:'Un depósito a plazo se caracteriza por…',op:['Tasa variable diaria','Inmovilizar un monto por un período a tasa fija','No tener vencimiento','Ser gratuito siempre'],correcta:1,exp:'Inmovilizas el dinero por un plazo a cambio de una tasa fija.'},
+ {q:'El interés compuesto es…',op:['Interés solo sobre el capital','Interés sobre el capital más los intereses ya ganados','Una comisión bancaria','Un impuesto al ahorro'],correcta:1,exp:'Es "interés sobre interés": por eso el ahorro se acelera con el tiempo.'},
+ {q:'En el interés compuesto, el factor más poderoso suele ser…',op:['El color de la app','El tiempo','El nombre del banco','La cantidad de cuentas'],correcta:1,exp:'Empezar temprano, aunque sea poco, supera a empezar tarde con más.'},
+ {q:'Para planificar una meta de ahorro necesitas…',op:['Solo el monto','Objetivo, plazo y cuota','Un crédito','Una tarjeta de crédito'],correcta:1,exp:'Defines qué quieres (objetivo), en cuánto tiempo (plazo) y cuánto aportas (cuota).'},
+ {q:'Un instrumento que protege el valor real frente a la inflación es…',op:['Alcancía','Cuenta corriente','Ahorro en UF','Efectivo'],correcta:2,exp:'Los instrumentos en UF se reajustan con la inflación y conservan el poder adquisitivo.'},
+ {q:'La "liquidez" de un ahorro se refiere a…',op:['Su rentabilidad','La facilidad de convertirlo en efectivo','El interés que paga','Su riesgo'],correcta:1,exp:'Es qué tan rápido puedes disponer del dinero sin perder valor.'},
+ {q:'Diversificar el ahorro busca…',op:['Pagar menos impuestos','Reducir el riesgo repartiéndolo','Aumentar las comisiones','Bloquear el dinero'],correcta:1,exp:'Repartir entre distintos instrumentos baja el riesgo de depender de uno solo.'},
+ {q:'Si un DAP rinde menos que la inflación, tu ahorro…',op:['Gana poder de compra','Mantiene exactamente su valor','Pierde poder de compra','Se duplica'],correcta:2,exp:'La tasa real es negativa: aunque el número suba, compras menos.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

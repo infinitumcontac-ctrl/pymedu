@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 1.1 — Dinero, inflación y UF</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 1 · Módulo 1.1</span>
+    <h1>El valor del dinero, la inflación y la UF</h1>
+    <p>Cómo funciona el dinero en Chile, por qué pierde valor con el tiempo y qué herramientas existen para protegerlo. La base sobre la que se construye todo el resto del programa.</p>
+    <div class="meta"><span>⏱️ 35–40 min</span><span>📶 Nivel inicial</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a class="actual">1.1 Dinero e inflación</a><a>1.2 Presupuesto</a><a>1.3 Tarjetas</a><a>1.4 Ahorro</a><a>1.5 Sobreendeudamiento</a><a>1.6 Sistema financiero</a><a>1.7 Fraudes</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo, el participante será capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar las <strong>tres funciones del dinero</strong> y qué significa que el peso sea dinero <em>fiat</em>.</li>
+      <li>Definir <strong>inflación</strong>, describir cómo el INE mide el <strong>IPC</strong> e interpretar las cifras mensuales, acumuladas y a 12 meses.</li>
+      <li>Distinguir entre <strong>UF, UTM y UTA</strong> y aplicar la UF para proteger contratos y ahorros.</li>
+      <li>Relacionar la <strong>Tasa de Política Monetaria (TPM)</strong> con las tasas de créditos y depósitos.</li>
+      <li>Calcular la <strong>tasa real</strong> de un ahorro y decidir si protege su poder de compra.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO: pega aquí tu <iframe> de YouTube/Vimeo -->🎬 Video del módulo (≈6–8 min) · contenedor id="video-modulo"</div>
+    <details class="guion">
+      <summary>📋 Guion para el relator</summary>
+      <div class="cuerpo">
+        <p><strong>0:00 Gancho.</strong> "Con $10.000 hace cinco años llenabas la bolsa; hoy te alcanza para la mitad. Eso es inflación, y entenderla es el primer paso para que tu plata trabaje a tu favor."</p>
+        <p><strong>1:00 Funciones del dinero.</strong> Intercambio, unidad de cuenta y depósito de valor. Mencionar que el peso es dinero fiat: vale porque el Estado y la confianza lo respaldan, no por oro.</p>
+        <p><strong>2:30 Inflación e IPC.</strong> El INE arma una canasta de productos del hogar y mide cuánto cambia mes a mes. Abril 2026: 1,3% mensual, 2,7% en el año, 4,0% a 12 meses. Meta del Banco Central: 3%.</p>
+        <p><strong>4:00 UF, UTM, UTA.</strong> La UF se reajusta con la inflación (≈$40.577). La UTM/UTA se usan para impuestos y multas. Mostrar el conversor.</p>
+        <p><strong>5:30 TPM y tasas.</strong> El Banco Central sube o baja la TPM (4,5%) para controlar la inflación; eso mueve las tasas de créditos y depósitos.</p>
+        <p><strong>7:00 Cierre.</strong> Invitar a usar los simuladores y rendir el quiz de 10 preguntas.</p>
+      </div>
+    </details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>El dinero y sus funciones</h2>
+    <p>El dinero es cualquier bien aceptado de forma general como medio de pago. A lo largo de la historia fue sal, conchas, metales y oro; hoy usamos <strong>dinero fiat</strong>: billetes, monedas y saldos digitales que valen no por su material, sino por la <strong>confianza</strong> en quien los emite. En Chile, ese emisor es el <strong>Banco Central de Chile (BCCh)</strong>, un organismo autónomo cuya misión es cuidar el valor del peso.</p>
+    <h3>Las tres funciones</h3>
+    <ul class="limpia">
+      <li><strong>Medio de intercambio:</strong> lo entregas a cambio de bienes o servicios. Evita el trueque (no necesitas que el panadero quiera justo lo que tú produces).</li>
+      <li><strong>Unidad de cuenta:</strong> permite poner todo en una misma "regla" y comparar precios, llevar contabilidad y firmar contratos.</li>
+      <li><strong>Depósito de valor:</strong> puedes guardarlo hoy para usarlo mañana. Aquí aparece el problema: si hay inflación, ese valor guardado se desgasta.</li>
+    </ul>
+    <div class="recuadro dato"><h4>📌 Concepto clave</h4><p>Que el dinero sea "depósito de valor" no significa que sea un <em>buen</em> depósito de valor. La inflación ataca justo esa función: por eso existen instrumentos como la UF.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Inflación y el IPC</h2>
+    <p>La <strong>inflación</strong> es el alza generalizada y sostenida de los precios. No es que "suba un producto", sino que sube el costo de vida en su conjunto. Su opuesto es la <strong>deflación</strong> (caída generalizada de precios), y un caso extremo es la <strong>hiperinflación</strong>.</p>
+    <h3>¿Cómo se mide? El IPC</h3>
+    <p>El <strong>Instituto Nacional de Estadísticas (INE)</strong> define una <strong>canasta</strong> de cientos de bienes y servicios que consume un hogar típico (alimentos, transporte, vivienda, salud, etc.), con una <strong>ponderación</strong> según cuánto pesa cada uno en el gasto. Cada mes mide cuánto cambió el precio de esa canasta: ese es el <strong>Índice de Precios al Consumidor (IPC)</strong>.</p>
+    <p>Las cifras se leen en tres formas:</p>
+    <ul class="limpia">
+      <li><strong>Variación mensual:</strong> cuánto subió respecto del mes anterior.</li>
+      <li><strong>Acumulada en el año:</strong> desde enero hasta el mes informado.</li>
+      <li><strong>A 12 meses (interanual):</strong> la más usada para hablar de "la inflación". Compara con el mismo mes del año pasado.</li>
+    </ul>
+    <div class="recuadro dato"><h4>📊 Dato Chile (actualiza al publicar en ine.gob.cl)</h4><p>Abril 2026: IPC <strong>+1,3% mensual</strong>, <strong>2,7% acumulado en el año</strong>, <strong>4,0% a 12 meses</strong>. La meta del Banco Central es <strong>3%</strong> en un horizonte de dos años.</p></div>
+    <h3>¿Por qué sube la inflación?</h3>
+    <p>Principalmente por dos vías: cuando la <strong>demanda</strong> crece más rápido que la oferta (mucha plata persiguiendo pocos bienes) y cuando suben los <strong>costos</strong> (combustibles, tipo de cambio, energía). En la cifra de abril 2026 pesó fuerte el alza de transporte y combustibles.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>UF, UTM y UTA: las unidades reajustables</h2>
+    <p>Para que la inflación no destruya el valor de contratos largos, Chile usa unidades que se <strong>reajustan</strong> automáticamente.</p>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <tr><th>Unidad</th><th>Qué es</th><th>Se usa para</th><th>Se reajusta</th></tr>
+        <tr><td><strong>UF</strong> (Unidad de Fomento)</td><td>Unidad indexada a la inflación pasada</td><td>Arriendos, créditos hipotecarios, seguros, ahorros</td><td>A diario, según IPC (≈$40.577 en may-2026)</td></tr>
+        <tr><td><strong>UTM</strong> (Unidad Tributaria Mensual)</td><td>Referencia tributaria</td><td>Multas, algunos impuestos y trámites</td><td>Mensual</td></tr>
+        <tr><td><strong>UTA</strong> (Unidad Tributaria Anual)</td><td>UTM × 12</td><td>Impuesto a la renta (tramos)</td><td>Anual</td></tr>
+      </table>
+    </div>
+    <div class="recuadro"><h4>💡 En palabras simples</h4><p>La UF es como una "moneda anti-inflación": cuando los precios suben, la UF sube parecido, así que lo pactado en UF mantiene su valor real. Por eso un arriendo en UF "sube solo" cada mes.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 4</span>
+    <h2>Tasas de interés y la TPM</h2>
+    <p>La <strong>tasa de interés</strong> es el "precio del dinero en el tiempo": lo que cuesta pedir prestado o lo que te pagan por ahorrar. El Banco Central fija la <strong>Tasa de Política Monetaria (TPM)</strong>, que en mayo de 2026 está en <strong>4,5%</strong>. Cuando la inflación está alta, el Banco Central <em>sube</em> la TPM para enfriar el consumo; cuando cede, la <em>baja</em> para reactivar.</p>
+    <p>La TPM se traspasa a toda la economía: si sube, suben las tasas de créditos de consumo, hipotecarios y también las de los depósitos a plazo. Para un emprendedor, esto significa que el costo de financiarse cambia según el momento del ciclo.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 5</span>
+    <h2>Poder adquisitivo y tasa real</h2>
+    <p>El <strong>poder adquisitivo</strong> es cuánto puedes comprar con tu dinero. La inflación lo erosiona. Por eso, al evaluar un ahorro, lo que importa no es el número nominal sino la <strong>tasa real</strong>:</p>
+    <div class="recuadro dato"><p><strong>Tasa real ≈ Rendimiento nominal − Inflación.</strong> Si tu depósito rinde 4% anual y la inflación es 4%, tu tasa real es ~0%: el número creció, pero compras lo mismo. Si rinde menos que la inflación, la tasa real es negativa y pierdes.</p></div>
+  </section>
+
+  <!-- ===== INTERACTIVOS ===== -->
+  <section>
+    <span class="tag">Actividad 1 · Arrastra y suelta</span>
+    <h2>Las tres funciones del dinero</h2>
+    <p>Arrastra cada función a su definición. En celular: toca la ficha y luego la definición.</p>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="intercambio">Medio de intercambio</div>
+          <div class="ficha" draggable="true" data-id="cuenta">Unidad de cuenta</div>
+          <div class="ficha" draggable="true" data-id="valor">Depósito de valor</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="intercambio"><div class="titulo">Lo entrego a cambio de bienes o servicios</div></div>
+          <div class="zona" data-acepta="cuenta"><div class="titulo">Me permite comparar precios y llevar cuentas</div></div>
+          <div class="zona" data-acepta="valor"><div class="titulo">Lo guardo hoy para usarlo en el futuro</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Simulador</span>
+    <h2>¿Cuánto valdrá tu plata en el futuro?</h2>
+    <div class="tool">
+      <h3><span class="icono">$</span> Simulador de inflación / poder de compra</h3>
+      <div class="fila">
+        <div class="campo"><label for="inf-monto">Monto hoy (CLP)</label><input type="number" id="inf-monto" value="100000" step="1000"></div>
+        <div class="campo"><label for="inf-anios">Horizonte (años)</label><input type="number" id="inf-anios" value="5" min="1" max="40"></div>
+      </div>
+      <div class="campo"><label for="inf-tasa">Inflación anual estimada: <strong id="inf-tasa-val">4,0%</strong></label>
+        <input type="range" id="inf-tasa" value="4" min="0" max="20" step="0.1" oninput="document.getElementById('inf-tasa-val').textContent=(this.value).replace('.',',')+'%'"></div>
+      <button class="btn" onclick="simularInflacion()">Calcular</button>
+      <div class="resultado" id="inf-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 3 · Calculadora</span>
+    <h2>Conversor UF y contrato pesos vs UF</h2>
+    <div class="tool">
+      <h3><span class="icono">UF</span> Conversor</h3>
+      <div class="campo"><label for="uf-valor">Valor de la UF hoy (CLP)</label><input type="number" id="uf-valor" value="40577" step="1"></div>
+      <div class="fila">
+        <div class="campo"><label for="uf-pesos">Pesos → UF</label><input type="number" id="uf-pesos" value="1000000" step="1000" oninput="convUF()"></div>
+        <div class="campo"><label for="uf-uf">UF → pesos</label><input type="number" id="uf-uf" value="10" step="0.1" oninput="convUFinv()"></div>
+      </div>
+      <div class="resultado" id="uf-res"></div>
+    </div>
+    <div class="tool">
+      <h3><span class="icono">⚖️</span> Contrato en pesos fijos vs UF</h3>
+      <div class="fila">
+        <div class="campo"><label for="cont-monto">Monto del contrato hoy (CLP)</label><input type="number" id="cont-monto" value="10000000" step="100000"></div>
+        <div class="campo"><label for="cont-anios">Años</label><input type="number" id="cont-anios" value="3" min="1" max="20"></div>
+      </div>
+      <button class="btn" onclick="compararContrato()">Comparar</button>
+      <div class="resultado" id="cont-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 4 · Simulador</span>
+    <h2>Tu depósito, ¿le gana a la inflación?</h2>
+    <div class="tool">
+      <h3><span class="icono">%</span> Tasa real del ahorro</h3>
+      <div class="fila">
+        <div class="campo"><label for="dep-tasa">Tasa del depósito (% mensual)</label><input type="number" id="dep-tasa" value="0.40" step="0.01"></div>
+        <div class="campo"><label for="dep-inf">Inflación anual (%)</label><input type="number" id="dep-inf" value="4.0" step="0.1"></div>
+      </div>
+      <button class="btn" onclick="simularDeposito()">Calcular tasa real</button>
+      <div class="resultado" id="dep-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Dinero fiat</dt><dd>Dinero que vale por la confianza y el respaldo legal, no por su material.</dd>
+      <dt>IPC</dt><dd>Índice de Precios al Consumidor; mide la variación de precios de una canasta. Lo publica el INE.</dd>
+      <dt>Inflación</dt><dd>Alza generalizada y sostenida de precios.</dd>
+      <dt>Deflación</dt><dd>Caída generalizada de precios; también es problemática para la economía.</dd>
+      <dt>Canasta del IPC</dt><dd>Conjunto ponderado de bienes y servicios que representa el consumo de un hogar típico.</dd>
+      <dt>UF</dt><dd>Unidad de Fomento; se reajusta a diario con la inflación.</dd>
+      <dt>UTM / UTA</dt><dd>Unidades tributarias (mensual/anual) usadas en impuestos y multas.</dd>
+      <dt>TPM</dt><dd>Tasa de Política Monetaria fijada por el Banco Central (4,5% en may-2026).</dd>
+      <dt>Tasa nominal</dt><dd>Rendimiento o costo expresado en números, sin descontar inflación.</dd>
+      <dt>Tasa real</dt><dd>Tasa nominal menos inflación; mide el cambio en poder de compra.</dd>
+      <dt>Poder adquisitivo</dt><dd>Cantidad de bienes y servicios que puedes comprar con tu dinero.</dd>
+      <dt>Banco Central</dt><dd>Organismo autónomo que emite el peso y cuida la estabilidad de precios.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Don Luis y la plata bajo el colchón</h2>
+    <p>Don Luis guardó <strong>$2.000.000</strong> en efectivo para renovar el refrigerador de su almacén en 3 años. Con inflación de 4% anual, al cabo de 3 años ese dinero comprará lo que hoy compras con cerca de <strong>$1.778.000</strong>: perdió ~$222.000 de poder de compra <em>sin gastar un peso</em>.</p>
+    <p>Si hubiera puesto la plata en un depósito o cuenta de ahorro <strong>en UF</strong>, habría conservado el valor real. Usa el simulador 2 con $2.000.000, 3 años y 4% para verlo, y el simulador 4 para comparar tasas.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Confundir "ganar intereses" con "ganar poder de compra".</strong> Si el rendimiento es menor que la inflación, pierdes aunque el número suba.</li>
+      <li><strong>Creer que la UF es una inversión.</strong> No "rinde": solo mantiene el valor real frente a la inflación.</li>
+      <li><strong>Guardar grandes sumas en efectivo en casa.</strong> La inflación las desgasta (y hay riesgo de robo).</li>
+      <li><strong>Mirar solo la inflación mensual.</strong> Para decisiones, usa la cifra a 12 meses.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar. Cada pregunta muestra su explicación al corregir.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.ine.gob.cl" target="_blank" rel="noopener">INE — IPC y canasta</a>
+    <a href="https://www.bcentral.cl" target="_blank" rel="noopener">Banco Central — UF, TPM y estadísticas</a>
+    <a href="https://www.cmfchile.cl" target="_blank" rel="noopener">CMF — Educación financiera</a>
+    <a href="https://www.sii.cl/valores_y_fechas/" target="_blank" rel="noopener">SII — Valores de UF, UTM, UTA</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>El dinero intercambia, mide y guarda valor, pero la inflación desgasta esa última función. El IPC mide esa pérdida; la UF la compensa; la TPM es la palanca del Banco Central; y la tasa real te dice si tu ahorro realmente avanza. Con esto puedes tomar mejores decisiones de ahorro y entender por qué los contratos largos van en UF.</p>
+    <p><strong>Siguiente módulo →</strong> 1.2 Presupuesto personal: ordenar ingresos y gastos con la regla 50/30/20.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial, no asesoría personalizada · Datos macro al 30-05-2026 (actualízalos al publicar).</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+/* DnD */
+let fichaTomada=null;
+function initDnd(){
+  document.querySelectorAll('.ficha').forEach(f=>{
+    f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));
+    f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});
+  });
+  document.querySelectorAll('.zona').forEach(z=>{
+    z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});
+    z.addEventListener('dragleave',()=>z.classList.remove('sobre'));
+    z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});
+    z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});
+  });
+}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===3?'✅ <strong>¡Perfecto!</strong> Identificaste las tres funciones del dinero.':'🔁 Acertaste <strong>'+c+' de 3</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+/* Inflación */
+function simularInflacion(){const P=+document.getElementById('inf-monto').value,n=+document.getElementById('inf-anios').value,i=+document.getElementById('inf-tasa').value/100;const real=P/Math.pow(1+i,n),nec=P*Math.pow(1+i,n),perd=P-real,pct=(perd/P)*100;const r=document.getElementById('inf-res');r.style.display='block';r.innerHTML='Tus <strong>'+fmtCLP(P)+'</strong> en <strong>'+n+' año(s)</strong> con inflación '+fmtNum(i*100,1)+'% comprarán lo que hoy compras con:<div class="cifra">'+fmtCLP(real)+'</div>Pierdes <strong>'+fmtCLP(perd)+'</strong> de poder de compra (≈'+fmtNum(pct,1)+'%).<div class="barra"><span style="width:'+Math.min(pct,100)+'%"></span></div><small>Para conservar el poder de compra de hoy necesitarías unos <strong>'+fmtCLP(nec)+'</strong>.</small>';}
+
+/* UF */
+function convUF(){const uf=+document.getElementById('uf-valor').value,p=+document.getElementById('uf-pesos').value;document.getElementById('uf-res').innerHTML=fmtCLP(p)+' = <strong>'+fmtNum(p/uf,2)+' UF</strong>.';}
+function convUFinv(){const uf=+document.getElementById('uf-valor').value,u=+document.getElementById('uf-uf').value;document.getElementById('uf-res').innerHTML=fmtNum(u,2)+' UF = <strong>'+fmtCLP(u*uf)+'</strong>.';}
+function compararContrato(){const uf=+document.getElementById('uf-valor').value,m=+document.getElementById('cont-monto').value,a=+document.getElementById('cont-anios').value,i=0.04,ufs=m/uf;let f='<tr><th>Año</th><th>Pesos fijos (nominal)</th><th>UF (nominal)</th><th>Valor real pesos fijos</th></tr>';for(let y=0;y<=a;y++){const nominalUF=ufs*uf*Math.pow(1+i,y),realFijo=m/Math.pow(1+i,y);f+='<tr><td>'+y+'</td><td>'+fmtCLP(m)+'</td><td>'+fmtCLP(nominalUF)+'</td><td>'+fmtCLP(realFijo)+'</td></tr>';}const r=document.getElementById('cont-res');r.style.display='block';r.innerHTML='<div class="cmp-wrap"><table class="cmp">'+f+'</table></div><p style="margin:12px 0 0"><strong>Lectura:</strong> en pesos fijos el número no cambia pero su valor real cae; en UF el monto en pesos sube con la inflación y conserva el valor real. Quien recibe el pago prefiere UF; quien paga, pesos fijos.</p>';}
+
+/* Depósito */
+function simularDeposito(){const rm=+document.getElementById('dep-tasa').value/100,i=+document.getElementById('dep-inf').value/100,an=Math.pow(1+rm,12)-1,real=(1+an)/(1+i)-1;const r=document.getElementById('dep-res');r.style.display='block';const s=real>=0?'gana':'pierde',c=real>=0?'var(--color-ok)':'var(--color-error)';r.innerHTML='Rendimiento anual (compuesto): <strong>'+fmtNum(an*100,2)+'%</strong><br>Inflación anual: <strong>'+fmtNum(i*100,2)+'%</strong><div class="cifra" style="color:'+c+'">Tasa real: '+fmtNum(real*100,2)+'%</div>Tu ahorro <strong style="color:'+c+'">'+s+' poder de compra</strong>. '+(real>=0?'Le ganas a la inflación 👍':'Considera instrumentos en UF o de mayor rendimiento ⚠️');}
+
+/* Quiz 10 */
+const preguntas=[
+ {q:'¿Cuál NO es una función del dinero?',op:['Medio de intercambio','Unidad de cuenta','Generador de intereses','Depósito de valor'],correcta:2,exp:'El dinero intercambia, mide y guarda valor. Generar intereses es propio de ciertos instrumentos.'},
+ {q:'Que el peso sea "dinero fiat" significa que…',op:['Está respaldado por oro','Vale por la confianza y el respaldo legal','Solo sirve para impuestos','Lo emite cualquier banco'],correcta:1,exp:'El dinero fiat vale por la confianza y el respaldo del Estado, no por un metal.'},
+ {q:'¿Qué organismo emite el peso y cuida la estabilidad de precios?',op:['SERNAC','SII','Banco Central de Chile','CMF'],correcta:2,exp:'El Banco Central de Chile emite la moneda y vela por la estabilidad de precios.'},
+ {q:'En abril 2026 el IPC subió 1,3% mensual. ¿Cuál fue la inflación a 12 meses?',op:['1,3%','2,7%','4,0%','3,0%'],correcta:2,exp:'4,0% a 12 meses. 2,7% es lo acumulado en el año y 1,3% la variación mensual.'},
+ {q:'El IPC se construye a partir de…',op:['El precio del dólar','Una canasta ponderada de bienes y servicios','La tasa de los créditos','El valor de la UF'],correcta:1,exp:'El INE mide la variación de precios de una canasta ponderada que representa el consumo de un hogar típico.'},
+ {q:'¿Para qué sirve principalmente la UF?',op:['Pagar menos impuestos','Proteger el valor real frente a la inflación','Fijar el sueldo mínimo','Calcular el IVA'],correcta:1,exp:'La UF se reajusta con la inflación, conservando el valor real de contratos y ahorros.'},
+ {q:'La UTM y la UTA se usan sobre todo para…',op:['Arriendos','Impuestos y multas','Depósitos a plazo','Comprar dólares'],correcta:1,exp:'Son unidades tributarias: se aplican a impuestos, tramos de renta y multas.'},
+ {q:'Si el Banco Central sube la TPM, lo más probable es que…',op:['Bajen todas las tasas','Suban las tasas de créditos y depósitos','Desaparezca la inflación','Suba el sueldo mínimo'],correcta:1,exp:'La TPM se traspasa al mercado: al subir, suben las tasas de créditos y depósitos.'},
+ {q:'Un depósito paga 0,3% mensual y la inflación anual es 4%. Tu poder de compra…',op:['Aumenta seguro','Se mantiene igual','Puede disminuir','Se duplica'],correcta:2,exp:'0,3% mensual ≈ 3,66% anual, bajo el 4% de inflación: tasa real negativa, pierdes poder de compra.'},
+ {q:'La "tasa real" de un ahorro se aproxima como…',op:['Rendimiento + inflación','Rendimiento − inflación','Inflación − TPM','Rendimiento × 12'],correcta:1,exp:'Tasa real ≈ rendimiento nominal − inflación; mide el cambio efectivo en poder de compra.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');window.scrollTo({top:document.getElementById('quiz').offsetTop-20,behavior:'smooth'});}
+
+initDnd();pintarQuiz();convUF();
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.env
+.env.local
+.env.production
+
+# Bases de datos locales
+*.db
+*.db-wal
+*.db-shm
+
+# Deploy
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

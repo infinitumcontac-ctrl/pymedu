@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L4.1 — Marca y propiedad industrial (INAPI)</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 4 · Módulo L4.1</span>
+    <h1>Registra tu marca (INAPI)</h1>
+    <p>Tu nombre y logo son un activo. Si no los registras, alguien más podría hacerlo y dejarte fuera. Aprende cómo proteger tu marca en Chile.</p>
+    <div class="meta"><span>⏱️ 40 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a class="actual">L4.1 Marca / INAPI</a><a>L4.2 Datos personales</a><a>L4.3 Propiedad intelectual</a><a>L4.4 NDA / confidencialidad</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. Para registros importantes conviene una búsqueda profesional o un abogado de propiedad industrial.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar qué es una <strong>marca</strong> y qué protege.</li>
+      <li>Entender el rol de <strong>INAPI</strong> y las <strong>clases</strong>.</li>
+      <li>Hacer una <strong>búsqueda previa</strong> y reconocer qué no se puede registrar.</li>
+      <li>Conocer el proceso, plazos y vigencia (10 años renovables).</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Le pusiste un nombre lindo a tu negocio… pero si no lo registras, no es tuyo legalmente."</p>
+      <p><strong>1:00 Qué es una marca.</strong> Signo que distingue tus productos/servicios (nombre, logo).</p>
+      <p><strong>2:00 INAPI y clases.</strong> Se registra por clases (clasificación de Niza). Búsqueda previa para no chocar con otra.</p>
+      <p><strong>3:30 Qué no se registra.</strong> Términos genéricos, engañosos, etc. Usa la actividad.</p>
+      <p><strong>4:30 Proceso.</strong> Solicitud, publicación, oposición, registro; vigencia 10 años renovables. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>¿Qué es una marca?</h2>
+    <p>Una <strong>marca</strong> es un signo que distingue tus productos o servicios de los demás: puede ser un <strong>nombre</strong>, un <strong>logo</strong>, o ambos (marca mixta). Registrarla te da el <strong>derecho exclusivo</strong> a usarla en tu rubro y a impedir que otros la copien. Es uno de los principales activos intangibles de un negocio.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>INAPI y las clases</h2>
+    <p>En Chile, las marcas se registran ante el <strong>INAPI</strong> (Instituto Nacional de Propiedad Industrial). El registro se hace por <strong>clases</strong> (según la Clasificación de Niza): cada clase agrupa ciertos productos o servicios. Debes registrar en la(s) clase(s) de tu actividad. Antes de solicitar, haz una <strong>búsqueda previa</strong> en la base de INAPI para verificar que no exista una marca igual o similar en tu clase.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Qué no se puede registrar y el proceso</h2>
+    <p>No se registran, en general, términos <strong>genéricos o descriptivos</strong> ("Pan" para una panadería), signos <strong>engañosos</strong>, contrarios a la ley o que se confundan con marcas ya registradas. El proceso típico: <strong>solicitud</strong> → <strong>publicación</strong> en el Diario Oficial → período de <strong>oposición</strong> → examen → <strong>registro</strong>. La marca dura <strong>10 años renovables</strong> indefinidamente. Tiene un costo por clase.</p>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Clasifica</span>
+    <h2>¿Se puede registrar como marca?</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="si">Un nombre inventado y distintivo</div>
+          <div class="ficha" draggable="true" data-id="no">"Zapatos" para una zapatería</div>
+          <div class="ficha" draggable="true" data-id="no2">Una marca igual a otra ya registrada en tu clase</div>
+          <div class="ficha" draggable="true" data-id="si2">Un logo original con nombre de fantasía</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="si"><div class="titulo">SÍ registrable</div></div>
+          <div class="zona" data-acepta="no"><div class="titulo">NO registrable (genérico)</div></div>
+          <div class="zona" data-acepta="no2"><div class="titulo">NO registrable (confundible)</div></div>
+          <div class="zona" data-acepta="si2"><div class="titulo">SÍ registrable</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Marca</dt><dd>Signo que distingue productos o servicios.</dd>
+      <dt>INAPI</dt><dd>Instituto Nacional de Propiedad Industrial.</dd>
+      <dt>Clase (Niza)</dt><dd>Categoría de productos/servicios para el registro.</dd>
+      <dt>Búsqueda previa</dt><dd>Revisión para verificar que la marca esté disponible.</dd>
+      <dt>Oposición</dt><dd>Período en que terceros pueden objetar el registro.</dd>
+      <dt>Marca mixta</dt><dd>Combina nombre y logo.</dd>
+      <dt>Vigencia</dt><dd>10 años, renovables indefinidamente.</dd>
+      <dt>Signo descriptivo</dt><dd>Describe el producto; en general no es registrable.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>La marca de Valentina</h2>
+    <p>Valentina quiere registrar "Aura" para su cosmética. Hace la búsqueda en INAPI, ve que está libre en su clase, y solicita el registro en la clase correspondiente. Tras la publicación y sin oposiciones, obtiene su marca por 10 años. Ahora nadie más puede usar "Aura" en cosmética. Practica con la actividad.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>No registrar</strong> y arriesgar que otro lo haga primero.</li>
+      <li><strong>Elegir un nombre genérico</strong> imposible de proteger.</li>
+      <li><strong>No hacer búsqueda previa</strong> y chocar con una marca existente.</li>
+      <li><strong>Registrar en la clase equivocada.</strong></li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.inapi.cl" target="_blank" rel="noopener">INAPI — Marcas</a>
+    <a href="https://www.inapi.cl" target="_blank" rel="noopener">INAPI — Búsqueda de marcas</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Tu marca es un activo: regístrala en INAPI, en la clase correcta, tras una búsqueda previa. Evita nombres genéricos, dura 10 años renovables y te da derecho exclusivo en tu rubro. No registrar es arriesgar que otro lo haga.</p>
+    <p><strong>Siguiente módulo →</strong> L4.2 Protección de datos personales.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial, no asesoría jurídica (2026).</footer>
+</article>
+
+<script>
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'Una marca sirve para…',op:['Pagar impuestos','Distinguir tus productos/servicios','Contratar','Arrendar'],correcta:1,exp:'Es un signo distintivo de tus productos o servicios.'},
+ {q:'En Chile las marcas se registran en…',op:['El SII','INAPI','El SERNAC','La municipalidad'],correcta:1,exp:'El Instituto Nacional de Propiedad Industrial.'},
+ {q:'El registro de marca se hace por…',op:['Comuna','Clases (productos/servicios)','Color','Tamaño'],correcta:1,exp:'Por clases, según la Clasificación de Niza.'},
+ {q:'Antes de solicitar conviene…',op:['Nada','Una búsqueda previa en INAPI','Pagar el IVA','Despedir personal'],correcta:1,exp:'La búsqueda previa evita chocar con marcas existentes.'},
+ {q:'¿Qué NO se puede registrar?',op:['Un nombre de fantasía','Un término genérico/descriptivo','Un logo original','Una marca mixta'],correcta:1,exp:'Los términos genéricos o descriptivos no son registrables.'},
+ {q:'La vigencia de una marca es…',op:['1 año','10 años renovables','Para siempre sin renovar','5 años'],correcta:1,exp:'Dura 10 años y se puede renovar indefinidamente.'},
+ {q:'El período de "oposición" permite que…',op:['Tú pagues','Terceros objeten el registro','Suba el IVA','Se anule INAPI'],correcta:1,exp:'Terceros pueden oponerse durante un plazo.'},
+ {q:'Registrar la marca te da…',op:['Derecho exclusivo en tu rubro','Nada','Un crédito','Una patente municipal'],correcta:0,exp:'Te da el derecho exclusivo de uso en tu clase.'},
+ {q:'No registrar tu marca implica el riesgo de que…',op:['Nada','Otro la registre primero','Pagues más impuestos','Pierdas el RUT'],correcta:1,exp:'Un tercero podría registrarla y dejarte fuera.'},
+ {q:'Una "marca mixta" combina…',op:['Dos empresas','Nombre y logo','Marca y patente','Dos clases'],correcta:1,exp:'Incluye elemento denominativo (nombre) y figurativo (logo).'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

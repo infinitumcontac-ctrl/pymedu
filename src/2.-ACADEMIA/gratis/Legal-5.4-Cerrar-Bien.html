@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L5.4 — Cerrar bien (término de giro)</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 5 · Módulo L5.4</span>
+    <h1>Cerrar bien tu negocio</h1>
+    <p>Cerrar no es solo dejar de vender: hay que dar término de giro, disolver la sociedad y cumplir las obligaciones que sobreviven. Hacerlo ordenado evita multas y deudas que te persiguen.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L5.1 Cobranza</a><a>L5.2 Insolvencia</a><a>L5.3 Conflictos de socios</a><a class="actual">L5.4 Cerrar bien</a><a>L5.5 Certificación</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. Para el cierre tributario y societario conviene apoyo de un contador y, si hay sociedad, de un abogado.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar qué es el <strong>término de giro</strong> ante el SII.</li>
+      <li>Entender la <strong>disolución</strong> de la sociedad.</li>
+      <li>Reconocer las <strong>obligaciones que sobreviven</strong> al cierre.</li>
+      <li>Ordenar los pasos para cerrar correctamente.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Dejar de vender no cierra tu empresa ante el SII. Si no haces término de giro, las obligaciones siguen corriendo."</p>
+      <p><strong>1:00 Término de giro.</strong> Avisar al SII que cesas actividades; declarar y pagar lo pendiente.</p>
+      <p><strong>2:30 Disolución.</strong> Si es persona jurídica, disolver la sociedad formalmente.</p>
+      <p><strong>3:30 Obligaciones que sobreviven.</strong> Deudas, finiquitos, garantías. Usa la actividad de ordenar.</p>
+      <p><strong>5:00 Cierre.</strong> Quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Término de giro</h2>
+    <p>El <strong>término de giro</strong> es el aviso al <strong>SII</strong> de que tu empresa <strong>cesa sus actividades</strong>. Implica declarar y pagar los impuestos pendientes y entregar la documentación final. Mientras no lo hagas, el SII considera que la empresa sigue activa, con obligaciones (declaraciones de IVA, etc.) que se siguen acumulando aunque no vendas. Existe un procedimiento simplificado en muchos casos.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Disolución de la sociedad</h2>
+    <p>Si operabas como <strong>persona jurídica</strong> (EIRL, SpA, Ltda, SA), además del término de giro debes <strong>disolver</strong> la sociedad formalmente (en el Registro de Empresas y Sociedades si la constituiste ahí, o por el procedimiento que corresponda). Disolver cierra la existencia legal de la empresa.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Obligaciones que sobreviven</h2>
+    <p>Cerrar <strong>no borra</strong> ciertas obligaciones: <strong>deudas</strong> con proveedores y bancos, <strong>finiquitos</strong> y cotizaciones de trabajadores, <strong>garantías legales</strong> de productos vendidos, e impuestos pendientes. Planifica el cierre para dejar todo saldado; de lo contrario, esas obligaciones pueden perseguirte (sobre todo si eras persona natural o garante).</p>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Ordena</span>
+    <h2>Pasos para cerrar correctamente</h2>
+    <div class="tool">
+      <ol class="pasos" id="pasos"></ol>
+      <p style="margin-top:14px"><button class="btn" onclick="verificarPasos()">Verificar orden</button> <button class="btn sec" onclick="mezclarPasos()">Mezclar</button></p>
+      <div class="resultado" id="pasos-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Término de giro</dt><dd>Aviso al SII del cese de actividades.</dd>
+      <dt>Disolución</dt><dd>Cierre legal de la sociedad.</dd>
+      <dt>Obligaciones supervivientes</dt><dd>Deudas y deberes que siguen tras el cierre.</dd>
+      <dt>Finiquito</dt><dd>Cierre de la relación laboral con cada trabajador (módulo L3.3).</dd>
+      <dt>Garantía legal</dt><dd>Responsabilidad por productos vendidos (módulo L2.3).</dd>
+      <dt>Procedimiento simplificado</dt><dd>Vía abreviada de término de giro en ciertos casos.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El cierre de la tienda de Marta</h2>
+    <p>Marta decide cerrar. Paga a proveedores, hace los finiquitos de sus trabajadoras, declara y paga sus impuestos pendientes, hace el <strong>término de giro</strong> en el SII y <strong>disuelve</strong> su SpA. Como dejó todo saldado, ninguna obligación la persigue. Ordena los pasos en la actividad.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Dejar de vender sin hacer término de giro:</strong> las obligaciones siguen corriendo.</li>
+      <li><strong>No disolver la sociedad</strong> y mantenerla "fantasma".</li>
+      <li><strong>No pagar finiquitos ni cotizaciones</strong> al cerrar.</li>
+      <li><strong>Olvidar deudas o garantías</strong> que sobreviven.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Término de giro</a>
+    <a href="https://www.registrodeempresasysociedades.cl" target="_blank" rel="noopener">Registro de Empresas y Sociedades — Disolución</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Cerrar bien implica término de giro en el SII, disolución de la sociedad y saldar las obligaciones que sobreviven (deudas, finiquitos, garantías). Hacerlo ordenado te deja libre para reemprender sin sorpresas.</p>
+    <p><strong>Siguiente módulo →</strong> L5.5 Certificación final legal.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial, no asesoría jurídica (2026).</footer>
+</article>
+
+<script>
+const pasosCorrectos=['Paga a proveedores y deudas pendientes','Haz los finiquitos y paga cotizaciones de los trabajadores','Declara y paga los impuestos pendientes','Realiza el término de giro en el SII','Disuelve la sociedad (si es persona jurídica)','Conserva la documentación por el plazo legal'];
+let ordenActual=[];
+function pintarPasos(){const ol=document.getElementById('pasos');ol.innerHTML='';ordenActual.forEach((t,i)=>{const li=document.createElement('li');li.className='paso';li.innerHTML='<span class="num">'+(i+1)+'</span><span class="txt">'+t+'</span><button onclick="moverPaso('+i+',-1)">▲</button><button onclick="moverPaso('+i+',1)">▼</button>';ol.appendChild(li);});}
+function moverPaso(i,d){const j=i+d;if(j<0||j>=ordenActual.length)return;[ordenActual[i],ordenActual[j]]=[ordenActual[j],ordenActual[i]];pintarPasos();document.getElementById('pasos-res').style.display='none';}
+function mezclarPasos(){ordenActual=[...pasosCorrectos];for(let i=ordenActual.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ordenActual[i],ordenActual[j]]=[ordenActual[j],ordenActual[i]];}if(ordenActual.every((t,k)=>t===pasosCorrectos[k]))[ordenActual[0],ordenActual[1]]=[ordenActual[1],ordenActual[0]];pintarPasos();document.getElementById('pasos-res').style.display='none';}
+function verificarPasos(){let c=0;document.querySelectorAll('#pasos .paso').forEach((li,i)=>{const ok=ordenActual[i]===pasosCorrectos[i];li.classList.toggle('ok',ok);li.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('pasos-res');r.style.display='block';r.innerHTML=c===pasosCorrectos.length?'✅ <strong>¡Orden perfecto!</strong>':'Llevas <strong>'+c+' de '+pasosCorrectos.length+'</strong>. Ajusta las rojas.';}
+
+const preguntas=[
+ {q:'El término de giro es…',op:['Dejar de vender','El aviso al SII del cese de actividades','Una multa','Una patente'],correcta:1,exp:'Es el aviso formal al SII de que cesas actividades.'},
+ {q:'Si dejas de vender pero no haces término de giro…',op:['No pasa nada','Las obligaciones siguen corriendo','Se cierra solo','Te devuelven el IVA'],correcta:1,exp:'El SII te considera activo y siguen las obligaciones.'},
+ {q:'Si eras persona jurídica, además debes…',op:['Nada','Disolver la sociedad','Sacar otra patente','Contratar'],correcta:1,exp:'Hay que disolver formalmente la sociedad.'},
+ {q:'¿Qué obligación puede sobrevivir al cierre?',op:['Ninguna','Deudas, finiquitos y garantías','El logo','El menú'],correcta:1,exp:'Deudas, finiquitos, cotizaciones y garantías siguen vigentes.'},
+ {q:'Antes de cerrar conviene…',op:['Irse sin avisar','Saldar deudas y finiquitos','Pedir un crédito','No declarar'],correcta:1,exp:'Dejar todo saldado evita que las obligaciones te persigan.'},
+ {q:'El término de giro se hace en…',op:['La municipalidad','El SII','INAPI','El banco'],correcta:1,exp:'Es un trámite ante el Servicio de Impuestos Internos.'},
+ {q:'No disolver la sociedad deja…',op:['Todo cerrado','Una empresa "fantasma" con obligaciones','Más utilidades','Una marca'],correcta:1,exp:'La sociedad sigue existiendo legalmente con deberes.'},
+ {q:'Los finiquitos al cerrar…',op:['No se pagan','Deben pagarse y formalizarse','Son opcionales','Los paga el SII'],correcta:1,exp:'Hay que cerrar correctamente las relaciones laborales.'},
+ {q:'Conservar la documentación tras cerrar es…',op:['Innecesario','Recomendable/obligatorio por un plazo','Ilegal','Solo para SA'],correcta:1,exp:'Debes guardar respaldos por el plazo legal.'},
+ {q:'Cerrar de forma ordenada te permite…',op:['Quedar con deudas','Reemprender sin sorpresas','Evitar impuestos','Perder el RUT personal'],correcta:1,exp:'Un cierre limpio te deja libre para volver a empezar.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+mezclarPasos();pintarQuiz();
+</script>
+</body>
+</html>

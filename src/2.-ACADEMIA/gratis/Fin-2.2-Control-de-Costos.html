@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 2.2 — Control de costos</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 2 · Módulo 2.2</span>
+    <h1>Gasto inteligente y control de costos</h1>
+    <p>Saber exactamente en qué gastas es lo que separa a un negocio que sobrevive de uno que crece. Aquí clasificas tus costos y cazas los "gastos invisibles".</p>
+    <div class="meta"><span>⏱️ 40 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>2.1 Flujo de caja</a><a class="actual">2.2 Costos</a><a>2.3 Herramientas digitales</a><a>2.4 Formalización</a><a>2.5 IVA/F29</a><a>2.6 Financiamiento</a><a>2.7 Precios</a><a>2.8 Personal vs negocio</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Clasificar costos en <strong>directos/indirectos</strong> y <strong>fijos/variables</strong>.</li>
+      <li>Identificar los <strong>gastos invisibles</strong> que erosionan tu margen.</li>
+      <li>Calcular el <strong>margen de contribución</strong> de un producto.</li>
+      <li>Aplicar estrategias de control de gasto y la regla 50/30/20 adaptada al negocio.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "No puedes controlar lo que no mides. Si no sabes en qué se va tu plata, el negocio te maneja a ti."</p>
+      <p><strong>1:00 Tipos de costo.</strong> Directos vs indirectos; fijos vs variables. Ejemplos de panadería.</p>
+      <p><strong>2:30 Gastos invisibles.</strong> Multas del IVA, intereses, comisiones de tarjeta (MDR), suscripciones olvidadas. Pueden ser >$200.000 al mes.</p>
+      <p><strong>3:30 Margen de contribución.</strong> Precio − costo variable. Mostrar la calculadora.</p>
+      <p><strong>5:00 Estrategias.</strong> Presupuesto, separar cuentas, revisar trimestralmente. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Clasificar para decidir</h2>
+    <ul class="limpia">
+      <li><strong>Costos directos:</strong> ligados a producir el bien o servicio (materias primas, mano de obra de producción).</li>
+      <li><strong>Costos indirectos:</strong> generales que no se asignan a un producto puntual (arriendo, administración, marketing).</li>
+      <li><strong>Costos fijos:</strong> estables en el corto plazo (arriendo, sueldos base, seguros).</li>
+      <li><strong>Costos variables:</strong> fluctúan con las ventas (insumos, comisiones).</li>
+    </ul>
+    <div class="recuadro dato"><h4>👻 Gastos invisibles</h4><p>Cargos que no aportan al negocio: multas por declarar tarde el IVA, intereses moratorios, comisiones de tarjeta (MDR), suscripciones que no usas. Pueden costar <strong>más de $200.000 al mes</strong> sin que te des cuenta.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Margen de contribución</h2>
+    <p>El <strong>margen de contribución</strong> es lo que deja cada venta para cubrir los costos fijos y generar utilidad: <strong>precio de venta (sin IVA) − costo variable unitario</strong>. Si es muy bajo o negativo, cada venta te acerca a la pérdida. Es la base para fijar precios (módulo 2.7) y calcular el punto de equilibrio (módulo 3.2).</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Estrategias de control</h2>
+    <ul class="limpia">
+      <li><strong>Presupuesto y metas</strong> mensuales; revísalo para corregir desviaciones.</li>
+      <li><strong>Digitaliza</strong> el control con tarjetas de empresa y software de gastos.</li>
+      <li><strong>Optimiza gastos invisibles:</strong> declara a tiempo, revisa comisiones MDR, usa factoring para el IVA crédito.</li>
+      <li><strong>Revisión trimestral:</strong> elimina suscripciones y gastos superfluos.</li>
+      <li><strong>Separa cuentas</strong> personales y del negocio (módulo 2.8).</li>
+      <li><strong>Regla 50/30/20 del negocio:</strong> 50% costos esenciales, 30% inversión/crecimiento, 20% ahorro/amortización.</li>
+    </ul>
+  </section>
+
+  <!-- INTERACTIVOS -->
+  <section>
+    <span class="tag">Actividad 1 · Clasifica</span>
+    <h2>Arrastra cada costo a su tipo</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="directo">Harina para el pan</div>
+          <div class="ficha" draggable="true" data-id="indirecto">Arriendo del local</div>
+          <div class="ficha" draggable="true" data-id="variable">Comisión por venta</div>
+          <div class="ficha" draggable="true" data-id="invisible">Multa por IVA atrasado</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="directo"><div class="titulo">Costo DIRECTO</div></div>
+          <div class="zona" data-acepta="indirecto"><div class="titulo">Costo INDIRECTO</div></div>
+          <div class="zona" data-acepta="variable"><div class="titulo">Costo VARIABLE</div></div>
+          <div class="zona" data-acepta="invisible"><div class="titulo">Gasto INVISIBLE</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Calculadora</span>
+    <h2>Margen de contribución</h2>
+    <div class="tool">
+      <h3><span class="icono">📈</span> ¿Cuánto deja cada venta?</h3>
+      <div class="fila">
+        <div class="campo"><label for="mc-precio">Precio de venta sin IVA (CLP)</label><input type="number" id="mc-precio" value="2000" step="100"></div>
+        <div class="campo"><label for="mc-cv">Costo variable unitario (CLP)</label><input type="number" id="mc-cv" value="1200" step="100"></div>
+      </div>
+      <button class="btn" onclick="margen()">Calcular</button>
+      <div class="resultado" id="mc-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Costo directo</dt><dd>Ligado directamente a producir el bien/servicio.</dd>
+      <dt>Costo indirecto</dt><dd>Gasto general no asignable a un producto puntual.</dd>
+      <dt>Costo fijo</dt><dd>Se mantiene estable en el corto plazo.</dd>
+      <dt>Costo variable</dt><dd>Cambia según el nivel de ventas/producción.</dd>
+      <dt>Gasto invisible</dt><dd>Cargo que no aporta valor (multas, intereses, comisiones, suscripciones).</dd>
+      <dt>Margen de contribución</dt><dd>Precio sin IVA menos costo variable unitario.</dd>
+      <dt>MDR</dt><dd>Comisión que cobran las tarjetas al comercio por cada venta.</dd>
+      <dt>IVA crédito</dt><dd>IVA de tus compras que puedes descontar del IVA de tus ventas.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Panadería "Las Delicias" recorta lo invisible</h2>
+    <p>La panadería detecta $180.000 mensuales en gastos invisibles: una multa recurrente por declarar el IVA tarde, comisiones MDR altas y dos suscripciones sin uso. Automatiza su declaración, renegocia el MDR y cancela lo que no usa. Recupera ~$150.000 al mes — equivalente a vender cientos de panes extra — sin esforzarse más. Usa la calculadora de margen para ver cuántas ventas equivale ese ahorro.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>No saber tu costo variable unitario.</strong> Sin eso no puedes fijar precios.</li>
+      <li><strong>Ignorar los gastos invisibles.</strong> Son fuga pura.</li>
+      <li><strong>Mezclar plata personal y del negocio.</strong> Distorsiona todos tus números.</li>
+      <li><strong>Recortar a ciegas.</strong> Recorta lo que no aporta, no lo que genera ventas.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Obligaciones y multas</a>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">Sercotec — Gestión de pymes</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Clasificar tus costos (directos/indirectos, fijos/variables) te permite decidir con datos. Cazar los gastos invisibles libera plata sin vender más, y el margen de contribución te dice cuánto deja cada venta: la base para poner precios.</p>
+    <p><strong>Siguiente módulo →</strong> 2.3 Herramientas digitales para la gestión.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function margen(){const p=+document.getElementById('mc-precio').value,cv=+document.getElementById('mc-cv').value;const m=p-cv,pct=p>0?m/p*100:0;const r=document.getElementById('mc-res');r.style.display='block';const color=m>0?'var(--color-ok)':'var(--color-error)';r.innerHTML='Margen de contribución por unidad:<div class="cifra" style="color:'+color+'">'+fmtCLP(m)+'</div>Equivale al <strong>'+fmtNum(pct,1)+'%</strong> del precio. '+(m>0?'Cada venta aporta a cubrir tus costos fijos y generar utilidad.':'⚠️ Es negativo: cada venta te genera pérdida. Sube el precio o baja el costo variable.');}
+
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong> Clasificaste bien los cuatro costos.':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'Un costo directo es…',op:['El arriendo','La materia prima del producto','El marketing','La multa del IVA'],correcta:1,exp:'El costo directo está ligado a producir el bien (ej. materia prima).'},
+ {q:'El arriendo del local es un costo…',op:['Directo y variable','Indirecto y fijo','Variable y directo','Invisible'],correcta:1,exp:'No se asigna a un producto puntual (indirecto) y es estable (fijo).'},
+ {q:'Un costo variable…',op:['Es siempre el mismo','Cambia según las ventas','No existe en servicios','Es una multa'],correcta:1,exp:'Fluctúa con el nivel de ventas o producción.'},
+ {q:'Los "gastos invisibles" incluyen…',op:['Sueldos','Multas, intereses y comisiones que no aportan','La materia prima','El arriendo'],correcta:1,exp:'Son cargos que no agregan valor: multas, intereses, comisiones, suscripciones.'},
+ {q:'El margen de contribución es…',op:['Precio + costo','Precio sin IVA − costo variable unitario','Ventas totales','Utilidad neta'],correcta:1,exp:'Es lo que deja cada venta para cubrir costos fijos y generar utilidad.'},
+ {q:'Si el margen de contribución es negativo…',op:['Ganas en cada venta','Pierdes en cada venta','No pasa nada','Subió el IVA'],correcta:1,exp:'Cada venta te genera pérdida: hay que subir precio o bajar costo variable.'},
+ {q:'El MDR es…',op:['Un impuesto','La comisión que cobran las tarjetas al comercio','Un crédito','Una multa del SII'],correcta:1,exp:'Merchant Discount Rate: comisión por cada venta con tarjeta.'},
+ {q:'El IVA crédito es…',op:['El IVA de tus ventas','El IVA de tus compras que puedes descontar','Una multa','Un subsidio'],correcta:1,exp:'Es el IVA pagado en tus compras, descontable del IVA de tus ventas.'},
+ {q:'Una buena práctica de control es…',op:['Mezclar cuentas personales y del negocio','Revisar gastos cada trimestre y eliminar lo superfluo','No presupuestar','Pagar el IVA tarde'],correcta:1,exp:'La revisión periódica detecta fugas y mantiene el control.'},
+ {q:'Recortar costos bien significa…',op:['Cortar lo que genera ventas','Cortar lo que no aporta valor','Cortar sueldos siempre','Cortar al azar'],correcta:1,exp:'Se recorta lo que no aporta, cuidando lo que genera ingresos.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

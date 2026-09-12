@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L4.3 — Propiedad intelectual y contenidos</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 4 · Módulo L4.3</span>
+    <h1>Propiedad intelectual y contenidos</h1>
+    <p>Las fotos, la música y los textos tienen dueño. Usar contenido ajeno sin permiso puede costarte multas; y el diseño que encargaste no es tuyo si no lo pactaste. Aprende a cuidarte.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L4.1 Marca / INAPI</a><a>L4.2 Datos personales</a><a class="actual">L4.3 Propiedad intelectual</a><a>L4.4 NDA / confidencialidad</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. Para contratos de creación o licencias de monto alto, asesórate profesionalmente.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Distinguir <strong>derechos de autor</strong> de <strong>propiedad industrial</strong> (marca/patente).</li>
+      <li>Usar <strong>imágenes y música</strong> sin infringir derechos (licencias).</li>
+      <li>Pactar la <strong>cesión de derechos</strong> con diseñadores y freelancers.</li>
+      <li>Proteger tus propias creaciones.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈5–7 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Bajaste una foto de Google para tu post… y te llega un cobro. Pasa más de lo que crees."</p>
+      <p><strong>1:00 Derechos de autor.</strong> Protegen obras (textos, fotos, música, software) desde su creación.</p>
+      <p><strong>2:00 Licencias.</strong> Banco de imágenes, Creative Commons, música libre de regalías. Atribución.</p>
+      <p><strong>3:00 Encargos.</strong> Si contratas un logo, pacta la cesión de derechos por escrito. Usa la actividad.</p>
+      <p><strong>4:00 Tus obras.</strong> Cómo dejar constancia. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Derecho de autor vs. propiedad industrial</h2>
+    <p>El <strong>derecho de autor</strong> protege <strong>obras</strong> (textos, fotos, música, videos, software, diseños) y nace con la <strong>creación</strong>, sin necesidad de registro (aunque registrar ayuda a probar). La <strong>propiedad industrial</strong> (marcas en INAPI, patentes de invención) protege signos e invenciones y sí requiere registro. Ambas son "propiedad intelectual".</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Usar contenido ajeno: licencias</h2>
+    <p>No puedes usar una foto, canción o texto de otro solo porque está en internet. Necesitas una <strong>licencia</strong>: bancos de imágenes (con su licencia), contenidos <strong>Creative Commons</strong> (respetando sus condiciones, como la atribución), música <strong>libre de regalías</strong> o permiso directo del autor. Usar sin permiso puede generar <strong>cobros y demandas</strong>.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Encargos y cesión de derechos</h2>
+    <p>Si contratas a un diseñador para tu logo o a un fotógrafo, <strong>el autor conserva derechos salvo que pactes lo contrario</strong>. Para que el logo sea plenamente tuyo (usarlo, modificarlo, registrarlo como marca), incluye en el contrato una <strong>cesión de derechos patrimoniales</strong> por escrito. Para tus propias obras, deja constancia de fecha y autoría (y registra lo importante).</p>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Clasifica</span>
+    <h2>¿Uso permitido o riesgoso?</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="ok">Usar una foto con licencia comprada</div>
+          <div class="ficha" draggable="true" data-id="mal">Bajar una imagen de Google para tu publicidad</div>
+          <div class="ficha" draggable="true" data-id="ok2">Pactar cesión de derechos del logo encargado</div>
+          <div class="ficha" draggable="true" data-id="mal2">Usar una canción famosa sin licencia en tu video</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="ok"><div class="titulo">PERMITIDO</div></div>
+          <div class="zona" data-acepta="mal"><div class="titulo">RIESGOSO / infringe</div></div>
+          <div class="zona" data-acepta="ok2"><div class="titulo">PERMITIDO / recomendable</div></div>
+          <div class="zona" data-acepta="mal2"><div class="titulo">RIESGOSO / infringe</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Derecho de autor</dt><dd>Protege obras desde su creación.</dd>
+      <dt>Propiedad industrial</dt><dd>Marcas y patentes; requiere registro.</dd>
+      <dt>Licencia</dt><dd>Permiso para usar una obra bajo ciertas condiciones.</dd>
+      <dt>Creative Commons</dt><dd>Licencias estandarizadas con condiciones (atribución, etc.).</dd>
+      <dt>Libre de regalías</dt><dd>Contenido que, con su licencia, se usa sin pago por uso.</dd>
+      <dt>Cesión de derechos</dt><dd>Transferir los derechos patrimoniales de una obra.</dd>
+      <dt>Derechos patrimoniales</dt><dd>Derechos económicos de explotar la obra.</dd>
+      <dt>Plagio</dt><dd>Usar la obra de otro como propia; infringe derechos.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El logo de Camila</h2>
+    <p>Camila encarga su logo a una diseñadora. En el contrato incluye la <strong>cesión de derechos patrimoniales</strong>, así puede usarlo, modificarlo y registrarlo como marca (módulo L4.1). Para sus redes usa imágenes con licencia y música libre de regalías. Evita cobros por uso indebido. Practica con la actividad.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Usar fotos/música de internet</strong> sin licencia.</li>
+      <li><strong>No pactar la cesión</strong> del diseño que encargaste.</li>
+      <li><strong>Copiar textos o diseños</strong> de la competencia.</li>
+      <li><strong>No dejar constancia</strong> de tus propias creaciones.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.propiedadintelectual.gob.cl" target="_blank" rel="noopener">Derecho de Autor (DIBAM/Propiedad Intelectual)</a>
+    <a href="https://www.inapi.cl" target="_blank" rel="noopener">INAPI — Propiedad industrial</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>El derecho de autor protege obras desde su creación; usa contenido ajeno solo con licencia. Cuando encargas un diseño, pacta por escrito la cesión de derechos para que sea plenamente tuyo. Y deja constancia de tus propias creaciones.</p>
+    <p><strong>Siguiente módulo →</strong> L4.4 Secreto comercial y acuerdos de confidencialidad (NDA).</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial, no asesoría jurídica (2026).</footer>
+</article>
+
+<script>
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'El derecho de autor protege…',op:['Solo marcas','Obras (textos, fotos, música, software)','Patentes','Patentes municipales'],correcta:1,exp:'Protege obras desde su creación.'},
+ {q:'El derecho de autor nace…',op:['Solo al registrar','Con la creación de la obra','Al pagar IVA','En INAPI'],correcta:1,exp:'Nace con la creación; registrar ayuda a probar.'},
+ {q:'Usar una foto de internet sin licencia es…',op:['Permitido','Riesgoso: puede generar cobros/demandas','Gratis y seguro','Obligatorio'],correcta:1,exp:'Necesitas licencia o permiso del autor.'},
+ {q:'"Creative Commons" son…',op:['Marcas','Licencias con condiciones (ej. atribución)','Impuestos','Patentes'],correcta:1,exp:'Licencias estandarizadas que fijan condiciones de uso.'},
+ {q:'Si encargas un logo, los derechos…',op:['Son tuyos automáticamente','Quedan con el autor salvo cesión pactada','No existen','Los tiene INAPI'],correcta:1,exp:'Debes pactar la cesión de derechos por escrito.'},
+ {q:'Para que el logo encargado sea plenamente tuyo, incluye…',op:['Una factura','Una cesión de derechos patrimoniales','Una patente','Una boleta'],correcta:1,exp:'La cesión te permite usarlo, modificarlo y registrarlo.'},
+ {q:'La música "libre de regalías"…',op:['No se puede usar','Se usa sin pago por uso, según su licencia','Es ilegal','Requiere INAPI'],correcta:1,exp:'Su licencia permite usarla sin pagar por cada uso.'},
+ {q:'La propiedad industrial (marcas/patentes)…',op:['No requiere registro','Requiere registro','Es lo mismo que derecho de autor','No existe'],correcta:1,exp:'Marcas y patentes se registran (ej. INAPI).'},
+ {q:'Copiar el diseño de la competencia…',op:['Es buena idea','Puede infringir derechos','Es obligatorio','No tiene riesgo'],correcta:1,exp:'Puede constituir plagio o infracción.'},
+ {q:'Para proteger tus propias obras conviene…',op:['No hacer nada','Dejar constancia de fecha y autoría (y registrar lo importante)','Publicarlas sin firma','Regalarlas'],correcta:1,exp:'La constancia ayuda a probar autoría ante conflictos.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

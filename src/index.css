@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-label: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  /* ── Light theme (default) ── */
+  --color-primary: #1B3022;
+  --color-primary-container: #2A4A33;
+  --color-on-primary-container: #6B9B7E;
+  --color-secondary: #C5A059;
+  --color-secondary-container: #E8D4A0;
+  --color-on-secondary-container: #8A6E2F;
+  --color-tertiary: #3F2427;
+  --color-tertiary-container: #5C3A3D;
+  --color-on-tertiary-container: #B0787B;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Surface palette — Light */
+  --color-surface: #F8F9FA;
+  --color-surface-dim: #DAD9DD;
+  --color-surface-bright: #FFFFFF;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #F3F4F5;
+  --color-surface-container: #EDEEEF;
+  --color-surface-container-high: #E7E8E9;
+  --color-surface-container-highest: #E1E3E4;
+  --color-on-surface: #191C1D;
+  --color-on-surface-variant: #454652;
+  --color-outline: #767683;
+  --color-outline-variant: #C6C5D4;
+
+  /* Inverse */
+  --color-inverse-surface: #2E3036;
+  --color-inverse-on-surface: #EFF0F7;
+  --color-inverse-primary: #5A9AB5;
+
+  /* Scrim & Shadow */
+  --color-scrim: #000000;
+  --color-shadow: #000000;
+}
+
+/* ── Dark theme overrides ── */
+[data-theme="dark"] {
+  --color-primary: #5A9AB5;
+  --color-primary-container: #003D5C;
+  --color-on-primary-container: #A1D4E9;
+  --color-secondary: #E8D4A0;
+  --color-secondary-container: #5C4A1A;
+  --color-on-secondary-container: #F5E6C0;
+  --color-tertiary: #B0787B;
+  --color-tertiary-container: #5C3A3D;
+  --color-on-tertiary-container: #FFD9DD;
+  --color-error: #FFB4AB;
+  --color-error-container: #93000A;
+  --color-on-error-container: #FFDAD6;
+
+  /* Surface palette — Dark (deep backgrounds like Landing) */
+  --color-surface: #0A0C10;
+  --color-surface-dim: #0A0C10;
+  --color-surface-bright: #1A1D24;
+  --color-surface-container-lowest: #0E1015;
+  --color-surface-container-low: #151820;
+  --color-surface-container: #1A1D24;
+  --color-surface-container-high: #22262E;
+  --color-surface-container-highest: #2C3038;
+  --color-on-surface: #E8EAF0;
+  --color-on-surface-variant: #B0B4C0;
+  --color-outline: #6B7080;
+  --color-outline-variant: #3A3E48;
+
+  /* Inverse */
+  --color-inverse-surface: #E8EAF0;
+  --color-inverse-on-surface: #0A0C10;
+  --color-inverse-primary: #003D5C;
+}
+
+[data-theme="dark"] body {
+  background-color: #0A0C10;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .glass-panel {
+    @apply bg-surface/80 backdrop-blur-md;
+  }
+  .command-gradient {
+    @apply bg-gradient-to-br from-primary to-primary-container;
+  }
+  /* Dark mode glass cards */
+  .dark-card {
+    @apply bg-surface-container-high/60 backdrop-blur-sm border border-outline-variant/30;
+  }
+  /* Glow buttons for dark mode */
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(90, 154, 181, 0.3), 0 0 40px rgba(90, 154, 181, 0.1);
+  }
+  .glow-primary:hover {
+    box-shadow: 0 0 25px rgba(90, 154, 181, 0.4), 0 0 50px rgba(90, 154, 181, 0.15);
+  }
+  .glow-secondary {
+    box-shadow: 0 0 20px rgba(232, 212, 160, 0.3), 0 0 40px rgba(232, 212, 160, 0.1);
+  }
+  .glow-secondary:hover {
+    box-shadow: 0 0 25px rgba(232, 212, 160, 0.4), 0 0 50px rgba(232, 212, 160, 0.15);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 20px rgba(52, 211, 153, 0.3), 0 0 40px rgba(52, 211, 153, 0.1);
+  }
+  .glow-emerald:hover {
+    box-shadow: 0 0 25px rgba(52, 211, 153, 0.4), 0 0 50px rgba(52, 211, 153, 0.15);
+  }
+  .glow-amber {
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.3), 0 0 40px rgba(245, 158, 11, 0.1);
+  }
+  .glow-amber:hover {
+    box-shadow: 0 0 25px rgba(245, 158, 11, 0.4), 0 0 50px rgba(245, 158, 11, 0.15);
+  }
+  .glow-red {
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.3), 0 0 40px rgba(239, 68, 68, 0.1);
+  }
+  .glow-red:hover {
+    box-shadow: 0 0 25px rgba(239, 68, 68, 0.4), 0 0 50px rgba(239, 68, 68, 0.15);
+  }
+  .glow-purple {
+    box-shadow: 0 0 20px rgba(192, 132, 252, 0.3), 0 0 40px rgba(192, 132, 252, 0.1);
+  }
+  .glow-purple:hover {
+    box-shadow: 0 0 25px rgba(192, 132, 252, 0.4), 0 0 50px rgba(192, 132, 252, 0.15);
+  }
+}

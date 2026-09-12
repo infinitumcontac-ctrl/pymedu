@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.4 — Fuentes de financiamiento</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.4</span>
+    <h1>Créditos, leasing, factoring y otras fuentes</h1>
+    <p>Préstamos, crowdfunding, capital de riesgo, fondos públicos, factoring y leasing. Conoce cada opción y elige según tu etapa y tu objetivo.</p>
+    <div class="meta"><span>⏱️ 45 min</span><span>📶 Nivel avanzado</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>3.1 Contabilidad</a><a>3.2 Punto de equilibrio</a><a>3.3 VAN/TIR/ROI</a><a class="actual">3.4 Fuentes financiamiento</a><a>3.5 Inversión</a><a>3.6 KPIs</a><a>3.7 Escalar</a><a>3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Describir <strong>préstamo, crowdfunding, capital de riesgo, fondos públicos, factoring y leasing</strong>.</li>
+      <li>Identificar ventajas y desventajas de cada uno.</li>
+      <li>Elegir la fuente según tu <strong>etapa</strong> y el <strong>propósito</strong> del financiamiento.</li>
+      <li>Conocer programas de <strong>CORFO y SERCOTEC</strong>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈7–9 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "No todo financiamiento es deuda. Hay opciones para cada etapa: probar, crecer o escalar."</p>
+      <p><strong>1:00 Recorrido.</strong> Préstamo, crowdfunding, capital de riesgo, CORFO/SERCOTEC, factoring, leasing, familia/socios.</p>
+      <p><strong>4:00 Cómo elegir.</strong> Etapa empresarial, propósito, costo, garantías. Simula el ROI antes. Mostrar la actividad.</p>
+      <p><strong>6:00 Cierre.</strong> Consulta expertos. Quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Las fuentes, una por una</h2>
+    <div class="cmp-wrap"><table class="cmp">
+      <tr><th>Fuente</th><th>Ventaja</th><th>Desventaja</th></tr>
+      <tr><td>Préstamo bancario</td><td>Montos altos, tasas relativamente bajas</td><td>Burocracia, garantías, historial</td></tr>
+      <tr><td>Crowdfunding</td><td>Valida la idea y crea comunidad</td><td>Meta no garantizada; requiere campaña</td></tr>
+      <tr><td>Capital de riesgo</td><td>Grandes recursos y mentoría</td><td>Cedes control; exige alto crecimiento</td></tr>
+      <tr><td>Fondos públicos (CORFO/SERCOTEC)</td><td>Tasas bajas o fondos no reembolsables</td><td>Procesos competitivos y requisitos</td></tr>
+      <tr><td>Factoring</td><td>Liquidez sin deuda</td><td>Comisión; depende de buena facturación</td></tr>
+      <tr><td>Leasing</td><td>No afecta líneas de crédito; deducible</td><td>Costo final mayor</td></tr>
+      <tr><td>Familia / socios</td><td>Flexible y rápido</td><td>Riesgos personales; sin garantías formales</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Cómo elegir</h2>
+    <ol class="limpia">
+      <li><strong>Evalúa tu etapa:</strong> recién iniciado, en crecimiento o consolidado.</li>
+      <li><strong>Define el propósito:</strong> capital de trabajo, maquinaria, marketing, expansión.</li>
+      <li><strong>Analiza costo y compatibilidad:</strong> tasas, plazos, garantías, control.</li>
+      <li><strong>Simula el ROI</strong> (módulo 3.3) antes de decidir.</li>
+      <li><strong>Consulta expertos:</strong> bancos, CORFO/SERCOTEC, contador, mentores.</li>
+    </ol>
+    <div class="recuadro"><h4>💡 Regla simple</h4><p>Idea por validar → crowdfunding/fondos. Activos productivos → leasing/crédito. Liquidez puntual → factoring. Salto de escala con alto crecimiento → capital de riesgo.</p></div>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Conecta</span>
+    <h2>¿Qué fuente para cada situación?</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="factoring">Factoring</div>
+          <div class="ficha" draggable="true" data-id="leasing">Leasing</div>
+          <div class="ficha" draggable="true" data-id="crowd">Crowdfunding</div>
+          <div class="ficha" draggable="true" data-id="vc">Capital de riesgo</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="factoring"><div class="titulo">Necesito liquidez ya; tengo facturas por cobrar</div></div>
+          <div class="zona" data-acepta="leasing"><div class="titulo">Quiero una máquina sin descapitalizarme</div></div>
+          <div class="zona" data-acepta="crowd"><div class="titulo">Quiero validar mi idea y crear comunidad</div></div>
+          <div class="zona" data-acepta="vc"><div class="titulo">Busco escalar rápido y acepto socios inversores</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Crowdfunding</dt><dd>Financiamiento colectivo en plataformas en línea.</dd>
+      <dt>Capital de riesgo</dt><dd>Inversionista aporta capital a cambio de participación.</dd>
+      <dt>CORFO</dt><dd>Agencia estatal de fomento; subsidios y créditos para innovación.</dd>
+      <dt>SERCOTEC</dt><dd>Servicio que apoya a micro y pequeñas empresas.</dd>
+      <dt>Factoring</dt><dd>Venta de facturas por cobrar para obtener liquidez.</dd>
+      <dt>Leasing</dt><dd>Arriendo con opción de compra de un activo.</dd>
+      <dt>Capital semilla</dt><dd>Primer financiamiento para arrancar un negocio.</dd>
+      <dt>Dilución</dt><dd>Reducción de tu participación al entrar nuevos socios.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Tres decisiones de Andrea</h2>
+    <p>Andrea usa <strong>factoring</strong> para cubrir el desfase mientras cobra a 60 días, <strong>leasing</strong> para una nueva máquina sin gastar su caja, y postula a un fondo <strong>CORFO</strong> para su proyecto de exportación. Descarta el capital de riesgo porque no quiere ceder control aún. Usa la actividad de conectar para practicar el criterio.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Tomar capital de riesgo</strong> para un negocio de bajo crecimiento.</li>
+      <li><strong>Endeudarse</strong> cuando un fondo no reembolsable era posible.</li>
+      <li><strong>No simular el ROI</strong> antes de comprometerte.</li>
+      <li><strong>Pedir a la familia sin reglas claras</strong> y arriesgar relaciones.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.corfo.cl" target="_blank" rel="noopener">CORFO</a>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">SERCOTEC</a>
+    <a href="https://www.fogape.cl" target="_blank" rel="noopener">FOGAPE</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Cada fuente sirve para una etapa y un propósito: validar (crowdfunding/fondos), comprar activos (leasing/crédito), liquidez (factoring) o escalar (capital de riesgo). Elige según costo, control y tu momento, y simula el ROI antes de firmar.</p>
+    <p><strong>Siguiente módulo →</strong> 3.5 Inversión inicial y retorno esperado.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'El crowdfunding sirve sobre todo para…',op:['Comprar maquinaria','Validar una idea y crear comunidad','Pagar el IVA','Liquidez inmediata'],correcta:1,exp:'Reúne aportes de muchas personas y valida la idea en el mercado.'},
+ {q:'En el capital de riesgo, el inversionista…',op:['Presta sin pedir nada','Aporta capital a cambio de participación','Cobra solo intereses','Da fondos no reembolsables'],correcta:1,exp:'Entra como socio y espera alto crecimiento; cedes parte del control.'},
+ {q:'CORFO y SERCOTEC ofrecen…',op:['Solo préstamos caros','Subsidios, créditos preferenciales y asistencia','Capital de riesgo','Factoring'],correcta:1,exp:'Son fomento estatal con apoyo a innovación y competitividad.'},
+ {q:'El factoring entrega…',op:['Maquinaria','Liquidez sin tomar deuda','Participación','Mentoría'],correcta:1,exp:'Adelantas el cobro de facturas sin endeudarte.'},
+ {q:'El leasing es ideal para…',op:['Validar ideas','Adquirir activos sin descapitalizarse','Cubrir el IVA','Pagar sueldos'],correcta:1,exp:'Permite usar y luego comprar el bien; cuota deducible.'},
+ {q:'Una desventaja del préstamo bancario es…',op:['No pedir requisitos','Burocracia y exigencia de garantías','Ser gratis','No tener plazos'],correcta:1,exp:'Suele requerir historial, garantías y trámites.'},
+ {q:'El capital de riesgo NO es adecuado para…',op:['Startups de alto crecimiento','Negocios de bajo crecimiento','Empresas que buscan escalar','Proyectos innovadores'],correcta:1,exp:'Busca retornos altos; no calza con negocios de bajo crecimiento.'},
+ {q:'Pedir financiamiento a familia/socios…',op:['No tiene riesgos','Es flexible pero arriesga relaciones','Siempre es lo mejor','Requiere garantías formales'],correcta:1,exp:'Es flexible y rápido, pero puede tensionar relaciones si falla el negocio.'},
+ {q:'Antes de elegir una fuente conviene…',op:['Firmar rápido','Simular el ROI y evaluar costo/control','Pedir el máximo','No comparar'],correcta:1,exp:'Simular el retorno y comparar costo, plazo y control evita malas decisiones.'},
+ {q:'Para validar una idea con poco riesgo financiero conviene…',op:['Capital de riesgo','Crowdfunding o fondos públicos','Hipotecar tu casa','Leasing'],correcta:1,exp:'Crowdfunding y fondos permiten validar sin gran endeudamiento.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

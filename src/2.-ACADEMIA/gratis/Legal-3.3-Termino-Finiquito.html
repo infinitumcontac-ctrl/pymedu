@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L3.3 — Término de contrato y finiquito</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 3 · Módulo L3.3</span>
+    <h1>Término de contrato y finiquito</h1>
+    <p>Terminar bien una relación laboral evita demandas costosas. Conoce las causales, cuándo hay indemnización y cómo se hace un finiquito válido.</p>
+    <div class="meta"><span>⏱️ 45 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L3.1 Contrato de trabajo</a><a>L3.2 Sueldo y cotizaciones</a><a class="actual">L3.3 Término y finiquito</a><a>L3.4 Honorarios vs dependiente</a><a>L3.5 Prevención y seguridad</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. Los despidos y finiquitos tienen reglas estrictas; ante un caso real, asesórate con un abogado laboral o la DT.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Reconocer las <strong>causales</strong> de término (art. 159, 160 y 161).</li>
+      <li>Identificar cuándo corresponde <strong>indemnización</strong>.</li>
+      <li>Estimar la <strong>indemnización por años de servicio</strong>.</li>
+      <li>Saber qué hace válido un <strong>finiquito</strong>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈7–9 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Un despido mal hecho puede terminar en demanda y pago doble. Hacerlo bien te protege."</p>
+      <p><strong>1:00 Causales.</strong> Art. 159 (mutuo acuerdo, renuncia, plazo), 160 (faltas graves, sin indemnización) y 161 (necesidades de la empresa, con indemnización).</p>
+      <p><strong>3:00 Indemnización.</strong> Aviso (un mes) + años de servicio (un mes por año, tope 11). Mostrar el simulador.</p>
+      <p><strong>4:30 Finiquito.</strong> Por escrito, ratificado ante ministro de fe; pago de lo adeudado. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Las causales de término</h2>
+    <ul class="limpia">
+      <li><strong>Art. 159 — sin culpa de nadie:</strong> mutuo acuerdo, renuncia (con aviso), vencimiento del plazo, conclusión de la obra. En general <strong>sin indemnización</strong> por años de servicio.</li>
+      <li><strong>Art. 160 — falta grave del trabajador:</strong> conductas indebidas graves (probadas). <strong>Sin indemnización</strong>, pero exige causa real y bien fundada.</li>
+      <li><strong>Art. 161 — necesidades de la empresa / desahucio:</strong> razones de la empresa. <strong>Con indemnización</strong> por años de servicio y aviso (o mes en su reemplazo).</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>La indemnización por años de servicio</h2>
+    <p>Cuando se despide por el <strong>art. 161</strong>, corresponde: <strong>un mes de la última remuneración por cada año trabajado</strong> (y fracción superior a seis meses), con un <strong>tope de 11 años</strong> (para contratos desde 1981), más la <strong>indemnización sustitutiva del aviso previo</strong> (un mes) si no se avisó con 30 días. Despedir invocando una causal que no corresponde puede llevar a un <strong>recargo</strong> y a pagar más.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>El finiquito</h2>
+    <p>El <strong>finiquito</strong> es el documento que pone fin a la relación y detalla los pagos finales (remuneraciones pendientes, vacaciones proporcionales, indemnizaciones si corresponden). Para tener pleno valor debe constar <strong>por escrito</strong> y ser <strong>ratificado ante un ministro de fe</strong> (notario, inspector del trabajo o el sindicato). Págalo y formalízalo correctamente: un finiquito mal hecho deja la puerta abierta a reclamos.</p>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>Estima la indemnización (art. 161)</h2>
+    <div class="tool">
+      <h3><span class="icono">🧮</span> Indemnización por años de servicio</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="i-sueldo">Última remuneración mensual (CLP)</label><input type="number" id="i-sueldo" value="700000" step="10000"></div>
+        <div class="campo"><label for="i-anios">Años trabajados</label><input type="number" id="i-anios" value="5" min="0" step="1"></div>
+        <div class="campo"><label for="i-aviso">¿Se avisó con 30 días?</label><select id="i-aviso"><option value="no">No</option><option value="si">Sí</option></select></div>
+      </div>
+      <button class="btn" onclick="indemnizacion()">Calcular</button>
+      <div class="resultado" id="i-res" style="display:none"></div>
+      <p style="margin:10px 0 0"><small>Estimación referencial (tope 11 años; existen topes de remuneración en UF). Verifica el caso con un profesional.</small></p>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Art. 159</dt><dd>Causales sin culpa (mutuo acuerdo, renuncia, plazo, obra).</dd>
+      <dt>Art. 160</dt><dd>Falta grave del trabajador; sin indemnización pero requiere prueba.</dd>
+      <dt>Art. 161</dt><dd>Necesidades de la empresa; con indemnización por años de servicio.</dd>
+      <dt>Indemnización por años de servicio</dt><dd>Un mes por año trabajado, tope 11 años.</dd>
+      <dt>Aviso previo</dt><dd>Aviso de 30 días; si no se da, se paga un mes (sustitutiva).</dd>
+      <dt>Finiquito</dt><dd>Documento que cierra la relación y detalla los pagos finales.</dd>
+      <dt>Ministro de fe</dt><dd>Notario, inspector del trabajo o sindicato que ratifica el finiquito.</dd>
+      <dt>Despido injustificado</dt><dd>Sin causal válida; puede implicar recargo.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El cierre de una sucursal</h2>
+    <p>Por necesidades de la empresa (art. 161), se despide a un trabajador con 5 años y $700.000 de sueldo, sin aviso de 30 días. Corresponde: 5 meses por años de servicio + 1 mes sustitutivo del aviso ≈ 6 sueldos, más vacaciones proporcionales. Se hace un finiquito por escrito y se ratifica ante notario. Usa el simulador.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Invocar una causal que no corresponde</strong> (riesgo de despido injustificado y recargo).</li>
+      <li><strong>No avisar con 30 días</strong> sin pagar el mes sustitutivo.</li>
+      <li><strong>Finiquito sin ratificar</strong> ante ministro de fe.</li>
+      <li><strong>No pagar vacaciones proporcionales</strong> ni cotizaciones al día.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo — Término de contrato</a>
+    <a href="https://www.bcn.cl" target="_blank" rel="noopener">BCN — Código del Trabajo</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Las causales del art. 159 y 160 no dan indemnización; el art. 161 sí (un mes por año, tope 11, más aviso). El finiquito debe ser escrito, pagado y ratificado ante ministro de fe. Despedir bien, con la causal correcta, evita demandas y recargos.</p>
+    <p><strong>Siguiente módulo →</strong> L3.4 Honorarios vs. dependientes.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial · Reglas y topes pueden variar (2026).</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+
+function indemnizacion(){const s=+document.getElementById('i-sueldo').value;let an=+document.getElementById('i-anios').value;const aviso=document.getElementById('i-aviso').value;let anComputables=Math.min(an,11);const ind=s*anComputables;const sust=(aviso==='no')?s:0;const total=ind+sust;const r=document.getElementById('i-res');r.style.display='block';r.innerHTML='Indemnización por años de servicio ('+anComputables+' año(s), tope 11): <strong>'+fmtCLP(ind)+'</strong><br>'+(aviso==='no'?'Mes sustitutivo del aviso: <strong>'+fmtCLP(sust)+'</strong>':'Aviso dado con 30 días: sin mes sustitutivo')+'<div class="cifra">Total estimado ≈ '+fmtCLP(total)+'</div><small>No incluye vacaciones proporcionales ni topes de remuneración en UF. Es referencial.</small>';}
+
+const preguntas=[
+ {q:'El art. 161 (necesidades de la empresa) implica…',op:['Sin indemnización','Indemnización por años de servicio','Cárcel','Nada'],correcta:1,exp:'Da derecho a indemnización por años de servicio y aviso.'},
+ {q:'El art. 160 (falta grave) implica…',op:['Indemnización alta','Sin indemnización, pero requiere causa probada','Mutuo acuerdo','Renuncia'],correcta:1,exp:'No hay indemnización, pero exige una causal real y fundada.'},
+ {q:'La indemnización por años de servicio es…',op:['Un mes por año, tope 11','Dos meses por año','Un día por año','Sin tope'],correcta:0,exp:'Un mes de la última remuneración por año, con tope de 11 años.'},
+ {q:'Si no se avisa con 30 días…',op:['No pasa nada','Se paga un mes sustitutivo del aviso','Se duplica el sueldo','Se va preso'],correcta:1,exp:'Corresponde la indemnización sustitutiva del aviso (un mes).'},
+ {q:'El finiquito debe…',op:['Ser verbal','Constar por escrito y ratificarse ante ministro de fe','Ir al SII','No pagarse'],correcta:1,exp:'Escrito y ratificado para tener pleno valor.'},
+ {q:'Un "ministro de fe" para el finiquito puede ser…',op:['El SERNAC','Un notario o inspector del trabajo','El Banco Central','La AFP'],correcta:1,exp:'Notario, inspector del trabajo o el sindicato.'},
+ {q:'Invocar una causal que no corresponde puede generar…',op:['Un premio','Despido injustificado y recargo','Menos pago','Nada'],correcta:1,exp:'El tribunal puede declarar el despido injustificado con recargo.'},
+ {q:'La renuncia del trabajador es causal del…',op:['Art. 161','Art. 159','Art. 160','Art. 200'],correcta:1,exp:'La renuncia se encuadra en el art. 159 (sin indemnización por años).'},
+ {q:'Al terminar, además de indemnizaciones, se pagan…',op:['Solo el sueldo','Vacaciones proporcionales y lo adeudado','Nada','El IVA'],correcta:1,exp:'El finiquito incluye vacaciones proporcionales y remuneraciones pendientes.'},
+ {q:'Un finiquito mal hecho…',op:['Es más barato','Deja la puerta abierta a reclamos','Evita pagos','No importa'],correcta:1,exp:'Sin ratificación o pago correcto, el trabajador puede reclamar.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

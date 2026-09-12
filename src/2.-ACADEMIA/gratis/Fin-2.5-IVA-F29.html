@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 2.5 — IVA y Formulario 29</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 2 · Módulo 2.5</span>
+    <h1>IVA y Formulario 29</h1>
+    <p>El IVA es el impuesto que más errores (y multas) genera en las pymes. Aquí entiendes débito, crédito, cómo se calcula el saldo a pagar y cómo declarar el F29 sin sustos.</p>
+    <div class="meta"><span>⏱️ 40 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>2.1 Flujo de caja</a><a>2.2 Costos</a><a>2.3 Herramientas digitales</a><a>2.4 Formalización</a><a class="actual">2.5 IVA/F29</a><a>2.6 Financiamiento</a><a>2.7 Precios</a><a>2.8 Personal vs negocio</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar qué es el <strong>IVA</strong> y quién debe declararlo.</li>
+      <li>Diferenciar <strong>IVA débito</strong> (ventas) de <strong>IVA crédito</strong> (compras).</li>
+      <li>Calcular el <strong>saldo a pagar</strong> del mes.</li>
+      <li>Conocer plazos del <strong>F29</strong> y el costo de declarar fuera de plazo.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "El IVA no es tu plata: lo recaudas para el Estado. Entenderlo evita multas y problemas de caja."</p>
+      <p><strong>1:00 Qué es.</strong> Impuesto al consumo (19%) que paga el consumidor final; tú lo recaudas y lo declaras.</p>
+      <p><strong>2:00 Débito vs crédito.</strong> Débito = IVA de tus ventas; crédito = IVA de tus compras. Pagas la diferencia. Mostrar la calculadora.</p>
+      <p><strong>3:30 F29.</strong> Se declara mensual; incluso sin movimiento. Plazos y multas por atraso.</p>
+      <p><strong>5:00 Consejos.</strong> Libro de compras/ventas al día, emitir facturas, software homologado. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>¿Qué es el IVA?</h2>
+    <p>El <strong>Impuesto al Valor Agregado (IVA)</strong> grava el consumo con una tasa del <strong>19%</strong> y lo paga el consumidor final. El negocio actúa como recaudador: cobra el IVA en sus ventas y lo entrega al Estado, descontando el IVA que pagó en sus compras. Por eso es clave entender que <strong>ese 19% no es tu utilidad</strong>: lo estás recaudando.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>IVA débito, IVA crédito y saldo</h2>
+    <ul class="limpia">
+      <li><strong>IVA débito:</strong> el IVA que cobraste en tus <strong>ventas</strong>.</li>
+      <li><strong>IVA crédito:</strong> el IVA que pagaste en tus <strong>compras</strong> (con factura).</li>
+      <li><strong>Saldo a pagar = IVA débito − IVA crédito.</strong> Si el débito es mayor, pagas la diferencia; si el crédito es mayor, queda un remanente a favor para el mes siguiente.</li>
+    </ul>
+    <div class="recuadro"><h4>💡 Por eso conviene pedir factura</h4><p>Cada compra con factura genera IVA crédito que reduce lo que pagas. Comprar "sin factura" te hace perder ese crédito.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>El Formulario 29 (F29)</h2>
+    <p>El <strong>F29</strong> es la declaración <strong>mensual</strong> de IVA (y otros impuestos como PPM y retenciones). Se presenta <strong>aunque no tengas movimiento</strong> (declaración "sin movimiento"). Los plazos típicos: hasta el <strong>día 12</strong> del mes siguiente, extendido al <strong>día 20</strong> para emisores de factura electrónica que pagan por internet.</p>
+    <div class="recuadro aviso"><h4>⚠️ Costo de atrasarse</h4><p>Declarar fuera de plazo genera <strong>multa</strong> (un porcentaje del impuesto adeudado que aumenta con los meses de atraso, con un tope) más <strong>intereses de mora</strong>. Verifica los porcentajes vigentes en sii.cl: cambian y conviene confirmarlos.</p></div>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Calculadora</span>
+    <h2>Calcula tu IVA del mes</h2>
+    <div class="tool">
+      <h3><span class="icono">🧾</span> IVA débito, crédito y saldo</h3>
+      <div class="fila">
+        <div class="campo"><label for="iva-ventas">Ventas netas del mes, sin IVA (CLP)</label><input type="number" id="iva-ventas" value="5000000" step="100000"></div>
+        <div class="campo"><label for="iva-compras">Compras netas con factura, sin IVA (CLP)</label><input type="number" id="iva-compras" value="2500000" step="100000"></div>
+      </div>
+      <button class="btn" onclick="calcIVA()">Calcular</button>
+      <div class="resultado" id="iva-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Simulador</span>
+    <h2>¿Cuánto cuesta declarar tarde?</h2>
+    <div class="tool">
+      <h3><span class="icono">⏰</span> Multa e interés por atraso (estimación)</h3>
+      <div class="fila">
+        <div class="campo"><label for="mu-impuesto">IVA a pagar (CLP)</label><input type="number" id="mu-impuesto" value="475000" step="10000"></div>
+        <div class="campo"><label for="mu-meses">Meses de atraso</label><input type="number" id="mu-meses" value="2" min="1" max="12"></div>
+      </div>
+      <button class="btn" onclick="calcMulta()">Estimar</button>
+      <div class="resultado" id="mu-res" style="display:none"></div>
+      <p style="margin:10px 0 0"><small>Estimación referencial (multa 10% + 2% por mes adicional, tope 30%; interés mora ~1,5% mensual). Confirma los valores vigentes en el SII.</small></p>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>IVA</dt><dd>Impuesto al Valor Agregado (19%) que paga el consumidor final.</dd>
+      <dt>IVA débito</dt><dd>IVA cobrado en tus ventas.</dd>
+      <dt>IVA crédito</dt><dd>IVA pagado en tus compras con factura.</dd>
+      <dt>Saldo a pagar</dt><dd>IVA débito menos IVA crédito.</dd>
+      <dt>Remanente</dt><dd>Crédito a favor cuando el IVA crédito supera al débito.</dd>
+      <dt>F29</dt><dd>Formulario mensual de declaración de IVA y otros impuestos.</dd>
+      <dt>Sin movimiento</dt><dd>Declaración obligatoria aun cuando no hubo operaciones.</dd>
+      <dt>Libro de compras y ventas</dt><dd>Registro de facturas emitidas y recibidas que respalda el F29.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El mes de la distribuidora</h2>
+    <p>Una distribuidora vende $5.000.000 netos (IVA débito $950.000) y compra $2.500.000 netos con factura (IVA crédito $475.000). Su saldo a pagar es $475.000. Si se atrasa dos meses, la multa e intereses elevan bastante el monto. Usa la calculadora 1 con estas cifras y el simulador 2 para ver el costo del atraso.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Gastar el IVA recaudado.</strong> No es tuyo; reserva ese dinero.</li>
+      <li><strong>Comprar sin factura</strong> y perder IVA crédito.</li>
+      <li><strong>No declarar "sin movimiento".</strong> Igual es obligatorio.</li>
+      <li><strong>Atrasarte:</strong> multa + intereses encarecen todo.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sii.cl/destacados/iva/" target="_blank" rel="noopener">SII — IVA y Formulario 29</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Declaraciones mensuales</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>El IVA es plata que recaudas, no tu utilidad. Pagas la diferencia entre el IVA de tus ventas (débito) y el de tus compras (crédito). El F29 se declara cada mes —incluso sin movimiento— y atrasarse cuesta caro. Pide factura siempre: cada una es IVA crédito a tu favor.</p>
+    <p><strong>Siguiente módulo →</strong> 2.6 Deuda saludable y financiamiento.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Verifica plazos y multas vigentes en el SII.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+const TASA_IVA=0.19;
+
+function calcIVA(){const v=+document.getElementById('iva-ventas').value,c=+document.getElementById('iva-compras').value;const deb=v*TASA_IVA,cred=c*TASA_IVA,saldo=deb-cred;const r=document.getElementById('iva-res');r.style.display='block';let txt;if(saldo>=0){txt='<div class="cifra">Pagas '+fmtCLP(saldo)+'</div>IVA débito (ventas): <strong>'+fmtCLP(deb)+'</strong> − IVA crédito (compras): <strong>'+fmtCLP(cred)+'</strong>.';}else{txt='<div class="cifra" style="color:var(--color-ok)">Remanente a favor '+fmtCLP(-saldo)+'</div>Tu IVA crédito superó al débito: ese remanente se arrastra al mes siguiente.';}r.innerHTML=txt;}
+
+function calcMulta(){const imp=+document.getElementById('mu-impuesto').value,m=+document.getElementById('mu-meses').value;let pctMulta=10+(m-1)*2;if(pctMulta>30)pctMulta=30;const multa=imp*pctMulta/100;const interes=imp*0.015*m;const total=imp+multa+interes;const r=document.getElementById('mu-res');r.style.display='block';r.innerHTML='Declarando con <strong>'+m+'</strong> mes(es) de atraso:<div class="cifra" style="color:var(--color-error)">Total ≈ '+fmtCLP(total)+'</div>Impuesto: '+fmtCLP(imp)+' + multa ('+pctMulta+'%): '+fmtCLP(multa)+' + interés mora: '+fmtCLP(interes)+'.<br><small>Estimación referencial; confirma los porcentajes vigentes en el SII.</small>';}
+
+const preguntas=[
+ {q:'El IVA en Chile tiene una tasa de…',op:['10%','19%','25%','5%'],correcta:1,exp:'La tasa general del IVA es 19%.'},
+ {q:'¿Quién paga finalmente el IVA?',op:['El Estado','El consumidor final','El banco','El proveedor'],correcta:1,exp:'Lo paga el consumidor final; el negocio solo lo recauda.'},
+ {q:'El IVA débito corresponde al IVA de tus…',op:['Compras','Ventas','Sueldos','Ahorros'],correcta:1,exp:'Es el IVA que cobras en tus ventas.'},
+ {q:'El IVA crédito corresponde al IVA de tus…',op:['Ventas','Compras con factura','Multas','Retiros'],correcta:1,exp:'Es el IVA que pagaste en tus compras con factura.'},
+ {q:'El saldo de IVA a pagar es…',op:['Débito + crédito','Débito − crédito','Solo el débito','Solo el crédito'],correcta:1,exp:'Pagas la diferencia: IVA débito menos IVA crédito.'},
+ {q:'Si el IVA crédito supera al débito…',op:['Pagas el doble','Queda un remanente a favor','No declaras','Te multan'],correcta:1,exp:'Se genera un remanente que se arrastra al mes siguiente.'},
+ {q:'El F29 se declara…',op:['Una vez al año','Cada mes','Solo si hay ventas','Cada 5 años'],correcta:1,exp:'Es una declaración mensual, incluso "sin movimiento".'},
+ {q:'Comprar con factura te conviene porque…',op:['Pagas más IVA','Generas IVA crédito que reduce lo que pagas','Evitas el SII','Subes el precio'],correcta:1,exp:'Cada factura de compra es IVA crédito a tu favor.'},
+ {q:'Declarar el F29 fuera de plazo genera…',op:['Un premio','Multa e intereses de mora','Nada','Más crédito'],correcta:1,exp:'Hay multa (porcentaje del impuesto) más intereses por mora.'},
+ {q:'El IVA que recaudas en tus ventas…',op:['Es tu utilidad','No es tuyo: lo entregas al Estado','Puedes gastarlo','Es un ahorro'],correcta:1,exp:'Lo recaudas para el Estado; conviene reservarlo y no gastarlo.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

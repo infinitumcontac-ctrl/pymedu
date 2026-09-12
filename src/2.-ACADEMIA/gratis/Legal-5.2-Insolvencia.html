@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L5.2 — Insolvencia y Reemprendimiento</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 5 · Módulo L5.2</span>
+    <h1>Ley de Insolvencia y Reemprendimiento</h1>
+    <p>Cuando las deudas superan lo manejable, no estás solo ni todo está perdido. Esta ley ofrece renegociar o liquidar de forma ordenada y darte una segunda oportunidad.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L5.1 Cobranza</a><a class="actual">L5.2 Insolvencia</a><a>L5.3 Conflictos de socios</a><a>L5.4 Cerrar bien</a><a>L5.5 Certificación</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. Estos procesos requieren asesoría; acude a la Superintendencia de Insolvencia (SUPERIR) y a un profesional.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Entender qué es la <strong>Ley de Insolvencia y Reemprendimiento</strong>.</li>
+      <li>Diferenciar <strong>renegociación</strong> de <strong>liquidación</strong>.</li>
+      <li>Conocer la idea de <strong>"segunda oportunidad"</strong>.</li>
+      <li>Saber a dónde acudir (SUPERIR).</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Quebrar no es el fin del mundo: la ley te da herramientas para renegociar o partir de nuevo, sin perderlo todo."</p>
+      <p><strong>1:00 La ley.</strong> Procedimientos ordenados para personas y empresas sobreendeudadas.</p>
+      <p><strong>2:00 Renegociación vs liquidación.</strong> Reorganizar/pagar ordenado vs liquidar bienes y partir limpio. Usa la actividad.</p>
+      <p><strong>3:30 Segunda oportunidad.</strong> Volver a emprender. SUPERIR. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Qué es y para qué sirve</h2>
+    <p>La <strong>Ley de Insolvencia y Reemprendimiento</strong> establece procedimientos ordenados para <strong>personas y empresas</strong> que no pueden pagar sus deudas. Su filosofía es doble: dar a los acreedores un mecanismo justo de cobro, y dar al deudor una <strong>salida digna</strong> y la posibilidad de <strong>reemprender</strong>. La supervisa la <strong>Superintendencia de Insolvencia y Reemprendimiento (SUPERIR)</strong>.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Renegociación vs. liquidación</h2>
+    <ul class="limpia">
+      <li><strong>Renegociación / reorganización:</strong> se acuerda con los acreedores un nuevo plan de pago (plazos, montos), manteniendo en lo posible la actividad. Para empresas se llama reorganización; para personas, renegociación.</li>
+      <li><strong>Liquidación:</strong> cuando no es viable seguir, se liquidan los bienes para pagar a los acreedores en orden, y el deudor obtiene la <strong>extinción</strong> de los saldos no cubiertos: parte "limpio".</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Segunda oportunidad</h2>
+    <p>La gran idea es que un fracaso financiero <strong>no condene de por vida</strong>. Tras el procedimiento, el deudor puede <strong>volver a emprender</strong> sin arrastrar deudas impagables. No es "no pagar": es un proceso reglado, con costos y consecuencias, pero que evita el sobreendeudamiento eterno. Busca asesoría antes de iniciarlo.</p>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Clasifica</span>
+    <h2>¿Renegociación o liquidación?</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="reneg">El negocio es viable; necesito reordenar pagos</div>
+          <div class="ficha" draggable="true" data-id="liq">El negocio ya no es viable; necesito partir limpio</div>
+          <div class="ficha" draggable="true" data-id="reneg2">Acordar un nuevo plan con los acreedores</div>
+          <div class="ficha" draggable="true" data-id="liq2">Liquidar bienes y extinguir saldos impagos</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="reneg"><div class="titulo">RENEGOCIACIÓN / reorganización</div></div>
+          <div class="zona" data-acepta="liq"><div class="titulo">LIQUIDACIÓN</div></div>
+          <div class="zona" data-acepta="reneg2"><div class="titulo">RENEGOCIACIÓN / reorganización</div></div>
+          <div class="zona" data-acepta="liq2"><div class="titulo">LIQUIDACIÓN</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Insolvencia</dt><dd>Imposibilidad de pagar las deudas.</dd>
+      <dt>Renegociación</dt><dd>Acuerdo de un nuevo plan de pago (personas).</dd>
+      <dt>Reorganización</dt><dd>Equivalente para empresas viables.</dd>
+      <dt>Liquidación</dt><dd>Venta ordenada de bienes para pagar y extinguir saldos.</dd>
+      <dt>Segunda oportunidad</dt><dd>Posibilidad de reemprender sin arrastrar deudas impagables.</dd>
+      <dt>SUPERIR</dt><dd>Superintendencia de Insolvencia y Reemprendimiento.</dd>
+      <dt>Acreedor</dt><dd>A quien se le debe.</dd>
+      <dt>Veedor / liquidador</dt><dd>Profesional que apoya o conduce el procedimiento.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El reemprendimiento de Jorge</h2>
+    <p>El taller de Jorge ya no era viable y las deudas lo superaban. En vez de esconderse, inicia un procedimiento de <strong>liquidación</strong> con apoyo de la SUPERIR: se liquidan los bienes del negocio, se pagan los acreedores en orden y se extinguen los saldos. Meses después, Jorge vuelve a emprender sin la mochila de las deudas viejas. Practica con la actividad.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Esconderse</strong> de las deudas en vez de buscar el procedimiento.</li>
+      <li><strong>Pedir más créditos</strong> para tapar otros (bola de nieve).</li>
+      <li><strong>Creer que es "gratis no pagar":</strong> tiene costos y consecuencias.</li>
+      <li><strong>No asesorarte</strong> antes de iniciar.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.superir.gob.cl" target="_blank" rel="noopener">SUPERIR — Insolvencia y Reemprendimiento</a>
+    <a href="https://www.bcn.cl" target="_blank" rel="noopener">BCN — Ley 20.720</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>La Ley de Insolvencia ofrece renegociar/reorganizar (si el negocio es viable) o liquidar (si no lo es) de forma ordenada, con una segunda oportunidad para reemprender. No es no pagar: es un proceso reglado. Asesórate y acude a la SUPERIR.</p>
+    <p><strong>Siguiente módulo →</strong> L5.3 Conflictos con socios.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial, no asesoría jurídica (2026).</footer>
+</article>
+
+<script>
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'La Ley de Insolvencia y Reemprendimiento sirve para…',op:['Subir impuestos','Ordenar deudas de personas y empresas','Registrar marcas','Contratar'],correcta:1,exp:'Da procedimientos para deudores que no pueden pagar.'},
+ {q:'La renegociación/reorganización busca…',op:['Cerrar siempre','Acordar un nuevo plan de pago manteniendo la actividad','Liquidar todo','Esconder la deuda'],correcta:1,exp:'Reordena los pagos cuando el negocio es viable.'},
+ {q:'La liquidación implica…',op:['Seguir igual','Vender bienes en orden y extinguir saldos','No pagar nada','Más créditos'],correcta:1,exp:'Se liquidan bienes y se extinguen los saldos no cubiertos.'},
+ {q:'La "segunda oportunidad" permite…',op:['No tener consecuencias','Volver a emprender sin deudas impagables','Eliminar impuestos','Evitar al SII'],correcta:1,exp:'Evita el sobreendeudamiento eterno y permite reemprender.'},
+ {q:'El organismo que supervisa es…',op:['El SII','La SUPERIR','El SERNAC','INAPI'],correcta:1,exp:'La Superintendencia de Insolvencia y Reemprendimiento.'},
+ {q:'¿Es "gratis no pagar" con esta ley?',op:['Sí','No: tiene costos y consecuencias','Solo para empresas','Solo para personas'],correcta:1,exp:'Es un proceso reglado, con efectos; no es simplemente no pagar.'},
+ {q:'Si el negocio es viable, conviene…',op:['Liquidar','Renegociar/reorganizar','Esconderse','Pedir más crédito'],correcta:1,exp:'La reorganización mantiene la actividad con un nuevo plan.'},
+ {q:'Si el negocio NO es viable, corresponde…',op:['Seguir endeudándose','Liquidación','Nada','Cambiar de marca'],correcta:1,exp:'La liquidación ordena el cierre y libera al deudor.'},
+ {q:'Antes de iniciar el procedimiento conviene…',op:['No asesorarse','Buscar asesoría profesional','Pedir un crédito','Cerrar el RUT'],correcta:1,exp:'Es un proceso técnico; la asesoría es clave.'},
+ {q:'Esconderse de las deudas, en vez de usar la ley…',op:['Es lo mejor','Agrava la situación','No tiene efecto','Las elimina'],correcta:1,exp:'Postergar y esconderse empeora el sobreendeudamiento.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

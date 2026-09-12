@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 2.8 — Finanzas personales vs del negocio</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 2 · Módulo 2.8</span>
+    <h1>Separa tus finanzas personales de las del negocio</h1>
+    <p>Mezclar la plata personal con la del negocio es uno de los errores más caros y comunes. Aquí aprendes a separarlas y a pagarte un sueldo sin descapitalizar tu empresa.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>2.1 Flujo de caja</a><a>2.2 Costos</a><a>2.3 Herramientas digitales</a><a>2.4 Formalización</a><a>2.5 IVA/F29</a><a>2.6 Financiamiento</a><a>2.7 Precios</a><a class="actual">2.8 Personal vs negocio</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar por qué mezclar finanzas personales y del negocio es riesgoso.</li>
+      <li>Asignarte un <strong>sueldo del emprendedor</strong> razonable.</li>
+      <li>Diferenciar <strong>sueldo</strong> de <strong>retiro de utilidades</strong>.</li>
+      <li>Implementar prácticas de separación (cuentas, registros).</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈5–7 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Si sacas plata de la caja para el supermercado, no sabes si tu negocio gana o pierde. Separar es ver claro."</p>
+      <p><strong>1:00 Por qué separar.</strong> Claridad, decisiones, crédito, impuestos, protección.</p>
+      <p><strong>2:00 Sueldo del emprendedor.</strong> Asígnate un monto fijo y razonable; no vacíes la caja. Mostrar el simulador.</p>
+      <p><strong>3:00 Sueldo vs retiro.</strong> El sueldo es un gasto fijo; el retiro reparte utilidades.</p>
+      <p><strong>4:00 Cómo hacerlo.</strong> Cuenta del negocio aparte, transferencia mensual, registro. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Por qué separar es no negociable</h2>
+    <p>Cuando la plata del negocio y la personal se mezclan, pierdes visibilidad: no sabes si el negocio realmente gana, no puedes presentar números limpios para un crédito o fondo, y complicas tu situación tributaria. Separar te da <strong>claridad para decidir</strong>, <strong>credibilidad ante bancos</strong> y <strong>protección</strong> (sobre todo si eres persona jurídica).</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>El sueldo del emprendedor</h2>
+    <p>Asígnate un <strong>sueldo fijo y razonable</strong>, como a cualquier trabajador. Eso convierte tu costo de vida en un <strong>gasto fijo predecible</strong> del negocio y evita que vacíes la caja según el antojo del mes. El sueldo debe ser sostenible: que el negocio pueda pagarlo todos los meses sin quedarse sin capital de trabajo.</p>
+    <div class="recuadro"><h4>💡 Sueldo vs retiro</h4><p>El <strong>sueldo</strong> es una remuneración mensual (gasto fijo). El <strong>retiro de utilidades</strong> es repartir las ganancias acumuladas, y solo debería hacerse cuando el negocio tiene utilidades reales y caja suficiente.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Cómo separar en la práctica</h2>
+    <ol class="limpia">
+      <li><strong>Cuenta bancaria del negocio</strong> distinta de la personal.</li>
+      <li><strong>Transfiere tu sueldo</strong> una vez al mes desde la cuenta del negocio a la tuya.</li>
+      <li><strong>Toda venta entra</strong> a la cuenta del negocio; todo gasto del negocio sale de ahí.</li>
+      <li><strong>Registra</strong> ingresos y egresos del negocio aparte (módulo 2.3).</li>
+      <li><strong>No pagues</strong> el supermercado o cuentas personales con la caja del negocio.</li>
+    </ol>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>¿Cuánto sueldo puede pagarte tu negocio?</h2>
+    <div class="tool">
+      <h3><span class="icono">👤</span> Sueldo sostenible del emprendedor</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="s-ingresos">Ingresos del negocio al mes (CLP)</label><input type="number" id="s-ingresos" value="4000000" step="100000"></div>
+        <div class="campo"><label for="s-costos">Costos y gastos del negocio (CLP)</label><input type="number" id="s-costos" value="2800000" step="100000"></div>
+        <div class="campo"><label for="s-reserva">% que reservas para reinvertir/colchón</label><input type="number" id="s-reserva" value="30" step="5"></div>
+      </div>
+      <button class="btn" onclick="sueldo()">Calcular</button>
+      <div class="resultado" id="s-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Sueldo del emprendedor</dt><dd>Remuneración fija mensual que te asignas como dueño-trabajador.</dd>
+      <dt>Retiro de utilidades</dt><dd>Reparto de ganancias acumuladas a los dueños.</dd>
+      <dt>Capital de trabajo</dt><dd>Recursos para operar el día a día.</dd>
+      <dt>Cuenta del negocio</dt><dd>Cuenta bancaria separada exclusiva del negocio.</dd>
+      <dt>Excedente</dt><dd>Lo que queda tras pagar costos, sueldo y reservas.</dd>
+      <dt>Descapitalizar</dt><dd>Sacar tanta plata que el negocio se queda sin recursos para operar.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El kiosco de la familia Pérez</h2>
+    <p>La familia sacaba plata de la caja "según necesitaban" y nunca sabían si ganaban. Abren una cuenta del negocio, se asignan un sueldo fijo de la dueña y reservan 30% para reponer stock. Recién entonces ven que el kiosco sí era rentable, pero se estaba descapitalizando por los retiros desordenados. Usa el simulador con sus cifras.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Pagar gastos personales</strong> con la caja del negocio.</li>
+      <li><strong>No asignarte sueldo</strong> y sacar plata al azar.</li>
+      <li><strong>Confundir sueldo con retiro</strong> de utilidades.</li>
+      <li><strong>Descapitalizar:</strong> retirar más de lo que el negocio puede.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">Sercotec — Gestión financiera</a>
+    <a href="https://www.cmfeduca.cl" target="_blank" rel="noopener">CMF Educa — Finanzas del emprendedor</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre · Fin del Nivel 2</span>
+    <h2>Síntesis</h2>
+    <p>Separar las finanzas es ver con claridad: cuenta del negocio aparte, un sueldo fijo y sostenible para ti, y retiros solo cuando hay utilidades y caja. Así sabes si tu negocio realmente gana y evitas descapitalizarlo.</p>
+    <p><strong>¡Completaste el Nivel 2!</strong> Siguiente nivel → <strong>3.1 Contabilidad básica para decisiones</strong>.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function sueldo(){const ing=+document.getElementById('s-ingresos').value,cos=+document.getElementById('s-costos').value,res=+document.getElementById('s-reserva').value/100;const excedente=ing-cos;const reserva=Math.max(excedente,0)*res;const disponible=excedente-reserva;const r=document.getElementById('s-res');r.style.display='block';if(excedente<=0){r.innerHTML='⚠️ Tus costos igualan o superan tus ingresos: hoy el negocio <strong>no genera excedente</strong> para un sueldo. Primero ajusta precios o costos (módulos 2.2 y 2.7).';return;}r.innerHTML='Excedente del negocio: <strong>'+fmtCLP(excedente)+'</strong><br>Reserva para reinvertir/colchón ('+fmtNum(res*100,0)+'%): <strong>'+fmtCLP(reserva)+'</strong><div class="cifra">Sueldo sostenible: '+fmtCLP(disponible)+'</div><small>Asígnate un sueldo fijo en torno a este monto y transfiérelo una vez al mes. No retires más de lo que el negocio puede sostener.</small>';}
+
+const preguntas=[
+ {q:'Mezclar finanzas personales y del negocio provoca…',op:['Más claridad','Que no sepas si el negocio gana o pierde','Mejor crédito','Menos impuestos'],correcta:1,exp:'Sin separar, pierdes visibilidad real del resultado del negocio.'},
+ {q:'El sueldo del emprendedor es…',op:['Un reparto de utilidades','Una remuneración fija mensual','Un crédito','Un impuesto'],correcta:1,exp:'Es una remuneración fija que te asignas como dueño-trabajador.'},
+ {q:'El retiro de utilidades es…',op:['Un gasto fijo','Repartir las ganancias acumuladas','Lo mismo que el sueldo','Un préstamo'],correcta:1,exp:'Reparte ganancias y solo conviene cuando hay utilidades y caja.'},
+ {q:'"Descapitalizar" el negocio significa…',op:['Reinvertir','Sacar tanta plata que se queda sin recursos','Pagar impuestos','Ahorrar'],correcta:1,exp:'Es retirar más de lo que el negocio puede sostener.'},
+ {q:'Una buena práctica es…',op:['Una sola cuenta para todo','Tener una cuenta bancaria del negocio aparte','Pagar el super con la caja','No registrar nada'],correcta:1,exp:'Cuenta del negocio separada de la personal.'},
+ {q:'El sueldo del emprendedor, dentro del negocio, es un…',op:['Ingreso','Gasto fijo predecible','Impuesto','Activo'],correcta:1,exp:'Convierte tu costo de vida en un gasto fijo del negocio.'},
+ {q:'Conviene transferirte el sueldo…',op:['Cuando se te antoje','Una vez al mes, monto fijo','Diario','Nunca'],correcta:1,exp:'Una transferencia mensual fija ordena y evita vaciar la caja.'},
+ {q:'Separar finanzas ayuda a obtener crédito porque…',op:['Oculta información','Permite presentar números limpios','Sube el IVA','Evita al banco'],correcta:1,exp:'Los bancos valoran estados financieros claros y separados.'},
+ {q:'Pagar gastos personales con la caja del negocio…',op:['Es recomendable','Distorsiona los números del negocio','Mejora el margen','No afecta'],correcta:1,exp:'Contamina la contabilidad y oculta el verdadero resultado.'},
+ {q:'Deberías retirar utilidades solo cuando…',op:['El negocio tiene utilidades reales y caja','Falta plata','Hay deudas impagas','Nunca'],correcta:0,exp:'Los retiros se hacen sobre ganancias reales y con caja disponible.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

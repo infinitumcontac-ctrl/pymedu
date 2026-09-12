@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.6 — Indicadores y tablero de control</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.6</span>
+    <h1>Indicadores y tablero de control (KPIs)</h1>
+    <p>Lo que no se mide, no se mejora. Aprende los indicadores clave de salud financiera y arma un tablero simple para vigilar tu negocio de un vistazo.</p>
+    <div class="meta"><span>⏱️ 45 min</span><span>📶 Nivel avanzado</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>3.1 Contabilidad</a><a>3.2 Punto de equilibrio</a><a>3.3 VAN/TIR/ROI</a><a>3.4 Fuentes financiamiento</a><a>3.5 Inversión</a><a class="actual">3.6 KPIs</a><a>3.7 Escalar</a><a>3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Calcular indicadores de <strong>rentabilidad</strong>, <strong>liquidez</strong> y <strong>endeudamiento</strong>.</li>
+      <li>Interpretar el <strong>margen neto</strong>, la <strong>razón corriente</strong> y la <strong>rotación de inventario</strong>.</li>
+      <li>Definir tus <strong>KPIs</strong> y armar un tablero de control.</li>
+      <li>Tomar decisiones a partir de los indicadores.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈7–9 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Mirar solo las ventas es como manejar mirando solo el velocímetro. Un tablero te muestra todo el panel."</p>
+      <p><strong>1:00 Rentabilidad.</strong> Margen neto = utilidad / ventas. Mostrar la calculadora.</p>
+      <p><strong>2:30 Liquidez.</strong> Razón corriente = activo corriente / pasivo corriente. Ideal &gt; 1.</p>
+      <p><strong>3:30 Endeudamiento y rotación.</strong> Deuda/patrimonio; rotación de inventario.</p>
+      <p><strong>5:00 Tablero.</strong> Elegir 4–6 KPIs y revisarlos cada mes. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Indicadores de rentabilidad</h2>
+    <ul class="limpia">
+      <li><strong>Margen neto = Utilidad neta / Ventas.</strong> Cuánto queda de cada peso vendido.</li>
+      <li><strong>Margen bruto = Margen bruto / Ventas.</strong> Eficiencia antes de gastos.</li>
+      <li><strong>ROI / rentabilidad</strong> de inversiones (módulos 3.3 y 3.5).</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Liquidez y endeudamiento</h2>
+    <ul class="limpia">
+      <li><strong>Razón corriente = Activo corriente / Pasivo corriente.</strong> Mayor a 1 indica que puedes cubrir tus deudas de corto plazo.</li>
+      <li><strong>Endeudamiento = Pasivos / Patrimonio.</strong> Cuánto debes por cada peso propio. Muy alto = riesgo.</li>
+      <li><strong>Rotación de inventario = Costo de ventas / Inventario promedio.</strong> Cuántas veces "giras" tu stock; mayor suele ser mejor.</li>
+    </ul>
+    <div class="recuadro"><h4>🎯 ¿Qué es un KPI?</h4><p>Un <strong>KPI</strong> (indicador clave de desempeño) es una métrica que de verdad mueve tu negocio. Elige pocos (4–6), defínelos bien y revísalos siempre igual.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Arma tu tablero</h2>
+    <ol class="limpia">
+      <li>Elige 4–6 KPIs (ventas, margen neto, días de caja, razón corriente, endeudamiento, rotación).</li>
+      <li>Define cómo se calcula cada uno y su <strong>meta</strong>.</li>
+      <li>Aliméntalo desde tu planilla o software (módulo 2.3).</li>
+      <li>Revísalo <strong>cada mes</strong> y compara con la meta y el mes anterior.</li>
+      <li>Actúa: si un KPI se desvía, investiga y corrige.</li>
+    </ol>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Calculadora</span>
+    <h2>Calcula tus indicadores clave</h2>
+    <div class="tool">
+      <h3><span class="icono">📟</span> Mini-tablero</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="k-ventas">Ventas (CLP)</label><input type="number" id="k-ventas" value="5000000" step="100000"></div>
+        <div class="campo"><label for="k-utilidad">Utilidad neta (CLP)</label><input type="number" id="k-utilidad" value="600000" step="50000"></div>
+        <div class="campo"><label for="k-inv">Inventario promedio (CLP)</label><input type="number" id="k-inv" value="800000" step="50000"></div>
+      </div>
+      <div class="fila tres">
+        <div class="campo"><label for="k-ac">Activo corriente (CLP)</label><input type="number" id="k-ac" value="2000000" step="100000"></div>
+        <div class="campo"><label for="k-pc">Pasivo corriente (CLP)</label><input type="number" id="k-pc" value="1200000" step="100000"></div>
+        <div class="campo"><label for="k-cv">Costo de ventas (CLP)</label><input type="number" id="k-cv" value="3000000" step="100000"></div>
+      </div>
+      <div class="fila">
+        <div class="campo"><label for="k-pasivos">Pasivos totales (CLP)</label><input type="number" id="k-pasivos" value="1500000" step="100000"></div>
+        <div class="campo"><label for="k-patrimonio">Patrimonio (CLP)</label><input type="number" id="k-patrimonio" value="3000000" step="100000"></div>
+      </div>
+      <button class="btn" onclick="calcKPIs()">Calcular tablero</button>
+      <div class="resultado" id="k-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>KPI</dt><dd>Indicador clave de desempeño.</dd>
+      <dt>Margen neto</dt><dd>Utilidad neta sobre ventas.</dd>
+      <dt>Razón corriente</dt><dd>Activo corriente / pasivo corriente; mide liquidez.</dd>
+      <dt>Endeudamiento</dt><dd>Pasivos / patrimonio.</dd>
+      <dt>Rotación de inventario</dt><dd>Veces que se renueva el stock en un período.</dd>
+      <dt>Activo corriente</dt><dd>Activos convertibles en efectivo en menos de un año.</dd>
+      <dt>Pasivo corriente</dt><dd>Deudas a pagar dentro de un año.</dd>
+      <dt>Tablero de control</dt><dd>Conjunto de KPIs que vigilas periódicamente.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El tablero de la distribuidora</h2>
+    <p>La distribuidora arma un tablero con 5 KPIs. Detecta que su margen neto es 12% (sano), su razón corriente 1,7 (buena liquidez) pero su rotación de inventario es baja: tiene stock detenido. Decide liquidar lo de baja rotación y mejorar su caja. Usa la calculadora para reproducir su tablero.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Mirar solo las ventas</strong> e ignorar margen, liquidez y deuda.</li>
+      <li><strong>Tener demasiados KPIs</strong> y no actuar sobre ninguno.</li>
+      <li><strong>Calcular distinto cada mes</strong> y no poder comparar.</li>
+      <li><strong>Medir y no decidir.</strong> El tablero existe para actuar.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">SERCOTEC — Gestión y KPIs</a>
+    <a href="https://www.corfo.cl" target="_blank" rel="noopener">CORFO — Herramientas de gestión</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Un puñado de indicadores —margen neto, razón corriente, endeudamiento y rotación— te muestra la salud real del negocio. Define tus KPIs, ármalos en un tablero y revísalos cada mes para decidir a tiempo.</p>
+    <p><strong>Siguiente módulo →</strong> 3.7 Crecer y escalar.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function calcKPIs(){const v=+document.getElementById('k-ventas').value,u=+document.getElementById('k-utilidad').value,inv=+document.getElementById('k-inv').value,ac=+document.getElementById('k-ac').value,pc=+document.getElementById('k-pc').value,cv=+document.getElementById('k-cv').value,pas=+document.getElementById('k-pasivos').value,pat=+document.getElementById('k-patrimonio').value;
+  const margen=v>0?u/v*100:0, corriente=pc>0?ac/pc:0, endeud=pat>0?pas/pat:0, rot=inv>0?cv/inv:0;
+  function fila(n,val,bien,txt){const color=bien?'var(--color-ok)':'var(--color-aviso)';return '<tr><td>'+n+'</td><td style="color:'+color+';font-weight:700">'+val+'</td><td>'+txt+'</td></tr>';}
+  const r=document.getElementById('k-res');r.style.display='block';
+  r.innerHTML='<div class="cmp-wrap"><table class="cmp"><tr><th>KPI</th><th>Valor</th><th>Lectura</th></tr>'+
+    fila('Margen neto',fmtNum(margen,1)+'%',margen>=8,'Cuánto queda de cada $ vendido')+
+    fila('Razón corriente',fmtNum(corriente,2),corriente>=1,'>1 = cubres deudas de corto plazo')+
+    fila('Endeudamiento (Pasivo/Patrimonio)',fmtNum(endeud,2),endeud<=1.5,'Más alto = más riesgo')+
+    fila('Rotación de inventario',fmtNum(rot,1)+'x',rot>=3,'Veces que giras el stock')+
+    '</table></div><small>Los umbrales son referenciales y varían por rubro. Lo importante es la tendencia mes a mes.</small>';}
+
+const preguntas=[
+ {q:'Un KPI es…',op:['Un impuesto','Un indicador clave de desempeño','Un tipo de crédito','Un software'],correcta:1,exp:'Es una métrica clave para gestionar el negocio.'},
+ {q:'El margen neto se calcula como…',op:['Ventas / utilidad','Utilidad neta / ventas','Activos / pasivos','Ventas − costos'],correcta:1,exp:'Mide cuánto queda de cada peso vendido.'},
+ {q:'La razón corriente mide…',op:['Rentabilidad','Liquidez de corto plazo','Endeudamiento','Rotación'],correcta:1,exp:'Activo corriente / pasivo corriente; >1 es señal de liquidez.'},
+ {q:'Una razón corriente mayor a 1 indica que…',op:['No puedes pagar','Puedes cubrir deudas de corto plazo','Estás quebrado','No tienes ventas'],correcta:1,exp:'Tus activos de corto plazo superan tus deudas de corto plazo.'},
+ {q:'El indicador de endeudamiento relaciona…',op:['Ventas y costos','Pasivos y patrimonio','Caja y ventas','Inventario y ventas'],correcta:1,exp:'Pasivos / patrimonio: cuánto debes por cada peso propio.'},
+ {q:'Una rotación de inventario alta suele indicar…',op:['Stock detenido','Que vendes y renuevas bien el stock','Más deuda','Menos ventas'],correcta:1,exp:'Giras el inventario más veces: buena gestión de stock.'},
+ {q:'Para un tablero conviene tener…',op:['20 KPIs','4 a 6 KPIs bien elegidos','1 solo KPI','Ninguno'],correcta:1,exp:'Pocos indicadores claros y accionables funcionan mejor.'},
+ {q:'Mirar solo las ventas es un error porque…',op:['Las ventas no importan','Ignora margen, liquidez y deuda','El IVA sube','No se puede medir'],correcta:1,exp:'Puedes vender mucho y aun así estar en problemas de margen o caja.'},
+ {q:'Para comparar KPIs entre meses debes…',op:['Calcularlos distinto cada vez','Usar siempre la misma fórmula','No medirlos','Cambiar las metas'],correcta:1,exp:'La consistencia permite comparar y ver tendencias.'},
+ {q:'El propósito final de un tablero es…',op:['Decorar','Tomar decisiones a tiempo','Pagar impuestos','Impresionar al banco'],correcta:1,exp:'Medir sirve para actuar y corregir desvíos.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 2.3 — Herramientas digitales</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 2 · Módulo 2.3</span>
+    <h1>Herramientas digitales para la gestión</h1>
+    <p>Digitalizar reduce errores, ahorra tiempo y te deja cumplir con el SII. Arma un "stack" simple para llevar tu negocio con datos y no con la memoria.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>2.1 Flujo de caja</a><a>2.2 Costos</a><a class="actual">2.3 Herramientas digitales</a><a>2.4 Formalización</a><a>2.5 IVA/F29</a><a>2.6 Financiamiento</a><a>2.7 Precios</a><a>2.8 Personal vs negocio</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar los beneficios de <strong>digitalizar</strong> la gestión.</li>
+      <li>Reconocer qué herramienta resuelve cada necesidad (contabilidad, POS, tareas, dashboards).</li>
+      <li>Diseñar un <strong>stack digital básico</strong> para tu negocio.</li>
+      <li>Conocer programas de apoyo como <strong>Negocios Digitales (Sercotec)</strong>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈5–7 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Llevar el negocio en cuadernos y en la cabeza no escala. La buena noticia: hoy hay herramientas baratas o gratis para ordenarlo."</p>
+      <p><strong>1:00 Por qué digitalizar.</strong> Menos errores, menos tiempo, cumplir con el SII, decidir con datos.</p>
+      <p><strong>2:30 El stack.</strong> Contabilidad/facturación (Alegra), POS (Vendus), tareas (Trello/Notion), dashboards (Looker Studio), atención (Respond.io).</p>
+      <p><strong>4:00 Cómo partir.</strong> Elige pocas herramientas, arma una base de datos en Sheets, automatiza alertas. Postula a Negocios Digitales. Cierre con la actividad y el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>¿Por qué digitalizar?</h2>
+    <p>Digitalizar tus procesos <strong>reduce errores</strong>, <strong>ahorra tiempo</strong>, te ayuda a <strong>cumplir con el SII</strong> (facturación electrónica) y te permite <strong>decidir con datos</strong> en vez de con intuición. No necesitas un sistema caro: con planillas y herramientas gratuitas o de bajo costo puedes empezar hoy.</p>
+    <div class="recuadro dato"><h4>📊 Apoyo estatal</h4><p><strong>Negocios Digitales (Sercotec)</strong> entrega financiamiento y capacitación a empresas para digitalizarse. Revisa convocatorias y requisitos vigentes en sercotec.cl.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>El "stack" digital básico</h2>
+    <div class="cmp-wrap"><table class="cmp">
+      <tr><th>Necesidad</th><th>Tipo de herramienta</th><th>Ejemplos</th></tr>
+      <tr><td>Contabilidad y facturación</td><td>Software homologado con el SII</td><td>Alegra, Nubox, Bsale</td></tr>
+      <tr><td>Vender y controlar inventario</td><td>Punto de venta (POS)</td><td>Vendus, Bsale</td></tr>
+      <tr><td>Organizar tareas/proyectos</td><td>Gestor de tareas</td><td>Trello, Notion</td></tr>
+      <tr><td>Ver tus números</td><td>Dashboard / visualización</td><td>Google Looker Studio</td></tr>
+      <tr><td>Atención al cliente</td><td>Centralizador de mensajes</td><td>Respond.io</td></tr>
+      <tr><td>Liquidez</td><td>Factoring / cobranza fintech</td><td>Xepelin, plataformas de factoring</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Cómo implementarlo (sin marearte)</h2>
+    <ol class="limpia">
+      <li><strong>Elige pocas herramientas</strong> al principio: una de contabilidad, una de tareas, una de visualización.</li>
+      <li><strong>Arma tu base de datos</strong> en Google Sheets: clientes, facturas, gastos, fechas de vencimiento.</li>
+      <li><strong>Automatiza</strong> alertas de facturas vencidas (Zapier o Apps Script).</li>
+      <li><strong>Analiza tus indicadores</strong> con un dashboard y compáralos con tus metas.</li>
+      <li><strong>Capacítate y postula</strong> a programas como Negocios Digitales.</li>
+    </ol>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Arma tu stack</span>
+    <h2>Conecta cada necesidad con su herramienta</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="conta">Software de contabilidad/facturación</div>
+          <div class="ficha" draggable="true" data-id="pos">Punto de venta (POS)</div>
+          <div class="ficha" draggable="true" data-id="dash">Dashboard / Looker Studio</div>
+          <div class="ficha" draggable="true" data-id="tareas">Gestor de tareas</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="conta"><div class="titulo">Emitir facturas y llevar la contabilidad</div></div>
+          <div class="zona" data-acepta="pos"><div class="titulo">Vender y controlar inventario</div></div>
+          <div class="zona" data-acepta="dash"><div class="titulo">Ver mis ingresos y gastos en gráficos</div></div>
+          <div class="zona" data-acepta="tareas"><div class="titulo">Organizar las tareas del equipo</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Software homologado</dt><dd>Programa autorizado por el SII para emitir documentos tributarios electrónicos.</dd>
+      <dt>POS</dt><dd>Punto de venta: sistema para registrar ventas e inventario.</dd>
+      <dt>Dashboard</dt><dd>Tablero visual con tus indicadores clave.</dd>
+      <dt>Automatización</dt><dd>Tareas que el sistema ejecuta solo (alertas, reportes).</dd>
+      <dt>Stack</dt><dd>Conjunto de herramientas que usas para operar el negocio.</dd>
+      <dt>Negocios Digitales</dt><dd>Programa de Sercotec que financia la digitalización de MIPEs.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Ferretería de Iván se ordena</h2>
+    <p>Iván llevaba todo en cuadernos. Adopta un POS homologado para ventas e inventario, una planilla de Sheets para gastos y un dashboard en Looker Studio. En un mes detecta sus productos más rentables y deja de quebrar stock. Postula a Negocios Digitales para financiar el resto.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Comprar 10 herramientas</strong> de golpe y no usar ninguna.</li>
+      <li><strong>Usar software no homologado</strong> para facturar.</li>
+      <li><strong>Tener datos y no mirarlos.</strong> Un dashboard sirve si lo revisas.</li>
+      <li><strong>No respaldar</strong> tu información.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">Sercotec — Negocios Digitales</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Software de facturación homologado</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Digitalizar no es comprar mucho, es elegir bien: contabilidad homologada, un POS, una planilla ordenada y un dashboard. Con eso decides con datos, cumples con el SII y ganas tiempo. Y hay fondos públicos para financiarlo.</p>
+    <p><strong>Siguiente módulo →</strong> 2.4 Formaliza tu emprendimiento.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'Un beneficio de digitalizar la gestión es…',op:['Más errores','Decidir con datos y cumplir con el SII','Gastar más tiempo','Perder información'],correcta:1,exp:'Reduce errores, ahorra tiempo, cumple con el SII y permite decidir con datos.'},
+ {q:'Para emitir facturas debes usar software…',op:['Cualquiera','Homologado por el SII','Solo de pago','Extranjero'],correcta:1,exp:'La facturación electrónica requiere software homologado por el SII.'},
+ {q:'Un POS sirve para…',op:['Hacer dashboards','Vender y controlar inventario','Pagar impuestos','Enviar correos'],correcta:1,exp:'El punto de venta registra ventas e inventario.'},
+ {q:'Un dashboard te permite…',op:['Facturar','Ver tus indicadores en gráficos','Contratar personal','Pagar el IVA'],correcta:1,exp:'Es un tablero visual con tus indicadores clave.'},
+ {q:'¿Qué programa estatal financia la digitalización de MIPEs?',op:['FOGAPE','Negocios Digitales (Sercotec)','SERNAC','UTM'],correcta:1,exp:'Negocios Digitales de Sercotec entrega financiamiento y capacitación.'},
+ {q:'Para empezar a digitalizar conviene…',op:['Comprar muchas herramientas','Elegir pocas y usarlas bien','No usar planillas','Evitar el SII'],correcta:1,exp:'Mejor pocas herramientas bien usadas que muchas abandonadas.'},
+ {q:'Una base de datos simple para partir puede ser…',op:['Un cuaderno','Una planilla de Google Sheets','La memoria','Un afiche'],correcta:1,exp:'Sheets permite registrar clientes, facturas, gastos y vencimientos.'},
+ {q:'Automatizar alertas de facturas vencidas ayuda a…',op:['Pagar más impuestos','Cobrar a tiempo y cuidar la caja','Vender menos','Aumentar errores'],correcta:1,exp:'Las alertas evitan que se te pasen los cobros.'},
+ {q:'Un error común al digitalizar es…',op:['Respaldar la información','Comprar muchas herramientas y no usarlas','Mirar los datos','Capacitarse'],correcta:1,exp:'Acumular herramientas sin usarlas es desperdicio de recursos.'},
+ {q:'Centralizar mensajes de WhatsApp e Instagram mejora…',op:['La contabilidad','La atención al cliente','El pago del IVA','El inventario'],correcta:1,exp:'Herramientas como Respond.io ordenan la atención al cliente.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

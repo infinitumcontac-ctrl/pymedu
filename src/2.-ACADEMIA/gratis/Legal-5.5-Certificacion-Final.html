@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L5.5 — Certificación final</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+<style>
+.diploma{display:none;border:3px solid var(--color-acento);border-radius:16px;padding:34px;text-align:center;background:linear-gradient(135deg,#ffffff,var(--color-acento-suave));margin-top:20px}
+.diploma.ver{display:block}
+.diploma h2{color:var(--color-acento-oscuro);margin:0 0 6px}
+.diploma .nombre{font-size:1.8rem;font-weight:800;margin:14px 0;border-bottom:2px dashed var(--color-borde);display:inline-block;padding:0 20px 6px}
+.diploma .sello{font-size:3rem;margin-top:10px}
+</style>
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 5 · Módulo L5.5</span>
+    <h1>Certificación final — Lo legal de tu negocio</h1>
+    <p>Examen integrador de los cinco niveles legales. Aprueba con 11 de 15 y descarga tu diploma digital.</p>
+    <div class="meta"><span>⏱️ 30 min</span><span>📶 Integrador N1–N5</span><span>📍 Chile · 2026</span><span>🎓 Diploma al aprobar</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L5.1 Cobranza</a><a>L5.2 Insolvencia</a><a>L5.3 Conflictos de socios</a><a>L5.4 Cerrar bien</a><a class="actual">L5.5 Certificación</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Esta academia entrega educación legal general, no asesoría jurídica. Para decisiones importantes consulta a un abogado o a la Corporación de Asistencia Judicial.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Antes de comenzar</span>
+    <h2>Recomendaciones</h2>
+    <ul class="limpia">
+      <li>Repasa: forma legal, constitución, permisos, contratos, consumidor, pago a 30 días, laboral, marca/datos/PI y cobranza/insolvencia/cierre.</li>
+      <li>Lee bien cada enunciado antes de responder.</li>
+    </ul>
+    <div class="campo" style="max-width:420px">
+      <label for="alumno">Tu nombre (aparecerá en el diploma)</label>
+      <input type="text" id="alumno" placeholder="Nombre y apellido">
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Examen final</span>
+    <h2>15 preguntas integradoras</h2>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Enviar examen</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+
+    <div class="diploma" id="diploma">
+      <div class="sello">🎓</div>
+      <h2>Diploma de Educación Legal para Emprendedores</h2>
+      <p>PymEdu certifica que</p>
+      <div class="nombre" id="dip-nombre">—</div>
+      <p>ha completado y aprobado los cinco niveles de la Academia Legal:<br>Nace tu negocio · Opera con reglas · Contratar personas · Proteger lo que construiste · Resolver y cerrar.</p>
+      <p id="dip-fecha" style="color:var(--color-texto-suave)"></p>
+      <p style="margin-top:16px"><button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button></p>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Reflexión final</span>
+    <h2>¡Felicitaciones!</h2>
+    <p>Ahora conoces el marco legal del ciclo de vida de un negocio en Chile: cómo nace, opera, contrata, se protege y, si toca, se resuelve o cierra. Combinado con la Academia Financiera, tienes las dos columnas para emprender con seguridad. Recuerda: ante casos concretos, busca asesoría profesional.</p>
+  </section>
+
+  <footer>PymEdu Legal · Diploma referencial de finalización del programa formativo. No constituye título profesional ni asesoría jurídica.</footer>
+</article>
+
+<script>
+const preguntas=[
+ {q:'1. La forma legal que mejor protege tu patrimonio siendo único dueño es…',op:['Persona natural con giro','EIRL o SpA','Sociedad colectiva','Ninguna'],correcta:1,exp:'EIRL o SpA dan responsabilidad limitada.'},
+ {q:'2. El régimen simplificado para constituir se llama…',op:['Diario Oficial','Empresa en un Día','Conservador','Patente exprés'],correcta:1,exp:'Empresa en un Día, en el Registro de Empresas y Sociedades.'},
+ {q:'3. Para vender alimentos preparados necesitas…',op:['Solo patente','Resolución sanitaria','Patente de alcoholes','Nada'],correcta:1,exp:'La resolución sanitaria de la SEREMI de Salud.'},
+ {q:'4. Un contrato válido requiere…',op:['Siempre notario','Consentimiento, objeto y causa lícitos','Solo firma','Pagar IVA'],correcta:1,exp:'Consentimiento, objeto y causa lícitos, y partes capaces.'},
+ {q:'5. Ante un producto defectuoso, el consumidor puede…',op:['Solo reclamar','Elegir cambio, reparación o devolución','Nada','Solo si tiene garantía del fabricante'],correcta:1,exp:'Es la garantía legal, a elección del consumidor.'},
+ {q:'6. La Ley de Pago a 30 días fija como regla general el pago en…',op:['90 días','30 días','1 año','7 días'],correcta:1,exp:'30 días desde la recepción de la factura.'},
+ {q:'7. Si hay subordinación y dependencia, corresponde…',op:['Boleta de honorarios','Contrato de trabajo','Sociedad','Nada'],correcta:1,exp:'La subordinación exige contrato de trabajo.'},
+ {q:'8. El despido por necesidades de la empresa (art. 161) implica…',op:['Sin indemnización','Indemnización por años de servicio','Cárcel','Renuncia'],correcta:1,exp:'Da derecho a indemnización por años de servicio y aviso.'},
+ {q:'9. La "falsa boleta" (honorarios siendo dependiente) genera…',op:['Ahorro sin riesgo','Multas, cotizaciones e indemnizaciones','Un bono','Nada'],correcta:1,exp:'La reclasificación implica pagos retroactivos y multas.'},
+ {q:'10. Las marcas en Chile se registran en…',op:['El SII','INAPI','El SERNAC','La municipalidad'],correcta:1,exp:'En el Instituto Nacional de Propiedad Industrial.'},
+ {q:'11. Para usar los datos de tus clientes en publicidad necesitas…',op:['Nada','Su consentimiento','Pagar IVA','Una patente'],correcta:1,exp:'Consentimiento y respetar la finalidad informada.'},
+ {q:'12. Para que el logo encargado sea plenamente tuyo, pacta…',op:['Una factura','La cesión de derechos','Una patente','Nada'],correcta:1,exp:'La cesión de derechos patrimoniales por escrito.'},
+ {q:'13. La cobranza extrajudicial NO puede…',op:['Enviar recordatorios','Amenazar o llamar a tu trabajo','Ofrecer repactar','Informar el saldo'],correcta:1,exp:'Amenazas o contactar terceros están prohibidos.'},
+ {q:'14. La Ley de Insolvencia ofrece…',op:['Solo cárcel','Renegociar o liquidar con segunda oportunidad','Más créditos','Eliminar impuestos'],correcta:1,exp:'Procedimientos ordenados y reemprendimiento.'},
+ {q:'15. Cerrar un negocio correctamente exige, ante el SII…',op:['Solo dejar de vender','Hacer término de giro','Cambiar la marca','Nada'],correcta:1,exp:'El término de giro avisa el cese de actividades.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});
+  const pj=document.getElementById('quiz-puntaje'),ok=a>=11;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / 15'+(ok?' · ¡APROBADO! 🎉':' · Necesitas 11 para aprobar. Repasa y reintenta.');
+  const dip=document.getElementById('diploma');
+  if(ok){const nombre=(document.getElementById('alumno').value||'Participante').trim();document.getElementById('dip-nombre').textContent=nombre;document.getElementById('dip-fecha').textContent='Emitido el '+new Date().toLocaleDateString('es-CL',{day:'numeric',month:'long',year:'numeric'});dip.classList.add('ver');dip.scrollIntoView({behavior:'smooth'});}else{dip.classList.remove('ver');}
+}
+pintarQuiz();
+</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 1.5 — Evitar el sobreendeudamiento</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 1 · Módulo 1.5</span>
+    <h1>Evitar (y salir) del sobreendeudamiento</h1>
+    <p>Cómo medir tu carga financiera, reconocer las señales de alerta a tiempo y usar herramientas como la renegociación, el factoring y la Ley de Insolvencia.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel inicial</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>1.1 Dinero e inflación</a><a>1.2 Presupuesto</a><a>1.3 Tarjetas</a><a>1.4 Ahorro</a><a class="actual">1.5 Sobreendeudamiento</a><a>1.6 Sistema financiero</a><a>1.7 Fraudes</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Definir el <strong>sobreendeudamiento</strong> y calcular tu <strong>carga financiera</strong>.</li>
+      <li>Reconocer las <strong>señales de alerta</strong> tempranas.</li>
+      <li>Aplicar estrategias: priorizar deudas, <strong>renegociar</strong>, consolidar, factoring.</li>
+      <li>Conocer la <strong>Ley de Insolvencia y Reemprendimiento</strong> como última red.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈5–7 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Endeudarse no es malo; perder el control sí. Veamos cómo saber si estás en zona de riesgo y cómo salir."</p>
+      <p><strong>1:00 Carga financiera.</strong> Suma de cuotas dividida por el ingreso. Mostrar el simulador con semáforo.</p>
+      <p><strong>2:30 Señales de alerta.</strong> Pagar solo el mínimo, pedir crédito para pagar otro, cuotas sobre el 30% del ingreso.</p>
+      <p><strong>3:30 Estrategias.</strong> Renegociar plazos/tasas, consolidar, factoring para microempresas.</p>
+      <p><strong>5:00 Ley de Insolvencia.</strong> Renegociación y "segunda oportunidad" sin perderlo todo. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>¿Qué es el sobreendeudamiento?</h2>
+    <p>Estás <strong>sobreendeudado</strong> cuando tus ingresos no alcanzan para cubrir las cuotas de tus deudas más tus gastos básicos. El indicador clave es la <strong>carga financiera</strong>: la parte de tu ingreso mensual que se va en pagar deudas.</p>
+    <div class="recuadro dato"><h4>📊 Referencia (CMF)</h4><p>La mediana de deuda de las personas ronda los <strong>$1,9 millones</strong>. Una carga financiera sana se mantiene <strong>bajo el 25%</strong> del ingreso; sobre el 30% se considera de alto riesgo.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Señales de alerta</h2>
+    <ul class="limpia">
+      <li>Pagar <strong>solo el mínimo</strong> de la tarjeta de forma habitual.</li>
+      <li>Pedir un <strong>crédito para pagar otro crédito</strong>.</li>
+      <li>Destinar <strong>más del 30%</strong> del ingreso a deudas.</li>
+      <li>Acumular cuotas atrasadas o recibir llamadas de cobranza.</li>
+      <li>Usar avances en efectivo para llegar a fin de mes.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Estrategias para salir</h2>
+    <ol class="limpia">
+      <li><strong>Mide tu carga financiera</strong> (simulador abajo). Si supera el 25%, actúa.</li>
+      <li><strong>Prioriza las deudas más caras</strong> (mayor CAE) o usa el método "bola de nieve" (la más chica primero) para tomar impulso.</li>
+      <li><strong>Renegocia</strong> tasas y plazos con tu entidad antes de caer en mora.</li>
+      <li><strong>Consolida</strong> varias deudas en una sola cuota más baja (ojo con alargar demasiado el plazo).</li>
+      <li><strong>Factoring</strong> (para negocios): convierte facturas por cobrar en liquidez inmediata sin tomar más deuda.</li>
+    </ol>
+    <div class="recuadro"><h4>⚖️ Ley de Insolvencia y Reemprendimiento</h4><p>Si la situación se desbordó, esta ley ofrece mecanismos de <strong>renegociación</strong> ante la Superintendencia y, en casos extremos, liquidación con "segunda oportunidad", sin que pierdas absolutamente todo. Es una red de protección, no un fracaso.</p></div>
+  </section>
+
+  <!-- INTERACTIVOS -->
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>Calcula tu carga financiera (semáforo)</h2>
+    <div class="tool">
+      <h3><span class="icono">🚦</span> ¿En qué zona estás?</h3>
+      <div class="fila">
+        <div class="campo"><label for="cf-ingreso">Ingreso mensual (CLP)</label><input type="number" id="cf-ingreso" value="800000" step="10000"></div>
+        <div class="campo"><label for="cf-cuotas">Suma de tus cuotas de deuda (CLP)</label><input type="number" id="cf-cuotas" value="200000" step="10000"></div>
+      </div>
+      <button class="btn" onclick="cargaFinanciera()">Calcular</button>
+      <div class="resultado" id="cf-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Simulador</span>
+    <h2>Renegociar: ¿qué pasa con la cuota?</h2>
+    <div class="tool">
+      <h3><span class="icono">🔄</span> Simulador de renegociación</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="rn-deuda">Saldo de la deuda (CLP)</label><input type="number" id="rn-deuda" value="3000000" step="100000"></div>
+        <div class="campo"><label for="rn-tasa">Tasa mensual (%)</label><input type="number" id="rn-tasa" value="1.8" step="0.1"></div>
+        <div class="campo"><label for="rn-meses">Plazo (meses)</label><input type="number" id="rn-meses" value="24" min="1"></div>
+      </div>
+      <button class="btn" onclick="renegociar()">Calcular cuota y costo</button>
+      <div class="resultado" id="rn-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Sobreendeudamiento</dt><dd>Cuando los ingresos no alcanzan para cubrir deudas y gastos básicos.</dd>
+      <dt>Carga financiera</dt><dd>Parte del ingreso destinada a pagar deudas (idealmente bajo 25%).</dd>
+      <dt>Renegociación</dt><dd>Acordar con el acreedor nuevas condiciones (tasa, plazo, cuota).</dd>
+      <dt>Consolidación</dt><dd>Unir varias deudas en una sola con una cuota total menor.</dd>
+      <dt>Factoring</dt><dd>Vender facturas por cobrar para obtener liquidez inmediata sin endeudarse.</dd>
+      <dt>Mora</dt><dd>Atraso en el pago; genera intereses adicionales y afecta tu historial.</dd>
+      <dt>Ley de Insolvencia</dt><dd>Marco legal para renegociar o liquidar deudas con segunda oportunidad.</dd>
+      <dt>Método bola de nieve</dt><dd>Pagar primero la deuda más pequeña para tomar impulso psicológico.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Rodrigo y sus tres tarjetas</h2>
+    <p>Rodrigo gana $800.000 y entre tres tarjetas paga $320.000 en cuotas: su carga financiera es 40% (zona roja). Renegocia y consolida en un solo crédito a plazo más largo, bajando la cuota a $200.000 (25%). No es magia: paga algo más de intereses totales, pero recupera el control y evita caer en mora. Prueba el simulador de carga con sus cifras y el de renegociación.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Tapar un crédito con otro</strong> sin un plan: la bola de nieve crece.</li>
+      <li><strong>Esperar a estar en mora</strong> para renegociar. Hazlo antes.</li>
+      <li><strong>Consolidar alargando demasiado</strong> el plazo: bajas la cuota pero pagas mucho más interés total.</li>
+      <li><strong>Ignorar las cobranzas.</strong> Conversar y acordar siempre es mejor que esconderse.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.superir.gob.cl" target="_blank" rel="noopener">Superintendencia de Insolvencia y Reemprendimiento</a>
+    <a href="https://www.sernac.cl" target="_blank" rel="noopener">SERNAC — Deudas y cobranza</a>
+    <a href="https://www.cmfeduca.cl" target="_blank" rel="noopener">CMF Educa — Endeudamiento responsable</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>La carga financiera es tu tablero: bajo 25% verde, sobre 30% rojo. Si te acercas al límite, renegocia y consolida a tiempo; el factoring ayuda a los negocios y la Ley de Insolvencia es la red de última instancia. El sobreendeudamiento se previene mirando los números a tiempo.</p>
+    <p><strong>Siguiente módulo →</strong> 1.6 Sistema financiero chileno: quién es quién y cuáles son tus derechos.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function cargaFinanciera(){const ing=+document.getElementById('cf-ingreso').value,cuo=+document.getElementById('cf-cuotas').value;const pct=ing>0?cuo/ing*100:0;let zona,color,msg;if(pct<25){zona='🟢 Verde — saludable';color='var(--color-ok)';msg='Tu carga está en un nivel sano. Mantén el control y sigue ahorrando.';}else if(pct<=30){zona='🟡 Amarillo — atención';color='var(--color-aviso)';msg='Estás en el límite. Evita tomar nuevas deudas y apunta a bajar bajo el 25%.';}else{zona='🔴 Rojo — riesgo';color='var(--color-error)';msg='Carga alta. Conviene renegociar o consolidar y reducir gastos cuanto antes.';}const r=document.getElementById('cf-res');r.style.display='block';r.innerHTML='Tu carga financiera es:<div class="cifra" style="color:'+color+'">'+fmtNum(pct,1)+'%</div><strong style="color:'+color+'">'+zona+'</strong><div class="barra"><span style="width:'+Math.min(pct,100)+'%;background:'+color+'"></span></div>'+msg;}
+
+function renegociar(){const D=+document.getElementById('rn-deuda').value,i=+document.getElementById('rn-tasa').value/100,n=+document.getElementById('rn-meses').value;let cuota;if(i>0){cuota=D*i/(1-Math.pow(1+i,-n));}else{cuota=D/n;}const total=cuota*n,interes=total-D;const r=document.getElementById('rn-res');r.style.display='block';r.innerHTML='Con saldo <strong>'+fmtCLP(D)+'</strong> a <strong>'+n+' meses</strong> y '+fmtNum(i*100,2)+'% mensual:<div class="cifra">'+fmtCLP(cuota)+' / mes</div>Pagas en total <strong>'+fmtCLP(total)+'</strong> ('+fmtCLP(interes)+' de intereses).<br><small>Prueba alargar el plazo: la cuota baja pero el interés total sube. Ese es el costo de "respirar".</small>';}
+
+const preguntas=[
+ {q:'La carga financiera es…',op:['El total de tus deudas','El % del ingreso destinado a pagar deudas','El interés de un depósito','El IVA de tus compras'],correcta:1,exp:'Es la porción del ingreso comprometida en cuotas de deuda.'},
+ {q:'Una carga financiera saludable se mantiene…',op:['Sobre el 50%','Bajo el 25%','En el 80%','En el 100%'],correcta:1,exp:'Idealmente bajo el 25%; sobre el 30% es zona de riesgo.'},
+ {q:'¿Cuál es una señal de alerta de sobreendeudamiento?',op:['Pagar el total de la tarjeta','Pedir un crédito para pagar otro','Ahorrar el 20%','Tener un fondo de emergencia'],correcta:1,exp:'Pedir crédito para pagar crédito es una señal clásica de alerta.'},
+ {q:'Renegociar conviene hacerlo…',op:['Solo cuando ya estás en mora','Antes de caer en mora','Nunca','Después de embargo'],correcta:1,exp:'Mejor anticiparse: renegociar antes de la mora da mejores condiciones.'},
+ {q:'Consolidar deudas significa…',op:['Pedir más tarjetas','Unir varias deudas en una sola cuota','Dejar de pagar','Invertir en acciones'],correcta:1,exp:'Se juntan varias deudas en un crédito con una cuota total menor.'},
+ {q:'Un riesgo de consolidar alargando mucho el plazo es…',op:['Bajar la cuota','Pagar mucho más interés total','Mejorar tu historial','Reducir la deuda al instante'],correcta:1,exp:'Bajar la cuota alargando el plazo encarece el costo total en intereses.'},
+ {q:'El factoring sirve para…',op:['Endeudarte más','Convertir facturas por cobrar en liquidez sin deuda','Pagar el IVA','Comprar acciones'],correcta:1,exp:'Vendes tus cuentas por cobrar y obtienes efectivo inmediato sin tomar deuda.'},
+ {q:'La Ley de Insolvencia y Reemprendimiento ofrece…',op:['Borrar deudas sin consecuencias','Mecanismos de renegociación y segunda oportunidad','Más crédito automático','Subsidios mensuales'],correcta:1,exp:'Permite renegociar o liquidar con una segunda oportunidad regulada.'},
+ {q:'El método "bola de nieve" para pagar deudas consiste en…',op:['Pagar la más cara primero','Pagar la más pequeña primero para tomar impulso','No pagar ninguna','Pagar todas el último día'],correcta:1,exp:'Empezar por la deuda más chica genera motivación para seguir.'},
+ {q:'Ante llamadas de cobranza, lo recomendable es…',op:['Ignorarlas','Conversar y buscar un acuerdo','Bloquear y esconderse','Pedir otro crédito'],correcta:1,exp:'Dialogar y acordar siempre es mejor que evadir la deuda.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

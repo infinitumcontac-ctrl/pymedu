@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.5 — Inversión inicial y retorno</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.5</span>
+    <h1>Inversión inicial y retorno esperado</h1>
+    <p>Antes de comprar esa máquina o ampliar el local, aprende a planificar la inversión, estimar el retorno y analizar los riesgos para no arriesgar a ciegas.</p>
+    <div class="meta"><span>⏱️ 45 min</span><span>📶 Nivel avanzado</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>3.1 Contabilidad</a><a>3.2 Punto de equilibrio</a><a>3.3 VAN/TIR/ROI</a><a>3.4 Fuentes financiamiento</a><a class="actual">3.5 Inversión</a><a>3.6 KPIs</a><a>3.7 Escalar</a><a>3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Planificar una inversión paso a paso.</li>
+      <li>Estimar el <strong>beneficio neto</strong>, el <strong>Payback</strong> y el <strong>ROI</strong> de un proyecto.</li>
+      <li>Identificar y <strong>mitigar riesgos</strong>.</li>
+      <li>Decidir cuándo <strong>diversificar</strong> y cuándo escalar de a poco.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈7–9 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Invertir no es apostar: es estimar lo que entra, lo que sale y en cuánto recuperas."</p>
+      <p><strong>1:00 Planificación.</strong> Objetivo, costo inicial, ingresos y costos adicionales, fuente, indicadores, riesgos.</p>
+      <p><strong>3:00 Ejemplo freezer.</strong> Mostrar el simulador con inversión, ingresos y costos extra.</p>
+      <p><strong>5:00 Riesgos.</strong> Identificar y mitigar; empezar pequeño y diversificar. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Planificar la inversión</h2>
+    <ol class="limpia">
+      <li><strong>Define el objetivo:</strong> para qué inviertes (ampliar producción, nuevo producto).</li>
+      <li><strong>Estima el costo inicial:</strong> precio del activo + instalación + capacitación + imprevistos.</li>
+      <li><strong>Proyecta ingresos y costos adicionales</strong> que traerá la inversión.</li>
+      <li><strong>Elige la fuente de financiamiento</strong> (módulo 3.4).</li>
+      <li><strong>Calcula indicadores:</strong> ROI, Payback (y VAN/TIR si aplica).</li>
+      <li><strong>Analiza riesgos</strong> y planifica mitigaciones.</li>
+    </ol>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Riesgos y buenas prácticas</h2>
+    <ul class="limpia">
+      <li><strong>Empieza pequeño</strong> y escala según resultados; no arriesgues todo sin validar.</li>
+      <li><strong>Diversifica:</strong> no pongas todo en un solo proyecto.</li>
+      <li><strong>Revisa periódicamente</strong> que la inversión siga siendo rentable.</li>
+      <li><strong>Aprovecha incentivos</strong> (CORFO, SERCOTEC) y evalúa <strong>leasing</strong> para activos caros.</li>
+      <li><strong>Mitiga riesgos típicos:</strong> alza de insumos, caída de demanda, nuevos competidores.</li>
+    </ul>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>Evalúa tu inversión</h2>
+    <div class="tool">
+      <h3><span class="icono">🧮</span> Beneficio, Payback y ROI</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="inv-inicial">Inversión inicial (CLP)</label><input type="number" id="inv-inicial" value="1200000" step="100000"></div>
+        <div class="campo"><label for="inv-ingreso">Ingresos adicionales / mes (CLP)</label><input type="number" id="inv-ingreso" value="300000" step="50000"></div>
+        <div class="campo"><label for="inv-costo">Costos adicionales / mes (CLP)</label><input type="number" id="inv-costo" value="50000" step="10000"></div>
+      </div>
+      <button class="btn" onclick="evalInversion()">Calcular</button>
+      <div class="resultado" id="inv-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Inversión inicial</dt><dd>Todo lo que cuesta poner en marcha el proyecto.</dd>
+      <dt>Beneficio neto</dt><dd>Ingresos adicionales menos costos adicionales.</dd>
+      <dt>Payback</dt><dd>Tiempo para recuperar la inversión inicial.</dd>
+      <dt>ROI</dt><dd>Retorno sobre la inversión, en porcentaje.</dd>
+      <dt>Mitigación de riesgo</dt><dd>Acciones para reducir el impacto de lo que puede salir mal.</dd>
+      <dt>Diversificación</dt><dd>Repartir recursos entre varios proyectos.</dd>
+      <dt>Vida útil</dt><dd>Período durante el cual el activo es productivo.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El freezer de la heladería</h2>
+    <p>Una heladería compra un congelador por $1.200.000. Le sumará $300.000 de ventas al mes y $50.000 de costos de energía. Beneficio neto: $250.000/mes ($3.000.000 al año). Payback ≈ 4,8 meses y ROI anual de 250%. La inversión se justifica ampliamente. Reproduce el caso en el simulador y prueba qué pasa si las ventas extra fueran solo $120.000.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Olvidar costos asociados</strong> (instalación, energía, mantención).</li>
+      <li><strong>Sobreestimar los ingresos</strong> adicionales.</li>
+      <li><strong>Invertir todo</strong> en un solo proyecto sin validar.</li>
+      <li><strong>No revisar</strong> si la inversión sigue rindiendo.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.corfo.cl" target="_blank" rel="noopener">CORFO — Inversión y fomento</a>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">SERCOTEC</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Una inversión bien planificada estima el costo total, el beneficio neto, el Payback y el ROI, y considera los riesgos. Empieza pequeño, diversifica y revisa. Así inviertes con cabeza, no con corazonadas.</p>
+    <p><strong>Siguiente módulo →</strong> 3.6 Indicadores y tablero de control (KPIs).</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function evalInversion(){const inv=+document.getElementById('inv-inicial').value,ing=+document.getElementById('inv-ingreso').value,cos=+document.getElementById('inv-costo').value;const netoMes=ing-cos,netoAnio=netoMes*12;const r=document.getElementById('inv-res');r.style.display='block';if(netoMes<=0){r.innerHTML='⚠️ La inversión no genera beneficio neto positivo: los costos adicionales igualan o superan los ingresos extra.';return;}const paybackMeses=inv/netoMes,roi=netoAnio/inv*100;r.innerHTML='Beneficio neto mensual: <strong>'+fmtCLP(netoMes)+'</strong> ('+fmtCLP(netoAnio)+' al año)<div class="cifra">Payback: '+fmtNum(paybackMeses,1)+' meses</div>ROI anual: <strong>'+fmtNum(roi,0)+'%</strong>. '+(roi>=50?'👍 Retorno atractivo.':roi>=15?'Retorno razonable; compáralo con tu costo de capital.':'Retorno bajo: evalúa con cuidado.');}
+
+const preguntas=[
+ {q:'La inversión inicial debe incluir…',op:['Solo el precio del activo','Precio + instalación + capacitación + imprevistos','Solo el IVA','Solo el flete'],correcta:1,exp:'Considera todos los costos de poner en marcha el proyecto.'},
+ {q:'El beneficio neto de una inversión es…',op:['Ingresos adicionales − costos adicionales','Solo los ingresos','La inversión inicial','Las ventas totales'],correcta:0,exp:'Es lo que efectivamente deja la inversión, neto de sus costos.'},
+ {q:'Un Payback corto significa…',op:['Más riesgo','Recuperas la inversión rápido','Menor ROI','Más impuestos'],correcta:1,exp:'Recuperar pronto la inversión reduce el riesgo.'},
+ {q:'El ROI anual de una inversión que cuesta 1.200.000 y deja 3.000.000 al año es…',op:['40%','250%','100%','25%'],correcta:1,exp:'3.000.000 / 1.200.000 × 100 = 250%.'},
+ {q:'Una buena práctica al invertir es…',op:['Arriesgar todo de una vez','Empezar pequeño y escalar','No medir','Evitar incentivos públicos'],correcta:1,exp:'Empezar pequeño valida antes de comprometer mucho.'},
+ {q:'Diversificar las inversiones busca…',op:['Aumentar el riesgo','Reducir el riesgo','Pagar más impuestos','Eliminar el ROI'],correcta:1,exp:'Repartir entre proyectos baja el riesgo de depender de uno.'},
+ {q:'Un riesgo típico de una inversión es…',op:['Que baje la inflación','El alza de insumos o caída de demanda','Tener utilidad','Pagar a tiempo'],correcta:1,exp:'Cambios de costos, demanda o competencia afectan el retorno.'},
+ {q:'Para activos caros, una alternativa que cuida la caja es…',op:['Pagar todo al contado','Leasing','No invertir','Capital de riesgo'],correcta:1,exp:'El leasing permite usar el activo sin descapitalizarte.'},
+ {q:'Sobreestimar los ingresos adicionales lleva a…',op:['Mejores decisiones','Expectativas irreales y malas decisiones','Más caja','Menos riesgo'],correcta:1,exp:'Proyecciones infladas distorsionan la evaluación.'},
+ {q:'Tras invertir, conviene…',op:['Olvidarse','Revisar periódicamente la rentabilidad','No medir','Vender el activo'],correcta:1,exp:'La revisión periódica confirma que la inversión sigue rindiendo.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

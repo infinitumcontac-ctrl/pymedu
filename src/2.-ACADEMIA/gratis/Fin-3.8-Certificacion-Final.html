@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.8 — Certificación final</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+<style>
+/* Diploma (específico de este módulo) */
+.diploma{display:none;border:3px solid var(--color-acento);border-radius:16px;padding:34px;text-align:center;
+  background:linear-gradient(135deg,#ffffff,var(--color-acento-suave));margin-top:20px}
+.diploma.ver{display:block}
+.diploma h2{color:var(--color-acento-oscuro);margin:0 0 6px}
+.diploma .nombre{font-size:1.8rem;font-weight:800;margin:14px 0;border-bottom:2px dashed var(--color-borde);display:inline-block;padding:0 20px 6px}
+.diploma .sello{font-size:3rem;margin-top:10px}
+</style>
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.8</span>
+    <h1>Certificación final — Finanzas para tu negocio</h1>
+    <p>Examen integrador de los tres niveles. Aprueba con 11 de 15 respuestas correctas y descarga tu diploma digital.</p>
+    <div class="meta"><span>⏱️ 30 min</span><span>📶 Integrador N1–N3</span><span>📍 Chile · 2026</span><span>🎓 Diploma al aprobar</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>3.1 Contabilidad</a><a>3.2 Punto de equilibrio</a><a>3.3 VAN/TIR/ROI</a><a>3.4 Fuentes financiamiento</a><a>3.5 Inversión</a><a>3.6 KPIs</a><a>3.7 Escalar</a><a class="actual">3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Antes de comenzar</span>
+    <h2>Recomendaciones</h2>
+    <ul class="limpia">
+      <li>Repasa: inflación y UF, presupuesto, tarjetas/CAE, ahorro, flujo de caja, IVA/F29, financiamiento, contabilidad, punto de equilibrio, VAN/TIR/ROI y KPIs.</li>
+      <li>Ten a mano papel y lápiz para los cálculos.</li>
+      <li>Lee bien cada enunciado; algunas preguntas son de cálculo.</li>
+    </ul>
+    <div class="campo" style="max-width:420px">
+      <label for="alumno">Tu nombre (aparecerá en el diploma)</label>
+      <input type="text" id="alumno" placeholder="Nombre y apellido">
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Examen final</span>
+    <h2>15 preguntas integradoras</h2>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Enviar examen</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+
+    <div class="diploma" id="diploma">
+      <div class="sello">🎓</div>
+      <h2>Diploma de Educación Financiera para Emprendedores</h2>
+      <p>PymEdu certifica que</p>
+      <div class="nombre" id="dip-nombre">—</div>
+      <p>ha completado y aprobado los tres niveles de la Academia Financiera:<br>Fundamentos · Gestión del negocio · Avanzado.</p>
+      <p id="dip-fecha" style="color:var(--color-texto-suave)"></p>
+      <p style="margin-top:16px"><button class="btn" onclick="window.print()">🖨️ Imprimir / Guardar PDF</button></p>
+    </div>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Reflexión final</span>
+    <h2>¡Felicitaciones!</h2>
+    <p>Al terminar este nivel cuentas con herramientas profesionales para analizar la salud financiera de tu negocio, planificar inversiones, evaluar financiamiento y decidir con datos. El aprendizaje continuo y la adaptación serán clave para tu crecimiento.</p>
+    <p><strong>Siguiente camino →</strong> la <strong>Academia Legal</strong>: forma legal, contratos, laboral, marca y resolución de conflictos.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Diploma referencial de finalización del programa formativo. No constituye título profesional.</footer>
+</article>
+
+<script>
+const preguntas=[
+ {q:'1. El dinero cumple tres funciones: medio de intercambio, unidad de cuenta y…',op:['Generador de interés','Depósito de valor','Cobro de impuestos','Garantía bancaria'],correcta:1,exp:'La tercera función es ser depósito de valor.'},
+ {q:'2. La UF se usa en contratos largos porque…',op:['Tiene valor fijo','Se reajusta con la inflación y protege el valor real','Es obligatoria','Paga interés'],correcta:1,exp:'La UF se indexa a la inflación, conservando el valor real.'},
+ {q:'3. En la regla 50/30/20, el 20% se destina a…',op:['Necesidades','Gustos','Ahorro y pago de deudas','Impuestos'],correcta:2,exp:'20% para ahorro y deudas.'},
+ {q:'4. Pagar solo el mínimo de la tarjeta…',op:['Acelera el pago','Prolonga la deuda y aumenta intereses','Elimina el interés','Da puntos'],correcta:1,exp:'El mínimo alarga y encarece la deuda.'},
+ {q:'5. El flujo de caja mide…',op:['La utilidad contable','La liquidez (plata real)','El patrimonio','Las ventas brutas'],correcta:1,exp:'Mide el efectivo real que entra y sale.'},
+ {q:'6. El saldo de IVA a pagar es…',op:['Débito + crédito','Débito − crédito','Solo el débito','Ventas × 19%'],correcta:1,exp:'IVA débito (ventas) menos IVA crédito (compras).'},
+ {q:'7. El mejor indicador para comparar el costo de dos créditos es…',op:['La cuota','El CAE','El plazo','El monto'],correcta:1,exp:'El CAE resume el costo total anual.'},
+ {q:'8. En el balance se cumple siempre…',op:['Activos = Pasivos − Patrimonio','Activos = Pasivos + Patrimonio','Pasivos = Activos + Patrimonio','Patrimonio = Activos + Pasivos'],correcta:1,exp:'Activos = Pasivos + Patrimonio.'},
+ {q:'9. Punto de equilibrio (unidades) =',op:['Costos fijos / margen de contribución unitario','Ventas / costos','Precio × cantidad','Costos variables / precio'],correcta:0,exp:'Costos fijos divididos por (precio − costo variable).'},
+ {q:'10. Con costos fijos 40.000, precio 200 y costo variable 80, el punto de equilibrio es…',op:['250','334','200','400'],correcta:1,exp:'40.000 / (200−80) = 333,3 ≈ 334 unidades.'},
+ {q:'11. Un VAN positivo significa que el proyecto…',op:['Pierde valor','Crea valor sobre el costo de capital','No conviene','Tiene TIR cero'],correcta:1,exp:'VAN positivo: conviene.'},
+ {q:'12. El ROI de invertir 1.000.000 con beneficio neto 400.000 es…',op:['25%','40%','60%','140%'],correcta:1,exp:'400.000 / 1.000.000 × 100 = 40%.'},
+ {q:'13. La razón corriente mayor a 1 indica…',op:['Falta de liquidez','Que cubres tus deudas de corto plazo','Más impuestos','Pérdida'],correcta:1,exp:'Activo corriente supera al pasivo corriente.'},
+ {q:'14. El factoring se diferencia de un crédito porque…',op:['Es más caro siempre','No aumenta la deuda','Tiene más trámites','Lo entrega el SII'],correcta:1,exp:'Es cesión de facturas, no un préstamo.'},
+ {q:'15. Antes de contratar tu primer trabajador debes considerar…',op:['Solo el sueldo líquido','El costo empresa completo (cotizaciones y cargas)','Nada','El color del logo'],correcta:1,exp:'El costo real incluye cotizaciones y cargas, no solo el líquido.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});
+  const pj=document.getElementById('quiz-puntaje'),ok=a>=11;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / 15'+(ok?' · ¡APROBADO! 🎉':' · Necesitas 11 para aprobar. Repasa y reintenta.');
+  const dip=document.getElementById('diploma');
+  if(ok){const nombre=(document.getElementById('alumno').value||'Participante').trim();document.getElementById('dip-nombre').textContent=nombre;document.getElementById('dip-fecha').textContent='Emitido el '+new Date().toLocaleDateString('es-CL',{day:'numeric',month:'long',year:'numeric'});dip.classList.add('ver');dip.scrollIntoView({behavior:'smooth'});}else{dip.classList.remove('ver');}
+}
+pintarQuiz();
+</script>
+</body>
+</html>

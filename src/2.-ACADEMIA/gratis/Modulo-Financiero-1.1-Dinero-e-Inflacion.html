@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Módulo 1.1 — El valor del dinero y la inflación</title>
+<style>
+/* =========================================================================
+   DESIGN TOKENS — cambia aquí colores/tipografía y se reestiliza TODO.
+   (Esta es la zona que tocas cuando "armes el CSS". La lógica no se toca.)
+   ========================================================================= */
+:root{
+  --color-acento:#0E8C7F;          /* acento Academia FINANCIERA (verde-azulado) */
+  --color-acento-suave:#E3F4F1;
+  --color-acento-oscuro:#0A6B61;
+  --color-texto:#1d2730;
+  --color-texto-suave:#5a6b78;
+  --color-fondo:#ffffff;
+  --color-panel:#f6f8f9;
+  --color-borde:#e2e8ec;
+  --color-ok:#1a9e57;
+  --color-error:#d1495b;
+  --color-aviso:#b8860b;
+  --radio:14px;
+  --sombra:0 2px 10px rgba(20,40,55,.06);
+  --fuente:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --ancho:880px;
+}
+
+/* ---- Base (estilo neutro de partida; reemplázalo por tu identidad) ---- */
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--fuente);color:var(--color-texto);background:var(--color-panel);line-height:1.6}
+.modulo{max-width:var(--ancho);margin:0 auto;background:var(--color-fondo);padding:0 0 60px}
+.envoltorio{padding:0 28px}
+h1,h2,h3{line-height:1.25;color:var(--color-texto)}
+h2{margin-top:0;font-size:1.5rem}
+h3{font-size:1.15rem;color:var(--color-acento-oscuro)}
+a{color:var(--color-acento-oscuro)}
+section{padding:34px 28px;border-bottom:1px solid var(--color-borde)}
+.tag{display:inline-block;background:var(--color-acento-suave);color:var(--color-acento-oscuro);
+  font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+
+/* ---- Encabezado ---- */
+.hero{background:linear-gradient(135deg,var(--color-acento),var(--color-acento-oscuro));color:#fff;padding:40px 28px}
+.hero .tag{background:rgba(255,255,255,.18);color:#fff}
+.hero h1{color:#fff;margin:14px 0 8px;font-size:2rem}
+.hero p{margin:0;opacity:.95;max-width:560px}
+.meta{margin-top:18px;font-size:.85rem;opacity:.9}
+.meta span{margin-right:18px}
+
+/* ---- Componentes reutilizables ---- */
+.objetivos{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.objetivos li{background:var(--color-panel);border-left:4px solid var(--color-acento);
+  padding:12px 16px;border-radius:0 var(--radio) var(--radio) 0}
+.recuadro{background:var(--color-acento-suave);border-radius:var(--radio);padding:16px 18px;margin:18px 0}
+.recuadro.aviso{background:#fdf6e3;border:1px solid #f0e0a8}
+.recuadro h4{margin:0 0 6px}
+.glosario dt{font-weight:700;color:var(--color-acento-oscuro);margin-top:10px}
+.glosario dd{margin:2px 0 0;color:var(--color-texto-suave)}
+
+/* ---- Caja de herramienta interactiva ---- */
+.tool{background:var(--color-fondo);border:1px solid var(--color-borde);border-radius:var(--radio);
+  box-shadow:var(--sombra);padding:22px;margin:18px 0}
+.tool h3{margin-top:0;display:flex;align-items:center;gap:8px}
+.tool .icono{width:30px;height:30px;display:grid;place-items:center;background:var(--color-acento-suave);
+  border-radius:8px;color:var(--color-acento-oscuro);font-weight:800}
+.campo{margin:12px 0}
+.campo label{display:block;font-weight:600;font-size:.9rem;margin-bottom:5px}
+.campo input[type=number],.campo input[type=range],.campo select{width:100%;padding:10px 12px;
+  border:1px solid var(--color-borde);border-radius:10px;font-size:1rem;font-family:inherit}
+.fila{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:560px){.fila{grid-template-columns:1fr}}
+.btn{background:var(--color-acento);color:#fff;border:0;padding:11px 20px;border-radius:10px;
+  font-size:.95rem;font-weight:700;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--color-acento-oscuro)}
+.btn.sec{background:transparent;color:var(--color-acento-oscuro);border:1px solid var(--color-borde)}
+.resultado{margin-top:16px;padding:16px;border-radius:12px;background:var(--color-panel);font-size:.98rem}
+.resultado strong{color:var(--color-acento-oscuro)}
+.cifra{font-size:1.5rem;font-weight:800;color:var(--color-acento-oscuro)}
+
+/* ---- Semáforo / barras ---- */
+.barra{height:14px;border-radius:7px;background:var(--color-borde);overflow:hidden;margin:8px 0}
+.barra>span{display:block;height:100%;background:var(--color-acento);transition:width .4s}
+
+/* ---- Drag & drop ---- */
+.dnd{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:640px){.dnd{grid-template-columns:1fr}}
+.fichas,.zonas{display:grid;gap:10px}
+.ficha{background:var(--color-acento-suave);border:1px dashed var(--color-acento);border-radius:10px;
+  padding:12px;cursor:grab;font-weight:600;user-select:none}
+.ficha.tomada{outline:3px solid var(--color-aviso)}
+.ficha.usada{opacity:.45;pointer-events:none}
+.zona{border:2px dashed var(--color-borde);border-radius:10px;padding:12px;min-height:64px;background:var(--color-panel)}
+.zona .titulo{font-size:.82rem;color:var(--color-texto-suave);font-weight:700}
+.zona.ok{border-color:var(--color-ok);background:#eafaf0}
+.zona.mal{border-color:var(--color-error);background:#fdeef0}
+.zona.sobre{border-color:var(--color-acento)}
+.zona .soltada{margin-top:8px;font-weight:700}
+
+/* ---- Quiz ---- */
+.pregunta{margin:18px 0;padding-bottom:8px}
+.pregunta p.enunciado{font-weight:700}
+.opcion{display:block;border:1px solid var(--color-borde);border-radius:10px;padding:11px 14px;margin:7px 0;cursor:pointer}
+.opcion:hover{border-color:var(--color-acento)}
+.opcion.correcta{border-color:var(--color-ok);background:#eafaf0}
+.opcion.incorrecta{border-color:var(--color-error);background:#fdeef0}
+.opcion input{margin-right:9px}
+.feedback{font-size:.9rem;margin-top:6px;padding:10px 12px;border-radius:8px;display:none}
+.feedback.ver{display:block}
+.feedback.bien{background:#eafaf0;color:#147a43}
+.feedback.mal{background:#fdeef0;color:#a5384a}
+.puntaje{font-size:1.2rem;font-weight:800;margin-top:14px}
+
+/* ---- Video ---- */
+.video-cont{position:relative;aspect-ratio:16/9;background:#0d1b22;border-radius:var(--radio);
+  display:grid;place-items:center;color:#9fb3bd;text-align:center;padding:20px}
+details.guion{margin-top:14px;border:1px solid var(--color-borde);border-radius:10px;padding:0 14px;background:var(--color-panel)}
+details.guion summary{cursor:pointer;font-weight:700;padding:12px 0;color:var(--color-acento-oscuro)}
+details.guion .cuerpo{padding-bottom:14px;font-size:.94rem;color:var(--color-texto-suave)}
+.recursos a{display:block;padding:6px 0}
+.cierre{background:var(--color-acento-suave);border:none}
+footer{padding:22px 28px;font-size:.8rem;color:var(--color-texto-suave);text-align:center}
+table.cmp{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:10px}
+table.cmp th,table.cmp td{border:1px solid var(--color-borde);padding:8px 10px;text-align:left}
+table.cmp th{background:var(--color-panel)}
+</style>
+</head>
+<body>
+<article class="modulo">
+
+  <!-- ====================== ENCABEZADO ====================== -->
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 1</span>
+    <h1>Módulo 1.1 — El valor del dinero y la inflación</h1>
+    <p>Entiende por qué tu plata "vale menos" con el tiempo y cómo herramientas como la UF y los depósitos te ayudan a protegerla.</p>
+    <div class="meta">
+      <span>⏱️ Duración: ~25 min</span>
+      <span>🎯 Sin conocimientos previos</span>
+      <span>📍 Contexto Chile · 2026</span>
+    </div>
+  </header>
+
+  <!-- ====================== OBJETIVOS ====================== -->
+  <section>
+    <span class="tag">Objetivos</span>
+    <h2>Al terminar este módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar las <strong>tres funciones del dinero</strong> con tus propias palabras.</li>
+      <li>Entender qué es el <strong>IPC</strong> y la <strong>inflación</strong>, y cómo afectan tu poder de compra.</li>
+      <li>Usar la <strong>UF</strong> para proteger contratos y ahorros del alza de precios.</li>
+      <li>Comparar la tasa de un <strong>depósito a plazo</strong> con la inflación y saber si ganas o pierdes.</li>
+    </ul>
+  </section>
+
+  <!-- ====================== VIDEO + GUION ====================== -->
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Mira la explicación</h2>
+    <div class="video-cont" id="video-modulo">
+      <!-- VIDEO: reemplaza este bloque por tu <iframe> de YouTube/Vimeo cuando lo grabes -->
+      🎬 Aquí va tu video (≈4–6 min). Contenedor id="video-modulo".
+    </div>
+
+    <details class="guion">
+      <summary>📋 Guion para el relator (no se muestra al alumno)</summary>
+      <div class="cuerpo">
+        <p><strong>0:00 — Gancho.</strong> "¿Te ha pasado que con $10.000 antes llenabas la bolsa del almacén y hoy te alcanza para la mitad? Eso tiene nombre: inflación. En 4 minutos vas a entender por qué pasa y cómo defenderte."</p>
+        <p><strong>0:30 — Qué es el dinero.</strong> El dinero sirve para tres cosas: intercambiar (lo usas para comprar), medir (comparas precios) y guardar valor (ahorras). El Banco Central emite el peso y cuida que mantenga su valor.</p>
+        <p><strong>1:30 — Inflación e IPC.</strong> El INE mide cada mes el IPC: cuánto subió una canasta de productos. A abril de 2026 la inflación a 12 meses fue 4,0%. Traducción: lo que costaba $100 hace un año, hoy cuesta $104.</p>
+        <p><strong>2:30 — La UF.</strong> Para que la inflación no te coma los contratos largos (arriendo, créditos), existe la UF: una "moneda" que se reajusta con la inflación. Hoy vale alrededor de $40.577. Muestra el conversor en pantalla.</p>
+        <p><strong>3:30 — Depósito vs inflación.</strong> Si un depósito te paga menos que la inflación, igual estás perdiendo poder de compra. Invita a usar el simulador del módulo.</p>
+        <p><strong>4:30 — Cierre + llamado a la acción.</strong> "Ahora prueba tú los simuladores de abajo con tus propias cifras y responde el quiz."</p>
+        <p><em>Tip de grabación: ten a mano el valor de la UF y el IPC del mes en que grabes, por si quieres mencionarlos. Los simuladores ya traen valores editables.</em></p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ====================== CONTENIDO ====================== -->
+  <section>
+    <span class="tag">Contenido</span>
+    <h2>¿Qué es el dinero?</h2>
+    <p>El dinero cumple <strong>tres funciones clave</strong>: es un <strong>medio de intercambio</strong> (lo entregas a cambio de bienes o servicios), una <strong>unidad de cuenta</strong> (te permite comparar precios y llevar cuentas) y un <strong>depósito de valor</strong> (puedes guardarlo para usarlo después). En Chile, el <strong>Banco Central</strong> emite el peso chileno y vela por su estabilidad.</p>
+
+    <h2>La inflación y el IPC</h2>
+    <p>El <strong>Índice de Precios al Consumidor (IPC)</strong> mide cómo varían los precios de una canasta de bienes y servicios que consume un hogar típico. Cuando el IPC sube, hablamos de <strong>inflación</strong>: tu dinero compra menos que antes.</p>
+    <div class="recuadro">
+      <h4>📊 Dato Chile (al grabar, actualízalo en sii.cl / ine.cl)</h4>
+      <p style="margin:0">En <strong>abril de 2026</strong> el IPC subió <strong>1,3% en el mes</strong>, acumulando <strong>2,7% en el año</strong> y <strong>4,0% en 12 meses</strong>. La meta del Banco Central es 3%.</p>
+    </div>
+
+    <h2>¿Qué es la UF?</h2>
+    <p>La <strong>Unidad de Fomento (UF)</strong> es una unidad de medida que se <strong>reajusta con la inflación</strong>. El Banco Central calcula su valor a diario tomando como referencia el IPC. Por eso, arriendos, créditos hipotecarios y seguros suelen expresarse en UF: así su valor real no se desgasta con el alza de precios. Al 30 de mayo de 2026 la UF vale alrededor de <strong>$40.577</strong>.</p>
+
+    <h2>Depósitos a plazo y poder de compra</h2>
+    <p>Un <strong>depósito a plazo</strong> es un instrumento de ahorro que paga una tasa fija durante un período. El truco está en compararla con la inflación: si tu depósito rinde menos que el alza de precios, tu plata <strong>pierde poder de compra</strong> aunque el número crezca.</p>
+    <div class="recuadro aviso">
+      <h4>⚠️ Ojo con esto</h4>
+      <p style="margin:0">"Ganar intereses" no es lo mismo que "ganar poder de compra". Lo que importa es la <strong>tasa real</strong> = rendimiento − inflación.</p>
+    </div>
+  </section>
+
+  <!-- ====================== GLOSARIO ====================== -->
+  <section>
+    <span class="tag">Glosario rápido</span>
+    <h2>Palabras clave</h2>
+    <dl class="glosario">
+      <dt>IPC</dt><dd>Índice que mide cuánto cambian los precios mes a mes. Lo publica el INE.</dd>
+      <dt>Inflación</dt><dd>Alza generalizada y sostenida de los precios.</dd>
+      <dt>UF</dt><dd>Unidad reajustable con la inflación; protege el valor real de contratos y ahorros.</dd>
+      <dt>TPM</dt><dd>Tasa de Política Monetaria que fija el Banco Central (4,5% a mayo 2026). Influye en las tasas de créditos y depósitos.</dd>
+      <dt>Tasa real</dt><dd>Rendimiento de un ahorro descontada la inflación.</dd>
+    </dl>
+  </section>
+
+  <!-- ====================== INTERACTIVO 1: DRAG & DROP ====================== -->
+  <section>
+    <span class="tag">Actividad 1 · Arrastra y suelta</span>
+    <h2>Las tres funciones del dinero</h2>
+    <p>Arrastra cada función a su definición. (En el celular: toca una ficha y luego la definición.)</p>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="intercambio">Medio de intercambio</div>
+          <div class="ficha" draggable="true" data-id="cuenta">Unidad de cuenta</div>
+          <div class="ficha" draggable="true" data-id="valor">Depósito de valor</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="intercambio">
+            <div class="titulo">Lo entrego a cambio de bienes o servicios</div>
+          </div>
+          <div class="zona" data-acepta="cuenta">
+            <div class="titulo">Me permite comparar precios y llevar cuentas</div>
+          </div>
+          <div class="zona" data-acepta="valor">
+            <div class="titulo">Puedo guardarlo para usarlo en el futuro</div>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ====================== INTERACTIVO 2: SIMULADOR INFLACIÓN ====================== -->
+  <section>
+    <span class="tag">Actividad 2 · Simulador</span>
+    <h2>¿Cuánto vale tu plata en el futuro?</h2>
+    <div class="tool">
+      <h3><span class="icono">$</span> Simulador de inflación</h3>
+      <div class="fila">
+        <div class="campo">
+          <label for="inf-monto">Monto hoy (CLP)</label>
+          <input type="number" id="inf-monto" value="100000" min="0" step="1000">
+        </div>
+        <div class="campo">
+          <label for="inf-anios">Horizonte (años)</label>
+          <input type="number" id="inf-anios" value="5" min="1" max="40">
+        </div>
+      </div>
+      <div class="campo">
+        <label for="inf-tasa">Inflación anual estimada: <strong id="inf-tasa-val">4,0%</strong></label>
+        <input type="range" id="inf-tasa" value="4" min="0" max="15" step="0.1" oninput="document.getElementById('inf-tasa-val').textContent=(this.value).replace('.',',')+'%'">
+      </div>
+      <button class="btn" onclick="simularInflacion()">Calcular</button>
+      <div class="resultado" id="inf-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ====================== INTERACTIVO 3: CALCULADORA UF ====================== -->
+  <section>
+    <span class="tag">Actividad 3 · Calculadora</span>
+    <h2>Conversor UF y contrato en pesos vs UF</h2>
+    <div class="tool">
+      <h3><span class="icono">UF</span> Conversor</h3>
+      <div class="campo">
+        <label for="uf-valor">Valor de la UF hoy (CLP) — edítalo con el valor del día</label>
+        <input type="number" id="uf-valor" value="40577" min="1" step="1">
+      </div>
+      <div class="fila">
+        <div class="campo">
+          <label for="uf-pesos">Pesos a convertir → UF</label>
+          <input type="number" id="uf-pesos" value="1000000" step="1000" oninput="convUF()">
+        </div>
+        <div class="campo">
+          <label for="uf-uf">UF a convertir → pesos</label>
+          <input type="number" id="uf-uf" value="10" step="0.1" oninput="convUFinv()">
+        </div>
+      </div>
+      <div class="resultado" id="uf-res"></div>
+    </div>
+
+    <div class="tool">
+      <h3><span class="icono">⚖️</span> ¿Conviene pactar en pesos fijos o en UF?</h3>
+      <p style="margin-top:0;font-size:.92rem;color:var(--color-texto-suave)">Compara un contrato pagado siempre el mismo monto en pesos contra el mismo monto expresado en UF, a lo largo de los años.</p>
+      <div class="fila">
+        <div class="campo">
+          <label for="cont-monto">Monto del contrato hoy (CLP)</label>
+          <input type="number" id="cont-monto" value="10000000" step="100000">
+        </div>
+        <div class="campo">
+          <label for="cont-anios">Años</label>
+          <input type="number" id="cont-anios" value="3" min="1" max="20">
+        </div>
+      </div>
+      <button class="btn" onclick="compararContrato()">Comparar</button>
+      <div class="resultado" id="cont-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ====================== INTERACTIVO 4: DEPÓSITO VS INFLACIÓN ====================== -->
+  <section>
+    <span class="tag">Actividad 4 · Simulador</span>
+    <h2>Tu depósito a plazo, ¿le gana a la inflación?</h2>
+    <div class="tool">
+      <h3><span class="icono">%</span> Tasa real del ahorro</h3>
+      <div class="fila">
+        <div class="campo">
+          <label for="dep-tasa">Tasa del depósito (% mensual)</label>
+          <input type="number" id="dep-tasa" value="0.40" step="0.01" min="0">
+        </div>
+        <div class="campo">
+          <label for="dep-inf">Inflación anual (%)</label>
+          <input type="number" id="dep-inf" value="4.0" step="0.1" min="0">
+        </div>
+      </div>
+      <button class="btn" onclick="simularDeposito()">Calcular tasa real</button>
+      <div class="resultado" id="dep-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ====================== CASO PRÁCTICO ====================== -->
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Don Luis y su almacén de barrio</h2>
+    <p>Don Luis guardó <strong>$2.000.000</strong> "abajo del colchón" para renovar su refrigerador en 3 años. Con una inflación de 4% anual, al cabo de 3 años esos $2.000.000 comprarán lo que hoy compras con cerca de <strong>$1.778.000</strong>: perdió ~$222.000 de poder de compra sin gastar un peso.</p>
+    <p>Si en cambio hubiese puesto la plata en un depósito o cuenta en UF que se reajusta con la inflación, habría <strong>mantenido el valor real</strong>. Moraleja: guardar plata quieta también tiene un costo. Usa el simulador de arriba con las cifras de don Luis para verlo tú mismo.</p>
+  </section>
+
+  <!-- ====================== QUIZ ====================== -->
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo</h2>
+    <p>Responde y revisa la explicación de cada pregunta. Necesitas 3 de 4 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <!-- ====================== RECURSOS ====================== -->
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.ine.gob.cl" target="_blank" rel="noopener">INE — Índice de Precios al Consumidor (IPC)</a>
+    <a href="https://www.bcentral.cl" target="_blank" rel="noopener">Banco Central de Chile — UF, TPM y estadísticas</a>
+    <a href="https://www.cmfchile.cl" target="_blank" rel="noopener">CMF — Educación financiera y comparador de depósitos</a>
+    <a href="https://www.sii.cl/valores_y_fechas/" target="_blank" rel="noopener">SII — Valores de UF, UTM y fechas</a>
+  </section>
+
+  <!-- ====================== CIERRE ====================== -->
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Lo que te llevas</h2>
+    <p>El dinero sirve para intercambiar, medir y guardar valor, pero la inflación desgasta ese valor con el tiempo. La UF y un ahorro que le gane a la inflación son tus aliados para proteger tu plata.</p>
+    <p><strong>Siguiente módulo →</strong> 1.2 Presupuesto personal: cómo ordenar tus ingresos y gastos con la regla 50/30/20.</p>
+  </section>
+
+  <footer>
+    PymEdu · Educación financiera para emprendedores · Contenido referencial, no asesoría financiera personalizada. Datos macro al 30-05-2026 (actualízalos al publicar).
+  </footer>
+</article>
+
+<script>
+/* =========================================================================
+   LÓGICA DEL MÓDULO — comentada en español. No necesitas tocarla para
+   reestilizar. Para un módulo nuevo, duplica el archivo y cambia datos/fórmulas.
+   ========================================================================= */
+
+/* Utilidad: formatear pesos chilenos */
+const fmtCLP = n => '$' + Math.round(n).toLocaleString('es-CL');
+const fmtNum = (n,d=2) => Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+/* ---------- 1) DRAG & DROP: funciones del dinero ---------- */
+let fichaTomada = null;
+
+function initDnd(){
+  document.querySelectorAll('.ficha').forEach(f=>{
+    f.addEventListener('dragstart', e=>{ e.dataTransfer.setData('id', f.dataset.id); });
+    f.addEventListener('click', ()=>{                 // soporte táctil: tocar para "tomar"
+      if(f.classList.contains('usada'))return;
+      document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));
+      f.classList.add('tomada'); fichaTomada = f;
+    });
+  });
+  document.querySelectorAll('.zona').forEach(z=>{
+    z.addEventListener('dragover', e=>{ e.preventDefault(); z.classList.add('sobre'); });
+    z.addEventListener('dragleave', ()=> z.classList.remove('sobre'));
+    z.addEventListener('drop', e=>{
+      e.preventDefault(); z.classList.remove('sobre');
+      const id = e.dataTransfer.getData('id');
+      soltar(z, document.querySelector('.ficha[data-id="'+id+'"]'));
+    });
+    z.addEventListener('click', ()=>{ if(fichaTomada) soltar(z, fichaTomada); });
+  });
+}
+function soltar(zona, ficha){
+  if(!ficha || ficha.classList.contains('usada')) return;
+  // quitar lo soltado previo en esta zona (si lo hubiera)
+  const prev = zona.querySelector('.soltada');
+  if(prev){ const idPrev=prev.dataset.id; const fp=document.querySelector('.ficha[data-id="'+idPrev+'"]'); if(fp)fp.classList.remove('usada'); prev.remove(); }
+  const et = document.createElement('div');
+  et.className='soltada'; et.textContent=ficha.textContent; et.dataset.id=ficha.dataset.id;
+  zona.appendChild(et);
+  ficha.classList.add('usada'); ficha.classList.remove('tomada'); fichaTomada=null;
+  evaluarDnd();
+}
+function evaluarDnd(){
+  const zonas=[...document.querySelectorAll('.zona')];
+  if(zonas.some(z=>!z.querySelector('.soltada'))) return; // aún incompleto
+  let correctas=0;
+  zonas.forEach(z=>{
+    const ok = z.querySelector('.soltada').dataset.id === z.dataset.acepta;
+    z.classList.toggle('ok',ok); z.classList.toggle('mal',!ok);
+    if(ok)correctas++;
+  });
+  const res=document.getElementById('dnd-res'); res.style.display='block';
+  res.innerHTML = correctas===3
+    ? '✅ <strong>¡Perfecto!</strong> Identificaste correctamente las tres funciones del dinero.'
+    : '🔁 Acertaste <strong>'+correctas+' de 3</strong>. Revisa las marcadas en rojo y prueba de nuevo.';
+}
+function reiniciarDnd(){
+  document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});
+  document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));
+  fichaTomada=null; document.getElementById('dnd-res').style.display='none';
+}
+
+/* ---------- 2) SIMULADOR DE INFLACIÓN ---------- */
+function simularInflacion(){
+  const P=+document.getElementById('inf-monto').value;
+  const n=+document.getElementById('inf-anios').value;
+  const i=+document.getElementById('inf-tasa').value/100;
+  const real = P/Math.pow(1+i,n);          // poder de compra futuro de P
+  const necesario = P*Math.pow(1+i,n);     // cuánto necesitarías para igualar hoy
+  const perdida = P-real;
+  const pctPerd = (perdida/P)*100;
+  const res=document.getElementById('inf-res'); res.style.display='block';
+  res.innerHTML =
+    'Tus <strong>'+fmtCLP(P)+'</strong> en <strong>'+n+' año(s)</strong> con inflación '+fmtNum(i*100,1)+'% comprarán lo que hoy compras con:'+
+    '<div class="cifra">'+fmtCLP(real)+'</div>'+
+    'Es decir, pierdes <strong>'+fmtCLP(perdida)+'</strong> de poder de compra (≈ '+fmtNum(pctPerd,1)+'%).'+
+    '<div class="barra"><span style="width:'+Math.min(pctPerd,100)+'%"></span></div>'+
+    '<small>Para conservar el poder de compra de hoy, en '+n+' año(s) necesitarías unos <strong>'+fmtCLP(necesario)+'</strong>.</small>';
+}
+
+/* ---------- 3) CONVERSOR UF + CONTRATO ---------- */
+function convUF(){
+  const uf=+document.getElementById('uf-valor').value;
+  const pesos=+document.getElementById('uf-pesos').value;
+  document.getElementById('uf-res').innerHTML = fmtCLP(pesos)+' equivalen a <strong>'+fmtNum(pesos/uf,2)+' UF</strong>.';
+}
+function convUFinv(){
+  const uf=+document.getElementById('uf-valor').value;
+  const ufs=+document.getElementById('uf-uf').value;
+  document.getElementById('uf-res').innerHTML = fmtNum(ufs,2)+' UF equivalen a <strong>'+fmtCLP(ufs*uf)+'</strong>.';
+}
+function compararContrato(){
+  const uf=+document.getElementById('uf-valor').value;
+  const monto=+document.getElementById('cont-monto').value;
+  const anios=+document.getElementById('cont-anios').value;
+  const i=0.04; // inflación supuesta 4% (editable en versión futura)
+  const ufs = monto/uf;
+  let filas='<tr><th>Año</th><th>Pagas en pesos fijos</th><th>Pagas en UF (nominal)</th><th>Valor real de lo pactado</th></tr>';
+  for(let a=0;a<=anios;a++){
+    const ufFut = uf*Math.pow(1+i,a);          // la UF sube con la inflación
+    const nominalUF = ufs*ufFut;               // monto en pesos si pactaste en UF
+    const realFijo = monto/Math.pow(1+i,a);    // poder de compra de un monto fijo
+    filas+='<tr><td>'+a+'</td><td>'+fmtCLP(monto)+'</td><td>'+fmtCLP(nominalUF)+'</td><td>'+fmtCLP(monto)+' (UF) vs '+fmtCLP(realFijo)+' (pesos)</td></tr>';
+  }
+  const res=document.getElementById('cont-res'); res.style.display='block';
+  res.innerHTML='<table class="cmp">'+filas+'</table>'+
+    '<p style="margin:12px 0 0"><strong>Lectura:</strong> en <strong>pesos fijos</strong> el número no cambia, pero su valor real cae año a año. En <strong>UF</strong>, el monto en pesos sube con la inflación y conserva el valor real de lo pactado. Por eso quien <em>recibe</em> el pago suele preferir UF, y quien <em>paga</em> prefiere pesos fijos.</p>';
+}
+
+/* ---------- 4) DEPÓSITO VS INFLACIÓN ---------- */
+function simularDeposito(){
+  const rm=+document.getElementById('dep-tasa').value/100;     // tasa mensual
+  const i=+document.getElementById('dep-inf').value/100;       // inflación anual
+  const anualNominal=Math.pow(1+rm,12)-1;                      // rendimiento anual compuesto
+  const real=(1+anualNominal)/(1+i)-1;                         // tasa real (Fisher)
+  const res=document.getElementById('dep-res'); res.style.display='block';
+  const signo = real>=0?'gana':'pierde';
+  const color = real>=0?'var(--color-ok)':'var(--color-error)';
+  res.innerHTML =
+    'Rendimiento anual del depósito (compuesto): <strong>'+fmtNum(anualNominal*100,2)+'%</strong><br>'+
+    'Inflación anual: <strong>'+fmtNum(i*100,2)+'%</strong>'+
+    '<div class="cifra" style="color:'+color+'">Tasa real: '+fmtNum(real*100,2)+'%</div>'+
+    'Tu ahorro <strong style="color:'+color+'">'+signo+' poder de compra</strong>. '+
+    (real>=0?'Le estás ganando a la inflación. 👍':'Aunque el número crece, compras menos con el tiempo. Considera instrumentos en UF o de mayor rendimiento. ⚠️');
+}
+
+/* ---------- 5) QUIZ ---------- */
+const preguntas=[
+  {q:'¿Cuál de estas NO es una función del dinero?',
+   op:['Medio de intercambio','Unidad de cuenta','Generador de intereses','Depósito de valor'],
+   correcta:2,
+   exp:'El dinero intercambia, mide y guarda valor. Generar intereses es una característica de ciertos instrumentos, no una función del dinero en sí.'},
+  {q:'En abril de 2026 el IPC subió 1,3% en el mes. ¿Cuál fue la inflación a 12 meses?',
+   op:['2,7%','4,0%','1,3%','3,0%'],
+   correcta:1,
+   exp:'La variación a 12 meses fue 4,0%. El 2,7% es lo acumulado en el año y 1,3% la variación mensual.'},
+  {q:'¿Por qué se usa la UF en contratos de largo plazo?',
+   op:['Porque tiene un valor fijo','Para proteger el valor real frente a la inflación','Porque es obligatoria en todo contrato','Para pagar menos impuestos'],
+   correcta:1,
+   exp:'La UF se reajusta con la inflación, así que conserva el valor real de lo pactado a lo largo del tiempo.'},
+  {q:'Un depósito paga 0,3% mensual y la inflación anual es 4%. ¿Qué pasa con tu poder de compra?',
+   op:['Aumenta con seguridad','Se mantiene exactamente igual','Puede disminuir','Se duplica'],
+   correcta:2,
+   exp:'0,3% mensual ≈ 3,66% anual, por debajo del 4% de inflación: la tasa real es negativa y pierdes poder de compra.'}
+];
+
+function pintarQuiz(){
+  const form=document.getElementById('quiz');
+  preguntas.forEach((p,idx)=>{
+    let html='<div class="pregunta" data-i="'+idx+'"><p class="enunciado">'+(idx+1)+'. '+p.q+'</p>';
+    p.op.forEach((o,j)=>{
+      html+='<label class="opcion"><input type="radio" name="p'+idx+'" value="'+j+'">'+o+'</label>';
+    });
+    html+='<div class="feedback"></div></div>';
+    form.insertAdjacentHTML('beforeend',html);
+  });
+}
+function corregirQuiz(){
+  let aciertos=0;
+  preguntas.forEach((p,idx)=>{
+    const cont=document.querySelector('.pregunta[data-i="'+idx+'"]');
+    const sel=cont.querySelector('input[name="p'+idx+'"]:checked');
+    const fb=cont.querySelector('.feedback');
+    cont.querySelectorAll('.opcion').forEach(o=>o.classList.remove('correcta','incorrecta'));
+    const labels=cont.querySelectorAll('.opcion');
+    labels[p.correcta].classList.add('correcta');
+    fb.className='feedback ver';
+    if(sel && +sel.value===p.correcta){
+      aciertos++; fb.classList.add('bien'); fb.textContent='✔️ Correcto. '+p.exp;
+    }else{
+      if(sel) labels[+sel.value].classList.add('incorrecta');
+      fb.classList.add('mal'); fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;
+    }
+  });
+  const pj=document.getElementById('quiz-puntaje');
+  const aprob = aciertos>=3;
+  pj.style.color = aprob?'var(--color-ok)':'var(--color-error)';
+  pj.textContent = 'Puntaje: '+aciertos+' / '+preguntas.length+(aprob?' · ¡Aprobado! 🎉':' · Repasa y vuelve a intentarlo.');
+}
+
+/* init */
+initDnd();
+pintarQuiz();
+convUF();
+</script>
+</body>
+</html>

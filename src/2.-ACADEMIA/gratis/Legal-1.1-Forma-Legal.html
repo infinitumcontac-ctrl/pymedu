@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L1.1 — Elige la forma legal de tu empresa</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 1 · Módulo L1.1</span>
+    <h1>Elige la forma legal de tu empresa</h1>
+    <p>Persona natural o jurídica, EIRL, SpA, Ltda o SA. Qué significan, cuánto te protegen y cuál le conviene a tu negocio.</p>
+    <div class="meta"><span>⏱️ 40 min</span><span>📶 Nivel inicial</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a class="actual">L1.1 Forma legal</a><a>L1.2 Constituir</a><a>L1.3 Patentes y permisos</a><a>L1.4 RUT y firma digital</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Antes de empezar</h4><p>Esto es <strong>educación legal general</strong>, no asesoría para tu caso. Para decisiones importantes consulta a un abogado o a la <strong>Corporación de Asistencia Judicial</strong> (gratuita).</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Diferenciar <strong>persona natural con giro</strong> de <strong>persona jurídica</strong>.</li>
+      <li>Explicar la <strong>responsabilidad limitada</strong> y por qué protege tu patrimonio.</li>
+      <li>Comparar <strong>EIRL, SpA, Ltda y SA</strong>.</li>
+      <li>Elegir la forma legal según tu situación.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Si demandan a tu negocio o se endeuda, ¿responde la empresa o respondes tú con tu casa? Depende de la forma legal."</p>
+      <p><strong>0:40 Natural vs jurídica.</strong> RUT propio, responsabilidad, socios.</p>
+      <p><strong>1:45 Los cuatro tipos.</strong> EIRL, SpA, Ltda, SA. Apóyate en el comparador.</p>
+      <p><strong>3:30 Cómo elegir.</strong> ¿Solo o con socios? ¿Proteger patrimonio? ¿Inversionistas? Usa el asesor.</p>
+      <p><strong>5:00 Cierre.</strong> En el próximo módulo lo constituimos paso a paso. Quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Persona natural vs. persona jurídica</h2>
+    <p>Una <strong>persona natural con giro</strong> emprende usando su propio RUT. Es lo más simple y barato, pero <strong>responde con su patrimonio personal</strong>: si el negocio se endeuda o lo demandan, tus bienes personales están expuestos.</p>
+    <p>Una <strong>persona jurídica</strong> es una empresa con <strong>RUT propio</strong>, separada de ti. Si es de <strong>responsabilidad limitada</strong>, tu riesgo se limita a lo que aportaste; tu casa y ahorros quedan, en principio, protegidos. Permite sumar socios e inversionistas y da más formalidad para crédito y fondos.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Los cuatro tipos más comunes</h2>
+    <p><strong>EIRL</strong> (Empresa Individual de Responsabilidad Limitada): un solo dueño con responsabilidad limitada. No admite socios.</p>
+    <p><strong>SpA</strong> (Sociedad por Acciones): la más usada por emprendimientos. Uno o más dueños, capital en acciones, muy flexible para incorporar inversionistas.</p>
+    <p><strong>Ltda</strong> (Sociedad de Responsabilidad Limitada): de 2 a 50 socios. Sólida, pero cambios de socios exigen modificar los estatutos (más rígida).</p>
+    <p><strong>SA</strong> (Sociedad Anónima): para empresas grandes, con accionistas y directorio. Más regulada y costosa; necesaria para abrirse a muchos inversionistas o a la bolsa.</p>
+    <div class="recuadro"><h4>💡 En palabras simples</h4><p>La decisión real para la mayoría es: partir como <strong>persona natural</strong> (rápido, barato, pero arriesgas tu patrimonio) o constituir una <strong>SpA o EIRL</strong> (un poco más de trámite, pero proteges lo tuyo).</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Herramienta 1 · Asesor</span>
+    <h2>¿Qué forma legal te conviene?</h2>
+    <div class="tool">
+      <h3><span class="icono">🧭</span> Asesor de forma jurídica</h3>
+      <div class="campo"><label for="q-socios">1. ¿Quiénes serán dueños?</label>
+        <select id="q-socios"><option value="solo">Solo yo</option><option value="varios">Dos o más personas</option></select></div>
+      <div class="campo"><label for="q-patrimonio">2. ¿Quieres proteger tu patrimonio personal?</label>
+        <select id="q-patrimonio"><option value="si">Sí, es importante</option><option value="no">No me preocupa / quiero lo más simple</option></select></div>
+      <div class="campo"><label for="q-inversionistas">3. ¿Planeas sumar inversionistas a futuro?</label>
+        <select id="q-inversionistas"><option value="no">No</option><option value="si">Sí</option></select></div>
+      <div class="campo"><label for="q-escala">4. ¿Aspiras a gran escala o abrir a la bolsa?</label>
+        <select id="q-escala"><option value="no">No, pequeño/mediano</option><option value="si">Sí, gran escala</option></select></div>
+      <button class="btn" onclick="asesorar()">Ver recomendación</button>
+      <div class="resultado" id="asesor-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Herramienta 2 · Comparador</span>
+    <h2>Compara las formas legales</h2>
+    <div class="tool">
+      <div class="chips" id="chips">
+        <span class="chip" data-col="0">Persona natural</span><span class="chip" data-col="1">EIRL</span><span class="chip" data-col="2">SpA</span><span class="chip" data-col="3">Ltda</span><span class="chip" data-col="4">SA</span>
+      </div>
+      <div class="cmp-wrap"><table class="cmp" id="tabla-cmp">
+        <tr><th>Característica</th><th data-col="0">Persona natural</th><th data-col="1">EIRL</th><th data-col="2">SpA</th><th data-col="3">Ltda</th><th data-col="4">SA</th></tr>
+        <tr><td>N° de dueños</td><td data-col="0">1</td><td data-col="1">1</td><td data-col="2">1 o más</td><td data-col="3">2 a 50</td><td data-col="4">2 o más</td></tr>
+        <tr><td>RUT</td><td data-col="0">El tuyo</td><td data-col="1">Propio</td><td data-col="2">Propio</td><td data-col="3">Propio</td><td data-col="4">Propio</td></tr>
+        <tr><td>Responsabilidad</td><td data-col="0">Ilimitada</td><td data-col="1">Limitada</td><td data-col="2">Limitada</td><td data-col="3">Limitada</td><td data-col="4">Limitada</td></tr>
+        <tr><td>Sumar inversionistas</td><td data-col="0">No</td><td data-col="1">No</td><td data-col="2">Fácil (acciones)</td><td data-col="3">Difícil</td><td data-col="4">Sí</td></tr>
+        <tr><td>Flexibilidad</td><td data-col="0">Máxima simplicidad</td><td data-col="1">Media</td><td data-col="2">Alta</td><td data-col="3">Media-baja</td><td data-col="4">Baja (regulada)</td></tr>
+        <tr><td>Ideal para…</td><td data-col="0">Probar una idea</td><td data-col="1">Un dueño que se protege</td><td data-col="2">Crecer / captar capital</td><td data-col="3">Socios estables</td><td data-col="4">Empresa grande</td></tr>
+      </table></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Responsabilidad limitada</dt><dd>Tu riesgo se limita al capital aportado.</dd>
+      <dt>Persona natural con giro</dt><dd>Emprender con tu propio RUT; responsabilidad ilimitada.</dd>
+      <dt>Persona jurídica</dt><dd>Empresa con RUT propio, separada de ti.</dd>
+      <dt>EIRL</dt><dd>Empresa individual de responsabilidad limitada (un dueño).</dd>
+      <dt>SpA</dt><dd>Sociedad por acciones; flexible, uno o más dueños.</dd>
+      <dt>Ltda</dt><dd>Sociedad de responsabilidad limitada (2 a 50 socios).</dd>
+      <dt>SA</dt><dd>Sociedad anónima; accionistas y directorio.</dd>
+      <dt>Estatutos</dt><dd>El "reglamento" de la sociedad.</dd>
+      <dt>Patrimonio</dt><dd>El conjunto de tus bienes y deudas.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Javiera y su marca de cosmética</h2>
+    <p>Javiera vende por Instagram como persona natural. Quiere crecer, pedir un FOGAPE y luego sumar una socia. Su perfil (sola hoy + proteger patrimonio + abrirse a inversionistas) apunta a una <strong>SpA</strong>: parte sola, se protege y suma socios emitiendo acciones. Si nunca pensara en socios, una <strong>EIRL</strong> también la protegería con menos complejidad. Usa el asesor.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Quedarte como persona natural</strong> cuando ya tomas deudas o riesgos altos.</li>
+      <li><strong>Elegir SA</strong> "porque suena serio" sin necesitar directorio ni bolsa.</li>
+      <li><strong>Constituir Ltda</strong> si prevés muchos cambios de socios (es rígida).</li>
+      <li><strong>No formalizar</strong> y perder acceso a crédito y fondos.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.registrodeempresasysociedades.cl" target="_blank" rel="noopener">Registro de Empresas y Sociedades</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII</a>
+    <a href="https://www.cajchile.cl" target="_blank" rel="noopener">Corporación de Asistencia Judicial</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>La forma legal define cuánto arriesgas y cuánto puedes crecer. Persona natural es lo más simple pero expone tu patrimonio; EIRL y SpA te protegen, y la SpA es la más flexible para crecer y sumar inversionistas.</p>
+    <p><strong>Siguiente módulo →</strong> L1.2 Constituir paso a paso en Empresa en un Día.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial, no asesoría jurídica · Verifica trámites vigentes en fuentes oficiales (2026).</footer>
+</article>
+
+<script>
+function asesorar(){const socios=document.getElementById('q-socios').value,patr=document.getElementById('q-patrimonio').value,inv=document.getElementById('q-inversionistas').value,esc=document.getElementById('q-escala').value;let reco,por,alt;
+ if(esc==='si'){reco='Sociedad Anónima (SA)';por='Aspiras a gran escala o bolsa: la SA está hecha para muchos accionistas, con directorio y reglas más estrictas.';alt='Si recién partes, una SpA da casi la misma flexibilidad con menos costo y luego se transforma en SA.';}
+ else if(inv==='si'){reco='Sociedad por Acciones (SpA)';por='Quieres sumar inversionistas: la SpA divide el capital en acciones, así incorporar socios es simple.';alt='Si finalmente eres un solo dueño sin inversionistas, una EIRL también te protegería.';}
+ else if(socios==='solo'&&patr==='no'){reco='Persona natural con giro';por='Un solo dueño, lo más simple y barato, y hoy no priorizas proteger tu patrimonio. Ideal para partir y validar.';alt='Apenas tomes deudas o riesgos, migra a EIRL o SpA para proteger tu patrimonio.';}
+ else if(socios==='solo'&&patr==='si'){reco='EIRL o SpA';por='Un solo dueño que quiere proteger su patrimonio. EIRL es simple; SpA agrega flexibilidad para crecer.';alt='Elige SpA si podrías sumar socios; EIRL si serás siempre el único dueño.';}
+ else{reco=(inv==='no')?'Ltda o SpA':'SpA';por='Dos o más dueños con responsabilidad limitada. La Ltda es sólida para socios estables; la SpA es más flexible ante cambios de socios o aportes.';alt='Hoy muchas sociedades de varios socios eligen SpA por su flexibilidad.';}
+ const r=document.getElementById('asesor-res');r.style.display='block';r.innerHTML='<p style="font-size:1.3rem;font-weight:800;color:var(--color-acento-oscuro);margin:0 0 6px">→ '+reco+'</p><p><strong>Por qué:</strong> '+por+'</p><p style="margin-bottom:0"><strong>Alternativa:</strong> '+alt+'</p><p style="font-size:.82rem;color:var(--color-texto-suave)">Orientación general; confírmalo con un contador o abogado.</p>';}
+
+document.querySelectorAll('#chips .chip').forEach(chip=>{chip.addEventListener('click',()=>{chip.classList.toggle('on');const col=chip.dataset.col;document.querySelectorAll('#tabla-cmp [data-col="'+col+'"]').forEach(c=>c.classList.toggle('col-activa'));});});
+
+const preguntas=[
+ {q:'La principal desventaja de la persona natural con giro es…',op:['Tener RUT propio','Responder con tu patrimonio personal','No poder vender','Pagar más IVA'],correcta:1,exp:'Tiene responsabilidad ilimitada: arriesgas tu patrimonio.'},
+ {q:'La forma más flexible para sumar inversionistas es…',op:['EIRL','Persona natural','SpA','Ltda'],correcta:2,exp:'La SpA divide el capital en acciones.'},
+ {q:'Responsabilidad limitada significa que…',op:['No pagas impuestos','Tu riesgo se limita al capital aportado','Tienes máximo 50 socios','No puedes endeudarte'],correcta:1,exp:'Respondes hasta lo aportado, no con tu patrimonio personal.'},
+ {q:'La EIRL admite…',op:['Varios socios','Un solo dueño','Solo personas jurídicas','Accionistas en bolsa'],correcta:1,exp:'Es individual: un solo titular con responsabilidad limitada.'},
+ {q:'La Ltda puede tener…',op:['1 socio','2 a 50 socios','Solo accionistas','Hasta 1.000 socios'],correcta:1,exp:'Entre 2 y 50 socios.'},
+ {q:'La SA es más adecuada para…',op:['Un emprendimiento que parte','Empresas grandes o que abren a la bolsa','Un negocio sin socios','Vender por Instagram'],correcta:1,exp:'Tiene directorio y mayor regulación; sirve a empresas grandes.'},
+ {q:'Una persona jurídica tiene…',op:['Tu mismo RUT','RUT propio','Sin RUT','El RUT del banco'],correcta:1,exp:'Es una entidad separada con RUT propio.'},
+ {q:'Para un solo dueño que quiere proteger su patrimonio y crecer, conviene…',op:['Persona natural','SpA (o EIRL)','SA','Sociedad colectiva'],correcta:1,exp:'SpA protege y da flexibilidad; EIRL si será siempre único dueño.'},
+ {q:'Un inconveniente de la Ltda es que…',op:['No protege el patrimonio','Cambiar socios exige modificar estatutos','No tiene RUT','No puede facturar'],correcta:1,exp:'Es más rígida ante entrada/salida de socios.'},
+ {q:'Los estatutos de una sociedad son…',op:['Un impuesto','El reglamento interno (objeto, aportes, administración)','Una patente','Un crédito'],correcta:1,exp:'Definen objeto social, aportes y administración.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

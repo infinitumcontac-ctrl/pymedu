@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · Módulo L1.1 — Elige la forma legal de tu empresa</title>
+<style>
+/* =========================================================================
+   DESIGN TOKENS — Academia LEGAL (acento azul/índigo para diferenciarla
+   de la financiera). Cambia colores/tipografía aquí y se reestiliza todo.
+   ========================================================================= */
+:root{
+  --color-acento:#3949AB;          /* acento Academia LEGAL (índigo) */
+  --color-acento-suave:#E8EAF6;
+  --color-acento-oscuro:#283593;
+  --color-texto:#1d2330;
+  --color-texto-suave:#5a6275;
+  --color-fondo:#ffffff;
+  --color-panel:#f6f7fa;
+  --color-borde:#e3e5ee;
+  --color-ok:#1a9e57;
+  --color-error:#d1495b;
+  --color-aviso:#b8860b;
+  --radio:14px;
+  --sombra:0 2px 10px rgba(30,35,60,.07);
+  --fuente:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+  --ancho:880px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--fuente);color:var(--color-texto);background:var(--color-panel);line-height:1.6}
+.modulo{max-width:var(--ancho);margin:0 auto;background:var(--color-fondo);padding:0 0 60px}
+h1,h2,h3{line-height:1.25}
+h2{margin-top:0;font-size:1.5rem}
+h3{font-size:1.15rem;color:var(--color-acento-oscuro)}
+a{color:var(--color-acento-oscuro)}
+section{padding:34px 28px;border-bottom:1px solid var(--color-borde)}
+.tag{display:inline-block;background:var(--color-acento-suave);color:var(--color-acento-oscuro);
+  font-size:.72rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.hero{background:linear-gradient(135deg,var(--color-acento),var(--color-acento-oscuro));color:#fff;padding:40px 28px}
+.hero .tag{background:rgba(255,255,255,.18);color:#fff}
+.hero h1{color:#fff;margin:14px 0 8px;font-size:2rem}
+.hero p{margin:0;opacity:.95;max-width:580px}
+.meta{margin-top:18px;font-size:.85rem;opacity:.9}.meta span{margin-right:18px}
+.objetivos{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.objetivos li{background:var(--color-panel);border-left:4px solid var(--color-acento);padding:12px 16px;border-radius:0 var(--radio) var(--radio) 0}
+.recuadro{background:var(--color-acento-suave);border-radius:var(--radio);padding:16px 18px;margin:18px 0}
+.recuadro.aviso{background:#fdf6e3;border:1px solid #f0e0a8}
+.recuadro h4{margin:0 0 6px}
+.glosario dt{font-weight:700;color:var(--color-acento-oscuro);margin-top:10px}
+.glosario dd{margin:2px 0 0;color:var(--color-texto-suave)}
+.tool{background:var(--color-fondo);border:1px solid var(--color-borde);border-radius:var(--radio);box-shadow:var(--sombra);padding:22px;margin:18px 0}
+.tool h3{margin-top:0;display:flex;align-items:center;gap:8px}
+.tool .icono{width:30px;height:30px;display:grid;place-items:center;background:var(--color-acento-suave);border-radius:8px;color:var(--color-acento-oscuro);font-weight:800}
+.campo{margin:14px 0}
+.campo label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px}
+.campo select,.campo input{width:100%;padding:10px 12px;border:1px solid var(--color-borde);border-radius:10px;font-size:1rem;font-family:inherit}
+.btn{background:var(--color-acento);color:#fff;border:0;padding:11px 20px;border-radius:10px;font-size:.95rem;font-weight:700;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--color-acento-oscuro)}
+.btn.sec{background:transparent;color:var(--color-acento-oscuro);border:1px solid var(--color-borde)}
+.resultado{margin-top:16px;padding:18px;border-radius:12px;background:var(--color-panel)}
+.reco{font-size:1.4rem;font-weight:800;color:var(--color-acento-oscuro);margin:0 0 6px}
+.recursos a{display:block;padding:6px 0}
+.cierre{background:var(--color-acento-suave);border:none}
+footer{padding:22px 28px;font-size:.8rem;color:var(--color-texto-suave);text-align:center}
+.video-cont{position:relative;aspect-ratio:16/9;background:#161a2b;border-radius:var(--radio);display:grid;place-items:center;color:#9aa3c2;text-align:center;padding:20px}
+details.guion{margin-top:14px;border:1px solid var(--color-borde);border-radius:10px;padding:0 14px;background:var(--color-panel)}
+details.guion summary{cursor:pointer;font-weight:700;padding:12px 0;color:var(--color-acento-oscuro)}
+details.guion .cuerpo{padding-bottom:14px;font-size:.94rem;color:var(--color-texto-suave)}
+
+/* comparador */
+.cmp-wrap{overflow-x:auto}
+table.cmp{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:6px;min-width:620px}
+table.cmp th,table.cmp td{border:1px solid var(--color-borde);padding:9px 11px;text-align:left;vertical-align:top}
+table.cmp th{background:var(--color-panel);position:sticky;top:0}
+table.cmp th.col-activa,table.cmp td.col-activa{background:var(--color-acento-suave)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chip{border:1px solid var(--color-borde);border-radius:999px;padding:7px 14px;cursor:pointer;font-size:.85rem;font-weight:600}
+.chip.on{background:var(--color-acento);color:#fff;border-color:var(--color-acento)}
+
+/* ordenar pasos */
+.pasos{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.paso{display:flex;align-items:center;gap:10px;background:var(--color-panel);border:1px solid var(--color-borde);border-radius:10px;padding:10px 12px}
+.paso .txt{flex:1}
+.paso .num{width:26px;height:26px;border-radius:50%;background:var(--color-acento-suave);color:var(--color-acento-oscuro);display:grid;place-items:center;font-weight:800;font-size:.85rem}
+.paso button{border:1px solid var(--color-borde);background:#fff;border-radius:8px;cursor:pointer;width:30px;height:30px;font-size:1rem}
+.paso.ok{border-color:var(--color-ok);background:#eafaf0}
+.paso.mal{border-color:var(--color-error);background:#fdeef0}
+
+/* quiz */
+.pregunta{margin:18px 0}
+.pregunta p.enunciado{font-weight:700}
+.opcion{display:block;border:1px solid var(--color-borde);border-radius:10px;padding:11px 14px;margin:7px 0;cursor:pointer}
+.opcion:hover{border-color:var(--color-acento)}
+.opcion.correcta{border-color:var(--color-ok);background:#eafaf0}
+.opcion.incorrecta{border-color:var(--color-error);background:#fdeef0}
+.opcion input{margin-right:9px}
+.feedback{font-size:.9rem;margin-top:6px;padding:10px 12px;border-radius:8px;display:none}
+.feedback.ver{display:block}.feedback.bien{background:#eafaf0;color:#147a43}.feedback.mal{background:#fdeef0;color:#a5384a}
+.puntaje{font-size:1.2rem;font-weight:800;margin-top:14px}
+</style>
+</head>
+<body>
+<article class="modulo">
+
+  <!-- ====================== ENCABEZADO ====================== -->
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 1</span>
+    <h1>Módulo L1.1 — Elige la forma legal de tu empresa</h1>
+    <p>Persona natural o jurídica, EIRL, SpA, Ltda o SA. Aprende qué significan, cuánto te protegen y cuál le conviene a tu negocio.</p>
+    <div class="meta">
+      <span>⏱️ Duración: ~30 min</span>
+      <span>🎯 Sin conocimientos previos</span>
+      <span>📍 Contexto Chile · 2026</span>
+    </div>
+  </header>
+
+  <!-- ====================== AVISO LEGAL ====================== -->
+  <section>
+    <div class="recuadro aviso">
+      <h4>⚖️ Antes de empezar</h4>
+      <p style="margin:0">Esto es <strong>educación legal general</strong>, no asesoría para tu caso particular. Para decisiones importantes consulta a un abogado o a la <strong>Corporación de Asistencia Judicial</strong> (gratuita).</p>
+    </div>
+  </section>
+
+  <!-- ====================== OBJETIVOS ====================== -->
+  <section>
+    <span class="tag">Objetivos</span>
+    <h2>Al terminar este módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Diferenciar <strong>persona natural con giro</strong> de <strong>persona jurídica</strong>.</li>
+      <li>Reconocer qué es la <strong>responsabilidad limitada</strong> y por qué protege tu patrimonio.</li>
+      <li>Comparar <strong>EIRL, SpA, Ltda y SA</strong> y elegir la más adecuada para tu negocio.</li>
+      <li>Conocer los <strong>pasos para constituir</strong> tu empresa en Chile.</li>
+    </ul>
+  </section>
+
+  <!-- ====================== VIDEO + GUION ====================== -->
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Mira la explicación</h2>
+    <div class="video-cont" id="video-modulo">
+      <!-- VIDEO: reemplaza por tu <iframe> cuando lo grabes -->
+      🎬 Aquí va tu video (≈5–7 min). Contenedor id="video-modulo".
+    </div>
+    <details class="guion">
+      <summary>📋 Guion para el relator (no se muestra al alumno)</summary>
+      <div class="cuerpo">
+        <p><strong>0:00 — Gancho.</strong> "Si tu negocio se endeuda o lo demandan, ¿responde la empresa… o respondes tú con tu casa y tu auto? La respuesta depende de la forma legal que elijas. Veámoslo simple."</p>
+        <p><strong>0:40 — Persona natural vs. jurídica.</strong> Persona natural con giro: usas tu propio RUT y respondes con TODO tu patrimonio. Persona jurídica: la empresa tiene RUT propio y, si es de responsabilidad limitada, tu riesgo se limita a lo que aportaste.</p>
+        <p><strong>1:45 — Los cuatro tipos.</strong> EIRL (uno solo, responsabilidad limitada), SpA (la favorita: flexible, sirve para sumar inversionistas), Ltda (2+ socios, más rígida) y SA (empresas grandes, con directorio). Apóyate en el comparador del módulo.</p>
+        <p><strong>3:30 — Cómo elegir.</strong> Tres preguntas: ¿solo o con socios?, ¿quiero proteger mi patrimonio?, ¿voy a buscar inversionistas? Invita a usar el "Asesor de forma jurídica".</p>
+        <p><strong>5:00 — Cómo se constituye.</strong> Empresa en un Día: registrodeempresasysociedades.cl, ClaveÚnica, estatutos, RUT, inicio de actividades, patente municipal.</p>
+        <p><strong>6:00 — Cierre.</strong> "Usa el asesor de abajo, ordena los pasos y responde el quiz. En el próximo módulo lo constituimos juntos paso a paso."</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ====================== CONTENIDO ====================== -->
+  <section>
+    <span class="tag">Contenido</span>
+    <h2>Persona natural vs. persona jurídica</h2>
+    <p>Una <strong>persona natural con giro</strong> emprende usando su propio RUT. Es lo más simple y barato, pero <strong>responde con su patrimonio personal</strong> por las deudas del negocio: si las cosas salen mal, tus bienes personales están expuestos.</p>
+    <p>Una <strong>persona jurídica</strong> es una empresa con <strong>RUT propio</strong>, separada de ti. Si es de <strong>responsabilidad limitada</strong>, tu riesgo se limita a lo que aportaste; tu casa y tus ahorros personales quedan, en principio, protegidos. Permite sumar socios e inversionistas y da más formalidad para acceder a crédito y a programas públicos.</p>
+
+    <h2>Los cuatro tipos más comunes</h2>
+    <p><strong>EIRL</strong> (Empresa Individual de Responsabilidad Limitada): un solo dueño, con responsabilidad limitada. No admite socios.</p>
+    <p><strong>SpA</strong> (Sociedad por Acciones): la más usada por emprendimientos. Uno o más dueños, capital dividido en acciones, muy flexible para incorporar inversionistas o vender participación.</p>
+    <p><strong>Ltda</strong> (Sociedad de Responsabilidad Limitada): de 2 a 50 socios. Sólida, pero cualquier cambio (entrada/salida de socios) exige modificar los estatutos, lo que la hace más rígida.</p>
+    <p><strong>SA</strong> (Sociedad Anónima): pensada para empresas grandes, con accionistas y directorio. Más regulada y costosa; necesaria si planeas abrirte a muchos inversionistas o a la bolsa.</p>
+
+    <div class="recuadro">
+      <h4>💡 En palabras simples</h4>
+      <p style="margin:0">Para la mayoría de los emprendimientos que parten, la decisión real es: <strong>partir como persona natural</strong> (rápido y barato, pero arriesgas tu patrimonio) o constituir una <strong>SpA o EIRL</strong> (un poco más de trámite, pero proteges lo tuyo).</p>
+    </div>
+  </section>
+
+  <!-- ====================== GLOSARIO ====================== -->
+  <section>
+    <span class="tag">Glosario rápido</span>
+    <h2>Palabras clave</h2>
+    <dl class="glosario">
+      <dt>Responsabilidad limitada</dt><dd>Tu riesgo se limita al capital que aportaste; no respondes con tu patrimonio personal.</dd>
+      <dt>Patrimonio</dt><dd>El conjunto de tus bienes (casa, auto, ahorros) y deudas.</dd>
+      <dt>Estatutos</dt><dd>El "reglamento" de la empresa: objeto, socios, aportes y administración.</dd>
+      <dt>Empresa en un Día</dt><dd>Régimen simplificado y gratuito para constituir empresas en línea (Registro de Empresas y Sociedades).</dd>
+      <dt>Giro</dt><dd>La actividad económica que declaras ante el SII.</dd>
+    </dl>
+  </section>
+
+  <!-- ====================== INTERACTIVO 1: ASESOR ====================== -->
+  <section>
+    <span class="tag">Herramienta 1 · Asesor</span>
+    <h2>¿Qué forma legal te conviene?</h2>
+    <p>Responde 4 preguntas y te sugerimos una forma legal (es una orientación, no una recomendación definitiva).</p>
+    <div class="tool">
+      <h3><span class="icono">🧭</span> Asesor de forma jurídica</h3>
+      <div class="campo">
+        <label for="q-socios">1. ¿Quiénes serán dueños del negocio?</label>
+        <select id="q-socios">
+          <option value="solo">Solo yo</option>
+          <option value="varios">Dos o más personas</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="q-patrimonio">2. ¿Quieres proteger tu patrimonio personal (limitar tu responsabilidad)?</label>
+        <select id="q-patrimonio">
+          <option value="si">Sí, es importante para mí</option>
+          <option value="no">No me preocupa por ahora / quiero lo más simple</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="q-inversionistas">3. ¿Planeas sumar inversionistas o vender participación a futuro?</label>
+        <select id="q-inversionistas">
+          <option value="no">No, será un negocio mío/de los socios</option>
+          <option value="si">Sí, quiero poder abrirme a inversionistas</option>
+        </select>
+      </div>
+      <div class="campo">
+        <label for="q-escala">4. ¿Aspiras a una empresa grande, con muchos accionistas o abrir a la bolsa?</label>
+        <select id="q-escala">
+          <option value="no">No, es un emprendimiento pequeño/mediano</option>
+          <option value="si">Sí, pienso en gran escala</option>
+        </select>
+      </div>
+      <button class="btn" onclick="asesorar()">Ver recomendación</button>
+      <div class="resultado" id="asesor-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ====================== INTERACTIVO 2: COMPARADOR ====================== -->
+  <section>
+    <span class="tag">Herramienta 2 · Comparador</span>
+    <h2>Compara las formas legales</h2>
+    <p>Toca para resaltar la(s) columna(s) que quieras comparar.</p>
+    <div class="tool">
+      <div class="chips" id="chips">
+        <span class="chip" data-col="0">Persona natural</span>
+        <span class="chip" data-col="1">EIRL</span>
+        <span class="chip" data-col="2">SpA</span>
+        <span class="chip" data-col="3">Ltda</span>
+        <span class="chip" data-col="4">SA</span>
+      </div>
+      <div class="cmp-wrap">
+        <table class="cmp" id="tabla-cmp">
+          <tr><th>Característica</th><th data-col="0">Persona natural</th><th data-col="1">EIRL</th><th data-col="2">SpA</th><th data-col="3">Ltda</th><th data-col="4">SA</th></tr>
+          <tr><td>N° de dueños</td><td data-col="0">1</td><td data-col="1">1</td><td data-col="2">1 o más</td><td data-col="3">2 a 50</td><td data-col="4">2 o más (accionistas)</td></tr>
+          <tr><td>RUT</td><td data-col="0">El tuyo</td><td data-col="1">Propio</td><td data-col="2">Propio</td><td data-col="3">Propio</td><td data-col="4">Propio</td></tr>
+          <tr><td>Responsabilidad</td><td data-col="0">Ilimitada (tu patrimonio)</td><td data-col="1">Limitada</td><td data-col="2">Limitada</td><td data-col="3">Limitada</td><td data-col="4">Limitada</td></tr>
+          <tr><td>Sumar inversionistas</td><td data-col="0">No</td><td data-col="1">No</td><td data-col="2">Fácil (acciones)</td><td data-col="3">Difícil (modificar estatutos)</td><td data-col="4">Sí (accionistas)</td></tr>
+          <tr><td>Flexibilidad</td><td data-col="0">Máxima simplicidad</td><td data-col="1">Media</td><td data-col="2">Alta</td><td data-col="3">Media-baja</td><td data-col="4">Baja (muy regulada)</td></tr>
+          <tr><td>Costo / formalidad</td><td data-col="0">Mínimo</td><td data-col="1">Bajo</td><td data-col="2">Bajo</td><td data-col="3">Bajo-medio</td><td data-col="4">Alto (directorio)</td></tr>
+          <tr><td>Ideal para…</td><td data-col="0">Probar una idea, micro-negocio</td><td data-col="1">Un dueño que quiere protegerse</td><td data-col="2">Emprendimiento que crece o busca capital</td><td data-col="3">Socios estables, negocio familiar</td><td data-col="4">Empresa grande / abrir a bolsa</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== INTERACTIVO 3: ORDENAR PASOS ====================== -->
+  <section>
+    <span class="tag">Herramienta 3 · Ordena</span>
+    <h2>Pasos para constituir tu empresa (Empresa en un Día)</h2>
+    <p>Ordena los pasos con las flechas y verifica.</p>
+    <div class="tool">
+      <ol class="pasos" id="pasos"></ol>
+      <p style="margin-top:14px">
+        <button class="btn" onclick="verificarPasos()">Verificar orden</button>
+        <button class="btn sec" onclick="mezclarPasos()">Mezclar</button>
+      </p>
+      <div class="resultado" id="pasos-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- ====================== CASO PRÁCTICO ====================== -->
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Javiera y su marca de cosmética natural</h2>
+    <p>Javiera vende cremas artesanales por Instagram. Hoy opera como <strong>persona natural</strong>. Quiere crecer, tomar un crédito FOGAPE y, más adelante, sumar una socia que aporte capital.</p>
+    <p>Con el asesor, su perfil (sola por ahora + proteger patrimonio + abrirse a inversionistas) apunta a una <strong>SpA</strong>: puede partir sola, protege su patrimonio y, cuando entre la socia, basta emitir acciones sin rehacer toda la sociedad. Si nunca pensara en socios ni inversionistas, una <strong>EIRL</strong> también la protegería con menos complejidad.</p>
+  </section>
+
+  <!-- ====================== QUIZ ====================== -->
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo</h2>
+    <p>Necesitas 3 de 4 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <!-- ====================== RECURSOS ====================== -->
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.registrodeempresasysociedades.cl" target="_blank" rel="noopener">Registro de Empresas y Sociedades — Empresa en un Día</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Inicio de actividades y régimen tributario</a>
+    <a href="https://www.chileatiende.gob.cl" target="_blank" rel="noopener">ChileAtiende — Trámites para emprender</a>
+    <a href="https://www.cajchile.cl" target="_blank" rel="noopener">Corporación de Asistencia Judicial — Orientación legal gratuita</a>
+  </section>
+
+  <!-- ====================== CIERRE ====================== -->
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Lo que te llevas</h2>
+    <p>La forma legal define cuánto arriesgas y cuánto puedes crecer. Persona natural es lo más simple pero expone tu patrimonio; EIRL y SpA te protegen, y la SpA es la más flexible para crecer y sumar inversionistas.</p>
+    <p><strong>Siguiente módulo →</strong> L1.2 Constituir paso a paso: lo hacemos juntos en registrodeempresasysociedades.cl.</p>
+  </section>
+
+  <footer>
+    PymEdu Legal · Educación legal para emprendedores · Contenido referencial, no constituye asesoría jurídica. Verifica trámites y montos vigentes en fuentes oficiales al publicar (2026).
+  </footer>
+</article>
+
+<script>
+/* =========================================================================
+   LÓGICA DEL MÓDULO LEGAL — comentada en español.
+   ========================================================================= */
+
+/* ---------- 1) ASESOR DE FORMA JURÍDICA (árbol de decisión) ---------- */
+function asesorar(){
+  const socios=document.getElementById('q-socios').value;
+  const patr=document.getElementById('q-patrimonio').value;
+  const inv=document.getElementById('q-inversionistas').value;
+  const escala=document.getElementById('q-escala').value;
+
+  let reco, por, alt;
+
+  if(escala==='si'){
+    reco='Sociedad Anónima (SA)';
+    por='Aspiras a gran escala, con muchos accionistas o apertura a bolsa. La SA está hecha para eso, con directorio y reglas más estrictas.';
+    alt='Si aún estás partiendo, una SpA te da casi la misma flexibilidad con mucho menos costo, y puedes transformarla en SA más adelante.';
+  } else if(inv==='si'){
+    reco='Sociedad por Acciones (SpA)';
+    por='Quieres poder sumar inversionistas o vender participación. La SpA divide el capital en acciones, así que incorporar socios es simple y no te obliga a rehacer la sociedad.';
+    alt='Si finalmente nunca sumas inversionistas y eres un solo dueño, una EIRL también te protegería.';
+  } else if(socios==='solo' && patr==='no'){
+    reco='Persona natural con giro';
+    por='Eres un solo dueño, buscas lo más simple y barato, y por ahora no priorizas proteger tu patrimonio. Es la vía más rápida para partir y probar tu idea.';
+    alt='Apenas el negocio tome vuelo o tome deudas, conviene migrar a EIRL o SpA para proteger tu patrimonio personal.';
+  } else if(socios==='solo' && patr==='si'){
+    reco='EIRL o SpA';
+    por='Eres un solo dueño y quieres proteger tu patrimonio. La EIRL es simple y de un titular; la SpA te da además flexibilidad si más adelante creces.';
+    alt='Elige SpA si crees que podrías sumar socios; EIRL si quieres lo más sencillo siendo siempre el único dueño.';
+  } else { /* varios socios */
+    reco = (inv==='no') ? 'Sociedad de Responsabilidad Limitada (Ltda) o SpA' : 'Sociedad por Acciones (SpA)';
+    por='Serán dos o más dueños con responsabilidad limitada. La Ltda es sólida para socios estables; la SpA es más flexible si prevés cambios de socios o aportes de capital.';
+    alt='Hoy muchas sociedades de varios socios eligen SpA por su flexibilidad para entrar y salir mediante acciones.';
+  }
+
+  const res=document.getElementById('asesor-res'); res.style.display='block';
+  res.innerHTML='<p class="reco">→ '+reco+'</p>'+
+    '<p><strong>Por qué:</strong> '+por+'</p>'+
+    '<p style="margin-bottom:0"><strong>Alternativa a considerar:</strong> '+alt+'</p>'+
+    '<p style="font-size:.82rem;color:var(--color-texto-suave);margin-bottom:0">Orientación general. Confírmalo con un contador o abogado antes de constituir.</p>';
+}
+
+/* ---------- 2) COMPARADOR: resaltar columnas ---------- */
+document.querySelectorAll('#chips .chip').forEach(chip=>{
+  chip.addEventListener('click', ()=>{
+    chip.classList.toggle('on');
+    const col=chip.dataset.col;
+    document.querySelectorAll('#tabla-cmp [data-col="'+col+'"]').forEach(c=>c.classList.toggle('col-activa'));
+  });
+});
+
+/* ---------- 3) ORDENAR PASOS ---------- */
+const pasosCorrectos=[
+  'Decide el tipo de empresa (EIRL, SpA, Ltda, SA)',
+  'Entra a registrodeempresasysociedades.cl con tu ClaveÚnica',
+  'Completa y firma los estatutos (firma electrónica o ante notario)',
+  'Obtén el RUT e inicia actividades en el SII',
+  'Solicita la patente municipal en tu comuna',
+  'Habilita boletas y facturas electrónicas en el SII'
+];
+let ordenActual=[];
+
+function pintarPasos(){
+  const ol=document.getElementById('pasos'); ol.innerHTML='';
+  ordenActual.forEach((txt,idx)=>{
+    const li=document.createElement('li'); li.className='paso';
+    li.innerHTML='<span class="num">'+(idx+1)+'</span><span class="txt">'+txt+'</span>'+
+      '<button title="Subir" onclick="moverPaso('+idx+',-1)">▲</button>'+
+      '<button title="Bajar" onclick="moverPaso('+idx+',1)">▼</button>';
+    ol.appendChild(li);
+  });
+}
+function moverPaso(i,dir){
+  const j=i+dir; if(j<0||j>=ordenActual.length)return;
+  [ordenActual[i],ordenActual[j]]=[ordenActual[j],ordenActual[i]];
+  pintarPasos(); document.getElementById('pasos-res').style.display='none';
+}
+function mezclarPasos(){
+  ordenActual=[...pasosCorrectos];
+  for(let i=ordenActual.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ordenActual[i],ordenActual[j]]=[ordenActual[j],ordenActual[i]];}
+  // asegurar que no quede ya ordenado
+  if(ordenActual.every((t,k)=>t===pasosCorrectos[k])) [ordenActual[0],ordenActual[1]]=[ordenActual[1],ordenActual[0]];
+  pintarPasos(); document.getElementById('pasos-res').style.display='none';
+}
+function verificarPasos(){
+  let correctos=0;
+  document.querySelectorAll('#pasos .paso').forEach((li,idx)=>{
+    const ok=ordenActual[idx]===pasosCorrectos[idx];
+    li.classList.toggle('ok',ok); li.classList.toggle('mal',!ok);
+    if(ok)correctos++;
+  });
+  const res=document.getElementById('pasos-res'); res.style.display='block';
+  res.innerHTML = correctos===pasosCorrectos.length
+    ? '✅ <strong>¡Orden perfecto!</strong> Así se constituye una empresa en el régimen simplificado.'
+    : 'Llevas <strong>'+correctos+' de '+pasosCorrectos.length+'</strong> en su lugar. Ajusta los marcados en rojo.';
+}
+
+/* ---------- 4) QUIZ ---------- */
+const preguntas=[
+  {q:'¿Cuál es la principal desventaja de operar como persona natural con giro?',
+   op:['Tiene RUT propio','Respondes con tu patrimonio personal por las deudas','No puede emitir boletas','Está prohibida en Chile'],
+   correcta:1,
+   exp:'La persona natural responde con su patrimonio personal: tus bienes quedan expuestos ante deudas del negocio.'},
+  {q:'¿Qué forma jurídica es la más flexible para sumar inversionistas?',
+   op:['EIRL','Persona natural','SpA','Ltda'],
+   correcta:2,
+   exp:'La SpA divide el capital en acciones, lo que facilita incorporar inversionistas o vender participación.'},
+  {q:'La responsabilidad limitada significa que…',
+   op:['No pagas impuestos','Tu riesgo se limita al capital aportado','Puedes tener máximo 50 socios','La empresa no puede endeudarse'],
+   correcta:1,
+   exp:'Con responsabilidad limitada, ante deudas respondes hasta lo que aportaste, no con tu patrimonio personal.'},
+  {q:'¿Cuál es el primer paso para constituir una empresa en el régimen simplificado?',
+   op:['Solicitar la patente municipal','Decidir el tipo de empresa','Emitir facturas electrónicas','Contratar trabajadores'],
+   correcta:1,
+   exp:'Primero defines el tipo de empresa; recién después entras al Registro de Empresas y Sociedades y sigues el resto.'}
+];
+function pintarQuiz(){
+  const form=document.getElementById('quiz');
+  preguntas.forEach((p,idx)=>{
+    let html='<div class="pregunta" data-i="'+idx+'"><p class="enunciado">'+(idx+1)+'. '+p.q+'</p>';
+    p.op.forEach((o,j)=>{html+='<label class="opcion"><input type="radio" name="p'+idx+'" value="'+j+'">'+o+'</label>';});
+    html+='<div class="feedback"></div></div>';
+    form.insertAdjacentHTML('beforeend',html);
+  });
+}
+function corregirQuiz(){
+  let aciertos=0;
+  preguntas.forEach((p,idx)=>{
+    const cont=document.querySelector('.pregunta[data-i="'+idx+'"]');
+    const sel=cont.querySelector('input[name="p'+idx+'"]:checked');
+    const fb=cont.querySelector('.feedback');
+    const labels=cont.querySelectorAll('.opcion');
+    labels.forEach(o=>o.classList.remove('correcta','incorrecta'));
+    labels[p.correcta].classList.add('correcta');
+    fb.className='feedback ver';
+    if(sel && +sel.value===p.correcta){aciertos++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}
+    else{if(sel)labels[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}
+  });
+  const pj=document.getElementById('quiz-puntaje');
+  const aprob=aciertos>=3;
+  pj.style.color=aprob?'var(--color-ok)':'var(--color-error)';
+  pj.textContent='Puntaje: '+aciertos+' / '+preguntas.length+(aprob?' · ¡Aprobado! 🎉':' · Repasa y vuelve a intentarlo.');
+}
+
+/* init */
+mezclarPasos();
+pintarQuiz();
+</script>
+</body>
+</html>

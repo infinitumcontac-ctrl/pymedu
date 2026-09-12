@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.3 — VAN, TIR, Payback y ROI</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.3</span>
+    <h1>VAN, TIR, Payback y ROI sin miedo</h1>
+    <p>Cuatro herramientas para responder una sola pregunta: ¿vale la pena invertir en esto? Aquí las entiendes y las calculas con tus propios números.</p>
+    <div class="meta"><span>⏱️ 50 min</span><span>📶 Nivel avanzado</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>3.1 Contabilidad</a><a>3.2 Punto de equilibrio</a><a class="actual">3.3 VAN/TIR/ROI</a><a>3.4 Fuentes financiamiento</a><a>3.5 Inversión</a><a>3.6 KPIs</a><a>3.7 Escalar</a><a>3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar el <strong>VAN</strong> (Valor Actual Neto) y qué significa si es positivo.</li>
+      <li>Interpretar la <strong>TIR</strong> en relación con tu costo de capital.</li>
+      <li>Calcular el <strong>Payback</strong> (plazo de recuperación) y el <strong>ROI</strong>.</li>
+      <li>Combinar los cuatro indicadores para decidir una inversión.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈8–10 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Antes de invertir en esa máquina o campaña, hay cuatro preguntas que te ahorran perder plata."</p>
+      <p><strong>1:00 VAN.</strong> Trae los flujos futuros a hoy y resta la inversión. Positivo = conviene. Mostrar calculadora.</p>
+      <p><strong>3:00 TIR.</strong> La tasa que hace el VAN cero; compárala con tu costo de capital.</p>
+      <p><strong>4:30 Payback y ROI.</strong> En cuánto recuperas y cuánto rinde. Mostrar calculadoras.</p>
+      <p><strong>6:30 Combinarlos.</strong> Ninguno solo basta. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>VAN — Valor Actual Neto</h2>
+    <p>El <strong>VAN</strong> trae a valor de hoy todos los flujos futuros que generará un proyecto (descontándolos a una tasa) y les resta la inversión inicial. <strong>Si el VAN es positivo, el proyecto genera más valor que su costo de capital: conviene.</strong> Si es negativo, no.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>TIR — Tasa Interna de Retorno</h2>
+    <p>La <strong>TIR</strong> es la tasa de descuento que hace el VAN igual a cero; en la práctica, la "rentabilidad implícita" del proyecto. Regla: si la <strong>TIR &gt; tu costo de capital</strong> (lo que te cuesta el dinero), el proyecto es atractivo.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Payback y ROI</h2>
+    <ul class="limpia">
+      <li><strong>Payback (plazo de recuperación):</strong> en cuánto tiempo recuperas la inversión inicial. Más corto = menos riesgo.</li>
+      <li><strong>ROI (retorno sobre la inversión):</strong> (beneficio neto / inversión) × 100. Mide cuánto rinde cada peso invertido.</li>
+    </ul>
+    <div class="recuadro"><h4>🧩 Úsalos juntos</h4><p>El VAN mide valor en pesos, la TIR en %, el Payback en tiempo y el ROI en rentabilidad. Ninguno solo da la película completa: combínalos.</p></div>
+  </section>
+
+  <!-- INTERACTIVOS -->
+  <section>
+    <span class="tag">Actividad 1 · Calculadora</span>
+    <h2>VAN de un proyecto (flujos anuales iguales)</h2>
+    <div class="tool">
+      <h3><span class="icono">∑</span> Valor Actual Neto</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="van-inv">Inversión inicial (CLP)</label><input type="number" id="van-inv" value="1000000" step="100000"></div>
+        <div class="campo"><label for="van-flujo">Flujo anual (CLP)</label><input type="number" id="van-flujo" value="400000" step="50000"></div>
+        <div class="campo"><label for="van-anios">Años</label><input type="number" id="van-anios" value="4" min="1" max="20"></div>
+      </div>
+      <div class="campo"><label for="van-tasa">Tasa de descuento (% anual)</label><input type="number" id="van-tasa" value="10" step="0.5"></div>
+      <button class="btn" onclick="calcVAN()">Calcular VAN y Payback</button>
+      <div class="resultado" id="van-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Calculadora</span>
+    <h2>ROI de una inversión</h2>
+    <div class="tool">
+      <h3><span class="icono">%</span> Retorno sobre la inversión</h3>
+      <div class="fila">
+        <div class="campo"><label for="roi-inv">Inversión (CLP)</label><input type="number" id="roi-inv" value="5000000" step="100000"></div>
+        <div class="campo"><label for="roi-ben">Beneficio neto esperado (CLP)</label><input type="number" id="roi-ben" value="2000000" step="100000"></div>
+      </div>
+      <button class="btn" onclick="calcROI()">Calcular ROI</button>
+      <div class="resultado" id="roi-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>VAN</dt><dd>Valor Actual Neto: valor de hoy de los flujos futuros menos la inversión.</dd>
+      <dt>TIR</dt><dd>Tasa Interna de Retorno: tasa que hace el VAN cero.</dd>
+      <dt>Payback</dt><dd>Tiempo para recuperar la inversión inicial.</dd>
+      <dt>ROI</dt><dd>Retorno sobre la inversión, en porcentaje.</dd>
+      <dt>Tasa de descuento</dt><dd>Tasa para traer flujos futuros a valor presente.</dd>
+      <dt>Costo de capital</dt><dd>Lo que te cuesta el dinero (interés del crédito o costo de oportunidad).</dd>
+      <dt>Flujo de caja del proyecto</dt><dd>Dinero neto que genera la inversión cada período.</dd>
+      <dt>Valor presente</dt><dd>Cuánto vale hoy un monto que recibirás en el futuro.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Inversión en una máquina</h2>
+    <p>Un proyecto requiere $1.000.000 y genera $400.000 al año por 4 años. Con tasa de descuento del 10%, su VAN es positivo (~$267.000) y la TIR ronda el 22%, por encima del 10%: conviene. El Payback es 2,5 años. Si tu costo de capital fuera 12%, igual conviene porque la TIR (22%) lo supera. Usa la calculadora 1.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Mirar un solo indicador.</strong> Combina VAN, TIR, Payback y ROI.</li>
+      <li><strong>Ignorar el costo de capital</strong> al comparar la TIR.</li>
+      <li><strong>Olvidar que la plata futura vale menos</strong> (por eso se descuenta).</li>
+      <li><strong>Elegir alto ROI con recuperación muy lenta</strong> si necesitas liquidez pronto.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.corfo.cl" target="_blank" rel="noopener">CORFO — Evaluación de proyectos</a>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">Sercotec — Inversión en pymes</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>VAN positivo = el proyecto crea valor. TIR mayor que tu costo de capital = atractivo. Payback corto = menos riesgo. ROI alto = buena rentabilidad. Decide combinándolos, no con uno solo.</p>
+    <p><strong>Siguiente módulo →</strong> 3.4 Fuentes de financiamiento avanzadas.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function tirAprox(inv,flujo,n){let lo=-0.9,hi=5;for(let k=0;k<200;k++){const mid=(lo+hi)/2;let van=-inv;for(let t=1;t<=n;t++)van+=flujo/Math.pow(1+mid,t);if(van>0)lo=mid;else hi=mid;}return (lo+hi)/2;}
+
+function calcVAN(){const inv=+document.getElementById('van-inv').value,fl=+document.getElementById('van-flujo').value,n=+document.getElementById('van-anios').value,r=+document.getElementById('van-tasa').value/100;let van=-inv;for(let t=1;t<=n;t++)van+=fl/Math.pow(1+r,t);const tir=tirAprox(inv,fl,n)*100;const payback=fl>0?inv/fl:Infinity;const box=document.getElementById('van-res');box.style.display='block';const color=van>=0?'var(--color-ok)':'var(--color-error)';box.innerHTML='<div class="cifra" style="color:'+color+'">VAN: '+fmtCLP(van)+'</div>'+(van>=0?'✅ Positivo: el proyecto crea valor sobre tu tasa de descuento.':'⚠️ Negativo: a esa tasa, no conviene.')+'<br>TIR aproximada: <strong>'+fmtNum(tir,1)+'%</strong> '+(tir>r*100?'(supera tu tasa 👍)':'(bajo tu tasa)')+'<br>Payback: <strong>'+fmtNum(payback,1)+' años</strong>.';}
+
+function calcROI(){const inv=+document.getElementById('roi-inv').value,ben=+document.getElementById('roi-ben').value;const roi=inv>0?ben/inv*100:0;const box=document.getElementById('roi-res');box.style.display='block';const color=roi>=0?'var(--color-ok)':'var(--color-error)';box.innerHTML='<div class="cifra" style="color:'+color+'">ROI: '+fmtNum(roi,1)+'%</div>Por cada $1 invertido, obtienes $'+fmtNum(roi/100,2)+' de retorno neto.';}
+
+const preguntas=[
+ {q:'Un VAN positivo indica que…',op:['El proyecto pierde valor','El proyecto crea valor sobre el costo de capital','No hay que invertir','La TIR es cero'],correcta:1,exp:'VAN positivo: los flujos descontados superan la inversión.'},
+ {q:'La TIR es…',op:['La tasa que hace el VAN cero','El total de ventas','El costo del arriendo','El IVA'],correcta:0,exp:'Es la tasa de descuento que iguala el VAN a cero.'},
+ {q:'Un proyecto es atractivo cuando la TIR…',op:['Es menor al costo de capital','Es mayor al costo de capital','Es cero','Es negativa'],correcta:1,exp:'Si la TIR supera tu costo de capital, conviene.'},
+ {q:'El Payback mide…',op:['La rentabilidad %','El tiempo para recuperar la inversión','El valor presente','El IVA'],correcta:1,exp:'Es el plazo de recuperación de la inversión inicial.'},
+ {q:'El ROI se calcula como…',op:['(Beneficio neto / inversión) × 100','Inversión − beneficio','Ventas / costos','VAN / TIR'],correcta:0,exp:'Relaciona el beneficio neto con la inversión, en porcentaje.'},
+ {q:'La plata que recibirás en el futuro…',op:['Vale igual que hoy','Vale menos que hoy (se descuenta)','Vale más que hoy','No se puede calcular'],correcta:1,exp:'Por el valor del dinero en el tiempo, se descuenta a valor presente.'},
+ {q:'La tasa de descuento suele basarse en…',op:['El IVA','El costo de capital o de oportunidad','El sueldo mínimo','La UTM'],correcta:1,exp:'Refleja lo que te cuesta el dinero o tu costo de oportunidad.'},
+ {q:'Un Payback más corto implica…',op:['Más riesgo','Menos riesgo de liquidez','Menor rentabilidad siempre','Más impuestos'],correcta:1,exp:'Recuperar antes la inversión reduce el riesgo.'},
+ {q:'Lo recomendable al evaluar una inversión es…',op:['Usar solo el ROI','Combinar VAN, TIR, Payback y ROI','Usar solo el Payback','No calcular nada'],correcta:1,exp:'Cada indicador aporta una vista distinta; combínalos.'},
+ {q:'Si un proyecto tiene alto ROI pero recuperación muy lenta y necesitas caja pronto…',op:['Es ideal igual','Puede ser riesgoso para tu liquidez','No importa','Súbele el precio'],correcta:1,exp:'Un retorno lento puede no servir si requieres liquidez pronto.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

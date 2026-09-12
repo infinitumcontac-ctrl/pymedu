@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.1 — Contabilidad para decisiones</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.1</span>
+    <h1>Contabilidad básica para decisiones</h1>
+    <p>Estado de resultados y balance general explicados sin tecnicismos. Dos reportes que te dicen si tu negocio gana plata y si está sano.</p>
+    <div class="meta"><span>⏱️ 45 min</span><span>📶 Nivel avanzado</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a class="actual">3.1 Contabilidad</a><a>3.2 Punto de equilibrio</a><a>3.3 VAN/TIR/ROI</a><a>3.4 Fuentes financiamiento</a><a>3.5 Inversión</a><a>3.6 KPIs</a><a>3.7 Escalar</a><a>3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar para qué sirve el <strong>estado de resultados</strong> y el <strong>balance general</strong>.</li>
+      <li>Calcular <strong>margen bruto</strong>, <strong>utilidad antes de impuestos</strong> y <strong>utilidad neta</strong>.</li>
+      <li>Clasificar partidas en <strong>activos, pasivos y patrimonio</strong>.</li>
+      <li>Aplicar la ecuación <strong>Activos = Pasivos + Patrimonio</strong>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈7–9 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Dos hojas te dicen casi todo: una si ganas plata (estado de resultados) y otra si estás sano (balance)."</p>
+      <p><strong>1:00 Estado de resultados.</strong> Ventas − costo de ventas = margen bruto; − gastos = utilidad antes de impuestos; − impuestos = utilidad neta. Ejemplo panadería. Mostrar la calculadora.</p>
+      <p><strong>4:00 Balance.</strong> Activos, pasivos y patrimonio. Ecuación fundamental. Actividad de clasificar.</p>
+      <p><strong>6:00 Consejos.</strong> Separar cuentas, herramientas, actualizar mensual. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Estado de resultados</h2>
+    <p>Mide el desempeño en un período (mes, trimestre, año): ¿ganaste o perdiste? Su lógica:</p>
+    <div class="cmp-wrap"><table class="cmp">
+      <tr><th>Concepto</th><th>Cómo se obtiene</th></tr>
+      <tr><td>Ingresos (ventas)</td><td>Lo que vendiste</td></tr>
+      <tr><td>− Costo de ventas</td><td>Insumos/mercadería vendida</td></tr>
+      <tr><td>= Margen bruto</td><td>Ingresos − costo de ventas</td></tr>
+      <tr><td>− Gastos operativos</td><td>Sueldos, arriendo, marketing…</td></tr>
+      <tr><td>= Utilidad antes de impuestos</td><td>Margen bruto − gastos</td></tr>
+      <tr><td>− Impuestos</td><td>Según régimen</td></tr>
+      <tr><td>= Utilidad neta</td><td>Lo que finalmente queda</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Balance general</h2>
+    <p>Es una "foto" de la situación financiera en un momento dado, en tres bloques:</p>
+    <ul class="limpia">
+      <li><strong>Activos:</strong> lo que la empresa posee (caja, cuentas por cobrar, inventario, equipos).</li>
+      <li><strong>Pasivos:</strong> lo que debe (proveedores, préstamos, impuestos por pagar).</li>
+      <li><strong>Patrimonio:</strong> lo que es de los dueños (aportes + utilidades retenidas).</li>
+    </ul>
+    <div class="recuadro dato"><h4>⚖️ Ecuación fundamental</h4><p><strong>Activos = Pasivos + Patrimonio.</strong> Siempre debe cuadrar. Si no, hay un error de registro o clasificación.</p></div>
+  </section>
+
+  <!-- INTERACTIVOS -->
+  <section>
+    <span class="tag">Actividad 1 · Calculadora</span>
+    <h2>Arma tu estado de resultados</h2>
+    <div class="tool">
+      <h3><span class="icono">📊</span> Utilidad neta</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="er-ventas">Ventas (CLP)</label><input type="number" id="er-ventas" value="5000000" step="100000"></div>
+        <div class="campo"><label for="er-costo">Costo de ventas (CLP)</label><input type="number" id="er-costo" value="2000000" step="100000"></div>
+        <div class="campo"><label for="er-gastos">Gastos operativos (CLP)</label><input type="number" id="er-gastos" value="1900000" step="100000"></div>
+      </div>
+      <div class="campo"><label for="er-imp">Tasa de impuesto (%)</label><input type="number" id="er-imp" value="10" step="1"></div>
+      <button class="btn" onclick="estadoResultados()">Calcular</button>
+      <div class="resultado" id="er-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Clasifica</span>
+    <h2>¿Activo, pasivo o patrimonio?</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="activo">Inventario y maquinaria</div>
+          <div class="ficha" draggable="true" data-id="pasivo">Préstamo bancario</div>
+          <div class="ficha" draggable="true" data-id="patrimonio">Aporte de los socios</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="activo"><div class="titulo">ACTIVO (lo que posee)</div></div>
+          <div class="zona" data-acepta="pasivo"><div class="titulo">PASIVO (lo que debe)</div></div>
+          <div class="zona" data-acepta="patrimonio"><div class="titulo">PATRIMONIO (de los dueños)</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 3 · Calculadora</span>
+    <h2>Verifica tu balance</h2>
+    <div class="tool">
+      <h3><span class="icono">⚖️</span> Activos = Pasivos + Patrimonio</h3>
+      <div class="fila">
+        <div class="campo"><label for="bal-activos">Total activos (CLP)</label><input type="number" id="bal-activos" value="4500000" step="100000"></div>
+        <div class="campo"><label for="bal-pasivos">Total pasivos (CLP)</label><input type="number" id="bal-pasivos" value="1200000" step="100000"></div>
+      </div>
+      <button class="btn" onclick="balance()">Calcular patrimonio</button>
+      <div class="resultado" id="bal-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Estado de resultados</dt><dd>Reporte de ingresos, costos y utilidad de un período.</dd>
+      <dt>Margen bruto</dt><dd>Ingresos menos costo de ventas.</dd>
+      <dt>Utilidad neta</dt><dd>Ganancia final tras gastos e impuestos.</dd>
+      <dt>Balance general</dt><dd>Foto de activos, pasivos y patrimonio en un momento.</dd>
+      <dt>Activo</dt><dd>Bienes y derechos de la empresa.</dd>
+      <dt>Pasivo</dt><dd>Deudas y obligaciones.</dd>
+      <dt>Patrimonio</dt><dd>Aportes de los dueños más utilidades retenidas.</dd>
+      <dt>Liquidez</dt><dd>Capacidad de cubrir deudas de corto plazo con activos líquidos.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Panadería "Las Delicias"</h2>
+    <p>Ventas $5.000.000, costo de insumos $2.000.000 → margen bruto $3.000.000. Gastos (sueldos, arriendo, marketing) $1.900.000 → utilidad antes de impuestos $1.100.000. Con 10% de impuesto, utilidad neta $990.000. En el balance: activos $4.500.000, pasivos $1.200.000 → patrimonio $3.300.000. Reproduce ambos en las calculadoras.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Confundir utilidad con caja.</strong> Puedes tener utilidad y no tener efectivo.</li>
+      <li><strong>Mezclar cuentas personales</strong> y distorsionar los reportes.</li>
+      <li><strong>Dejar la contabilidad para fin de año.</strong> Revísala cada mes.</li>
+      <li><strong>Que el balance no cuadre</strong> y no investigar por qué.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Contabilidad y obligaciones</a>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">Sercotec — Gestión contable</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>El estado de resultados te dice si ganas; el balance, si estás sano. Margen bruto, utilidad neta y la ecuación Activos = Pasivos + Patrimonio son tus brújulas para decidir con datos.</p>
+    <p><strong>Siguiente módulo →</strong> 3.2 Flujo proyectado y punto de equilibrio.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function estadoResultados(){const v=+document.getElementById('er-ventas').value,c=+document.getElementById('er-costo').value,g=+document.getElementById('er-gastos').value,t=+document.getElementById('er-imp').value/100;const mb=v-c,uai=mb-g,imp=uai>0?uai*t:0,un=uai-imp;const r=document.getElementById('er-res');r.style.display='block';const color=un>=0?'var(--color-ok)':'var(--color-error)';r.innerHTML='Margen bruto: <strong>'+fmtCLP(mb)+'</strong><br>Utilidad antes de impuestos: <strong>'+fmtCLP(uai)+'</strong><br>Impuesto: <strong>'+fmtCLP(imp)+'</strong><div class="cifra" style="color:'+color+'">Utilidad neta: '+fmtCLP(un)+'</div>'+(un<0?'⚠️ El negocio está dando pérdida en este período.':'👍 El negocio genera utilidad.');}
+
+function balance(){const a=+document.getElementById('bal-activos').value,p=+document.getElementById('bal-pasivos').value;const pat=a-p;const r=document.getElementById('bal-res');r.style.display='block';r.innerHTML='Patrimonio = Activos − Pasivos =<div class="cifra">'+fmtCLP(pat)+'</div>Se cumple la ecuación: '+fmtCLP(a)+' = '+fmtCLP(p)+' + '+fmtCLP(pat)+'.'+(pat<0?'<br>⚠️ Patrimonio negativo: las deudas superan a los activos.':'');}
+
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===3?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 3</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'El estado de resultados muestra…',op:['La foto de activos y pasivos','Si el negocio ganó o perdió en un período','El valor de la empresa','La deuda total'],correcta:1,exp:'Mide el desempeño (utilidad o pérdida) de un período.'},
+ {q:'El margen bruto es…',op:['Ventas − costo de ventas','Ventas − impuestos','Activos − pasivos','Utilidad neta + gastos'],correcta:0,exp:'Es ingresos menos el costo de ventas.'},
+ {q:'La utilidad neta es lo que queda después de…',op:['Solo el costo de ventas','Gastos e impuestos','Solo el arriendo','Las ventas'],correcta:1,exp:'Es la ganancia final tras descontar gastos e impuestos.'},
+ {q:'El balance general es…',op:['Un flujo de un mes','Una foto de la situación financiera en un momento','El IVA del mes','La nómina'],correcta:1,exp:'Muestra activos, pasivos y patrimonio en un momento dado.'},
+ {q:'Un activo es…',op:['Una deuda','Algo que la empresa posee','El aporte de socios','Un impuesto'],correcta:1,exp:'Activos son los bienes y derechos de la empresa.'},
+ {q:'Un préstamo bancario es un…',op:['Activo','Pasivo','Patrimonio','Ingreso'],correcta:1,exp:'Es una obligación: un pasivo.'},
+ {q:'La ecuación fundamental del balance es…',op:['Activos = Pasivos − Patrimonio','Activos = Pasivos + Patrimonio','Activos + Pasivos = Patrimonio','Patrimonio = Activos + Pasivos'],correcta:1,exp:'Activos = Pasivos + Patrimonio; siempre debe cuadrar.'},
+ {q:'Si activos son 10M y patrimonio 6M, los pasivos son…',op:['16M','4M','6M','10M'],correcta:1,exp:'Pasivos = Activos − Patrimonio = 10M − 6M = 4M.'},
+ {q:'Tener utilidad pero no efectivo es posible porque…',op:['Es imposible','Utilidad no es lo mismo que caja','El balance está mal','No pagaste IVA'],correcta:1,exp:'La utilidad es contable; la caja es el efectivo real disponible.'},
+ {q:'Conviene revisar la contabilidad…',op:['Solo a fin de año','Cada mes','Nunca','Cada 5 años'],correcta:1,exp:'La revisión mensual detecta problemas a tiempo.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

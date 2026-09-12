@@ -1,0 +1,485 @@
+{
+  "gratis": [
+    {
+      "id": "gratis-Fin-1-1",
+      "file": "Fin-1.1-Dinero-Inflacion-UF.html",
+      "type": "Fin",
+      "level": 1,
+      "lesson": 1,
+      "title": "Dinero Inflacion UF",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-1.1-Dinero-Inflacion-UF.html"
+    },
+    {
+      "id": "gratis-Fin-1-2",
+      "file": "Fin-1.2-Presupuesto.html",
+      "type": "Fin",
+      "level": 1,
+      "lesson": 2,
+      "title": "Presupuesto",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-1.2-Presupuesto.html"
+    },
+    {
+      "id": "gratis-Fin-1-3",
+      "file": "Fin-1.3-Tarjetas.html",
+      "type": "Fin",
+      "level": 1,
+      "lesson": 3,
+      "title": "Tarjetas",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-1.3-Tarjetas.html"
+    },
+    {
+      "id": "gratis-Fin-1-4",
+      "file": "Fin-1.4-Ahorro.html",
+      "type": "Fin",
+      "level": 1,
+      "lesson": 4,
+      "title": "Ahorro",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-1.4-Ahorro.html"
+    },
+    {
+      "id": "gratis-Fin-1-5",
+      "file": "Fin-1.5-Sobreendeudamiento.html",
+      "type": "Fin",
+      "level": 1,
+      "lesson": 5,
+      "title": "Sobreendeudamiento",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-1.5-Sobreendeudamiento.html"
+    },
+    {
+      "id": "gratis-Fin-1-6",
+      "file": "Fin-1.6-Sistema-Financiero.html",
+      "type": "Fin",
+      "level": 1,
+      "lesson": 6,
+      "title": "Sistema Financiero",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-1.6-Sistema-Financiero.html"
+    },
+    {
+      "id": "gratis-Fin-1-7",
+      "file": "Fin-1.7-Fraudes-Seguridad.html",
+      "type": "Fin",
+      "level": 1,
+      "lesson": 7,
+      "title": "Fraudes Seguridad",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-1.7-Fraudes-Seguridad.html"
+    },
+    {
+      "id": "gratis-Fin-2-1",
+      "file": "Fin-2.1-Flujo-de-Caja.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 1,
+      "title": "Flujo de Caja",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.1-Flujo-de-Caja.html"
+    },
+    {
+      "id": "gratis-Fin-2-2",
+      "file": "Fin-2.2-Control-de-Costos.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 2,
+      "title": "Control de Costos",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.2-Control-de-Costos.html"
+    },
+    {
+      "id": "gratis-Fin-2-3",
+      "file": "Fin-2.3-Herramientas-Digitales.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 3,
+      "title": "Herramientas Digitales",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.3-Herramientas-Digitales.html"
+    },
+    {
+      "id": "gratis-Fin-2-4",
+      "file": "Fin-2.4-Formalizacion.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 4,
+      "title": "Formalizacion",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.4-Formalizacion.html"
+    },
+    {
+      "id": "gratis-Fin-2-5",
+      "file": "Fin-2.5-IVA-F29.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 5,
+      "title": "IVA F29",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.5-IVA-F29.html"
+    },
+    {
+      "id": "gratis-Fin-2-6",
+      "file": "Fin-2.6-Financiamiento.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 6,
+      "title": "Financiamiento",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.6-Financiamiento.html"
+    },
+    {
+      "id": "gratis-Fin-2-7",
+      "file": "Fin-2.7-Precios-Margen.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 7,
+      "title": "Precios Margen",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.7-Precios-Margen.html"
+    },
+    {
+      "id": "gratis-Fin-2-8",
+      "file": "Fin-2.8-Personal-vs-Negocio.html",
+      "type": "Fin",
+      "level": 2,
+      "lesson": 8,
+      "title": "Personal vs Negocio",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-2.8-Personal-vs-Negocio.html"
+    },
+    {
+      "id": "gratis-Fin-3-1",
+      "file": "Fin-3.1-Contabilidad.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 1,
+      "title": "Contabilidad",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.1-Contabilidad.html"
+    },
+    {
+      "id": "gratis-Fin-3-2",
+      "file": "Fin-3.2-Punto-de-Equilibrio.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 2,
+      "title": "Punto de Equilibrio",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.2-Punto-de-Equilibrio.html"
+    },
+    {
+      "id": "gratis-Fin-3-3",
+      "file": "Fin-3.3-VAN-TIR-ROI.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 3,
+      "title": "VAN TIR ROI",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.3-VAN-TIR-ROI.html"
+    },
+    {
+      "id": "gratis-Fin-3-4",
+      "file": "Fin-3.4-Fuentes-Financiamiento.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 4,
+      "title": "Fuentes Financiamiento",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.4-Fuentes-Financiamiento.html"
+    },
+    {
+      "id": "gratis-Fin-3-5",
+      "file": "Fin-3.5-Inversion-Retorno.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 5,
+      "title": "Inversion Retorno",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.5-Inversion-Retorno.html"
+    },
+    {
+      "id": "gratis-Fin-3-6",
+      "file": "Fin-3.6-KPIs-Tablero.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 6,
+      "title": "KPIs Tablero",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.6-KPIs-Tablero.html"
+    },
+    {
+      "id": "gratis-Fin-3-7",
+      "file": "Fin-3.7-Crecer-Escalar.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 7,
+      "title": "Crecer Escalar",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.7-Crecer-Escalar.html"
+    },
+    {
+      "id": "gratis-Fin-3-8",
+      "file": "Fin-3.8-Certificacion-Final.html",
+      "type": "Fin",
+      "level": 3,
+      "lesson": 8,
+      "title": "Certificacion Final",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Fin-3.8-Certificacion-Final.html"
+    },
+    {
+      "id": "gratis-Legal-1-1",
+      "file": "Legal-1.1-Forma-Legal.html",
+      "type": "Legal",
+      "level": 1,
+      "lesson": 1,
+      "title": "Forma Legal",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-1.1-Forma-Legal.html"
+    },
+    {
+      "id": "gratis-Legal-1-2",
+      "file": "Legal-1.2-Constituir.html",
+      "type": "Legal",
+      "level": 1,
+      "lesson": 2,
+      "title": "Constituir",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-1.2-Constituir.html"
+    },
+    {
+      "id": "gratis-Legal-1-3",
+      "file": "Legal-1.3-Patentes-Permisos.html",
+      "type": "Legal",
+      "level": 1,
+      "lesson": 3,
+      "title": "Patentes Permisos",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-1.3-Patentes-Permisos.html"
+    },
+    {
+      "id": "gratis-Legal-1-4",
+      "file": "Legal-1.4-RUT-Firma-Digital.html",
+      "type": "Legal",
+      "level": 1,
+      "lesson": 4,
+      "title": "RUT Firma Digital",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-1.4-RUT-Firma-Digital.html"
+    },
+    {
+      "id": "gratis-Legal-2-1",
+      "file": "Legal-2.1-Contratos.html",
+      "type": "Legal",
+      "level": 2,
+      "lesson": 1,
+      "title": "Contratos",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-2.1-Contratos.html"
+    },
+    {
+      "id": "gratis-Legal-2-2",
+      "file": "Legal-2.2-Arriendo-Comercial.html",
+      "type": "Legal",
+      "level": 2,
+      "lesson": 2,
+      "title": "Arriendo Comercial",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-2.2-Arriendo-Comercial.html"
+    },
+    {
+      "id": "gratis-Legal-2-3",
+      "file": "Legal-2.3-Ley-Consumidor.html",
+      "type": "Legal",
+      "level": 2,
+      "lesson": 3,
+      "title": "Ley Consumidor",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-2.3-Ley-Consumidor.html"
+    },
+    {
+      "id": "gratis-Legal-2-4",
+      "file": "Legal-2.4-Pago-30-Dias.html",
+      "type": "Legal",
+      "level": 2,
+      "lesson": 4,
+      "title": "Pago 30 Dias",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-2.4-Pago-30-Dias.html"
+    },
+    {
+      "id": "gratis-Legal-2-5",
+      "file": "Legal-2.5-Ecommerce.html",
+      "type": "Legal",
+      "level": 2,
+      "lesson": 5,
+      "title": "Ecommerce",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-2.5-Ecommerce.html"
+    },
+    {
+      "id": "gratis-Legal-3-1",
+      "file": "Legal-3.1-Contrato-Trabajo.html",
+      "type": "Legal",
+      "level": 3,
+      "lesson": 1,
+      "title": "Contrato Trabajo",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-3.1-Contrato-Trabajo.html"
+    },
+    {
+      "id": "gratis-Legal-3-2",
+      "file": "Legal-3.2-Sueldo-Cotizaciones.html",
+      "type": "Legal",
+      "level": 3,
+      "lesson": 2,
+      "title": "Sueldo Cotizaciones",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-3.2-Sueldo-Cotizaciones.html"
+    },
+    {
+      "id": "gratis-Legal-3-3",
+      "file": "Legal-3.3-Termino-Finiquito.html",
+      "type": "Legal",
+      "level": 3,
+      "lesson": 3,
+      "title": "Termino Finiquito",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-3.3-Termino-Finiquito.html"
+    },
+    {
+      "id": "gratis-Legal-3-4",
+      "file": "Legal-3.4-Honorarios-vs-Dependiente.html",
+      "type": "Legal",
+      "level": 3,
+      "lesson": 4,
+      "title": "Honorarios vs Dependiente",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-3.4-Honorarios-vs-Dependiente.html"
+    },
+    {
+      "id": "gratis-Legal-3-5",
+      "file": "Legal-3.5-Prevencion-Seguridad.html",
+      "type": "Legal",
+      "level": 3,
+      "lesson": 5,
+      "title": "Prevencion Seguridad",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-3.5-Prevencion-Seguridad.html"
+    },
+    {
+      "id": "gratis-Legal-4-1",
+      "file": "Legal-4.1-Marca-INAPI.html",
+      "type": "Legal",
+      "level": 4,
+      "lesson": 1,
+      "title": "Marca INAPI",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-4.1-Marca-INAPI.html"
+    },
+    {
+      "id": "gratis-Legal-4-2",
+      "file": "Legal-4.2-Datos-Personales.html",
+      "type": "Legal",
+      "level": 4,
+      "lesson": 2,
+      "title": "Datos Personales",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-4.2-Datos-Personales.html"
+    },
+    {
+      "id": "gratis-Legal-4-3",
+      "file": "Legal-4.3-Propiedad-Intelectual.html",
+      "type": "Legal",
+      "level": 4,
+      "lesson": 3,
+      "title": "Propiedad Intelectual",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-4.3-Propiedad-Intelectual.html"
+    },
+    {
+      "id": "gratis-Legal-4-4",
+      "file": "Legal-4.4-NDA-Confidencialidad.html",
+      "type": "Legal",
+      "level": 4,
+      "lesson": 4,
+      "title": "NDA Confidencialidad",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-4.4-NDA-Confidencialidad.html"
+    },
+    {
+      "id": "gratis-Legal-5-1",
+      "file": "Legal-5.1-Cobranza-Deudas.html",
+      "type": "Legal",
+      "level": 5,
+      "lesson": 1,
+      "title": "Cobranza Deudas",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-5.1-Cobranza-Deudas.html"
+    },
+    {
+      "id": "gratis-Legal-5-2",
+      "file": "Legal-5.2-Insolvencia.html",
+      "type": "Legal",
+      "level": 5,
+      "lesson": 2,
+      "title": "Insolvencia",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-5.2-Insolvencia.html"
+    },
+    {
+      "id": "gratis-Legal-5-3",
+      "file": "Legal-5.3-Conflictos-Socios.html",
+      "type": "Legal",
+      "level": 5,
+      "lesson": 3,
+      "title": "Conflictos Socios",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-5.3-Conflictos-Socios.html"
+    },
+    {
+      "id": "gratis-Legal-5-4",
+      "file": "Legal-5.4-Cerrar-Bien.html",
+      "type": "Legal",
+      "level": 5,
+      "lesson": 4,
+      "title": "Cerrar Bien",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-5.4-Cerrar-Bien.html"
+    },
+    {
+      "id": "gratis-Legal-5-5",
+      "file": "Legal-5.5-Certificacion-Final.html",
+      "type": "Legal",
+      "level": 5,
+      "lesson": 5,
+      "title": "Certificacion Final",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Legal-5.5-Certificacion-Final.html"
+    },
+    {
+      "id": "gratis-Modulo-Financiero-1-1",
+      "file": "Modulo-Financiero-1.1-Dinero-e-Inflacion.html",
+      "type": "Modulo-Financiero",
+      "level": 1,
+      "lesson": 1,
+      "title": "Dinero e Inflacion",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Modulo-Financiero-1.1-Dinero-e-Inflacion.html"
+    },
+    {
+      "id": "gratis-Modulo-Legal-1-1",
+      "file": "Modulo-Legal-1.1-Forma-Legal-Empresa.html",
+      "type": "Modulo-Legal",
+      "level": 1,
+      "lesson": 1,
+      "title": "Forma Legal Empresa",
+      "category": "gratis",
+      "path": "/src/2.-ACADEMIA/gratis/Modulo-Legal-1.1-Forma-Legal-Empresa.html"
+    }
+  ],
+  "suscripcion": []
+}

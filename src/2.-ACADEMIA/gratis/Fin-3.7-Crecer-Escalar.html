@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 3.7 — Crecer y escalar</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 3 · Módulo 3.7</span>
+    <h1>Crecer y escalar con cabeza</h1>
+    <p>Reinvertir, abrir un segundo punto o contratar a tu primer trabajador son saltos que entusiasman… y que hunden negocios si se hacen sin números. Aquí los planificas.</p>
+    <div class="meta"><span>⏱️ 40 min</span><span>📶 Nivel avanzado</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>3.1 Contabilidad</a><a>3.2 Punto de equilibrio</a><a>3.3 VAN/TIR/ROI</a><a>3.4 Fuentes financiamiento</a><a>3.5 Inversión</a><a>3.6 KPIs</a><a class="actual">3.7 Escalar</a><a>3.8 Certificación</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Diferenciar <strong>crecer</strong> de <strong>escalar</strong>.</li>
+      <li>Decidir cuándo <strong>reinvertir</strong> utilidades.</li>
+      <li>Evaluar si tu negocio puede <strong>contratar</strong> a su primer trabajador.</li>
+      <li>Reconocer las señales y riesgos de un crecimiento sano.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Crecer mal es la forma más rápida de quebrar: más ventas con más costos desordenados te puede dejar sin caja."</p>
+      <p><strong>1:00 Crecer vs escalar.</strong> Crecer: más ventas con más costos proporcionales. Escalar: crecer ingresos sin que los costos suban igual.</p>
+      <p><strong>2:30 Reinversión.</strong> Reinvertir utilidades para crecer sostenible; cuándo sí, cuándo no.</p>
+      <p><strong>3:30 Primer empleado.</strong> Sueldo + cargas (~mucho más que el líquido). Mostrar el simulador.</p>
+      <p><strong>5:00 Riesgos.</strong> Crecer sin caja, perder calidad. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Crecer vs. escalar</h2>
+    <p><strong>Crecer</strong> es vender más, normalmente sumando costos en proporción (más ventas → más insumos, más personal). <strong>Escalar</strong> es aumentar los ingresos <em>sin</em> que los costos suban al mismo ritmo (por ejemplo, un producto digital, o automatizar). Escalar da más rentabilidad, pero no todo negocio escala: muchos crecen, y está bien si se hace ordenado.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Reinvertir utilidades</h2>
+    <p>Reinvertir es usar parte de las ganancias para impulsar el negocio (stock, equipos, marketing, personal). Reglas sanas: reinvierte sobre <strong>utilidades reales</strong> (no sobre la caja del IVA o de deudas), mantén un <strong>colchón</strong>, y prioriza lo que mejora tu <strong>margen</strong> o tu <strong>capacidad</strong>, no caprichos.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Tu primer trabajador</h2>
+    <p>Contratar es un salto grande: el costo no es solo el sueldo líquido, sino también las <strong>cotizaciones</strong> (AFP, salud, seguro de cesantía), gratificación y otros (lo verás en detalle en la <strong>Academia Legal, Nivel 3</strong>). Como referencia, el costo empresa suele ser bastante mayor que el líquido que recibe la persona. Antes de contratar, asegúrate de que el excedente lo sostenga todos los meses.</p>
+    <div class="recuadro aviso"><h4>🔗 Nota</h4><p>Las reglas laborales (contrato, jornada de 40 horas, finiquito, cotizaciones) se ven en profundidad en <strong>Academia Legal L3.1–L3.3</strong>. Aquí evaluamos solo la viabilidad financiera.</p></div>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>¿Tu negocio puede contratar?</h2>
+    <div class="tool">
+      <h3><span class="icono">🧑‍🔧</span> Viabilidad del primer empleado</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="ex-excedente">Excedente mensual del negocio (CLP)</label><input type="number" id="ex-excedente" value="900000" step="50000"></div>
+        <div class="campo"><label for="ex-sueldo">Sueldo líquido a ofrecer (CLP)</label><input type="number" id="ex-sueldo" value="500000" step="50000"></div>
+        <div class="campo"><label for="ex-factor">Factor costo empresa (×)</label><input type="number" id="ex-factor" value="1.4" step="0.05"></div>
+      </div>
+      <button class="btn" onclick="contratar()">Evaluar</button>
+      <div class="resultado" id="ex-res" style="display:none"></div>
+      <p style="margin:10px 0 0"><small>El "factor costo empresa" estima cuánto más cuesta sobre el líquido (cotizaciones, seguro de cesantía, etc.). Es referencial; revisa el detalle en la Academia Legal.</small></p>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Crecer</dt><dd>Aumentar ventas, normalmente con más costos proporcionales.</dd>
+      <dt>Escalar</dt><dd>Crecer ingresos sin que los costos suban al mismo ritmo.</dd>
+      <dt>Reinversión</dt><dd>Usar utilidades para impulsar el negocio.</dd>
+      <dt>Costo empresa</dt><dd>Lo que cuesta un trabajador incluyendo cotizaciones y cargas.</dd>
+      <dt>Capacidad instalada</dt><dd>Cuánto puede producir/atender tu negocio con sus recursos actuales.</dd>
+      <dt>Economías de escala</dt><dd>Reducción del costo unitario al aumentar el volumen.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El segundo local de Pizzería Don Tito</h2>
+    <p>Don Tito quiere abrir un segundo local. Antes calcula: su excedente actual sostiene un sueldo, pero un local nuevo duplica arriendo y personal sin garantía de ventas. Decide primero <strong>contratar un ayudante</strong> en el local actual (crecer ordenado) y, con esa utilidad extra reinvertida, evaluar el segundo local con VAN/Payback. Usa el simulador para ver si el excedente aguanta la contratación.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Crecer sin caja:</strong> más ventas con más costos puede dejarte sin liquidez.</li>
+      <li><strong>Contratar mirando solo el líquido</strong> y olvidar las cotizaciones.</li>
+      <li><strong>Reinvertir la caja del IVA</strong> o de deudas en vez de utilidades reales.</li>
+      <li><strong>Perder calidad</strong> por crecer demasiado rápido.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.corfo.cl" target="_blank" rel="noopener">CORFO — Escalamiento</a>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">SERCOTEC — Crecimiento de pymes</a>
+    <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo (contratación)</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Crecer es vender más; escalar es ganar más sin subir los costos al mismo ritmo. Reinvierte utilidades reales, mantén caja y, antes de contratar, asegúrate de que el excedente sostiene el costo empresa completo.</p>
+    <p><strong>Siguiente módulo →</strong> 3.8 Certificación final del nivel avanzado.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function contratar(){const ex=+document.getElementById('ex-excedente').value,sl=+document.getElementById('ex-sueldo').value,f=+document.getElementById('ex-factor').value;const costo=sl*f;const queda=ex-costo;const r=document.getElementById('ex-res');r.style.display='block';const color=queda>=0?'var(--color-ok)':'var(--color-error)';r.innerHTML='Costo empresa estimado del trabajador: <strong>'+fmtCLP(costo)+'</strong><div class="cifra" style="color:'+color+'">Excedente tras contratar: '+fmtCLP(queda)+'</div>'+(queda>=costo*0.3?'👍 El excedente sostiene la contratación con holgura.':queda>=0?'🟡 Apenas alcanza: deja poco margen ante imprevistos.':'🔴 El excedente NO sostiene este sueldo hoy. Aumenta ventas/margen antes de contratar.');}
+
+const preguntas=[
+ {q:'Escalar se diferencia de crecer en que…',op:['Es lo mismo','Aumentas ingresos sin subir los costos al mismo ritmo','Solo aplica a tiendas','Reduce las ventas'],correcta:1,exp:'Escalar mejora la rentabilidad porque los costos no crecen igual que los ingresos.'},
+ {q:'Reinvertir conviene hacerlo sobre…',op:['La caja del IVA','Utilidades reales','Deudas','El sueldo del dueño'],correcta:1,exp:'Reinvierte ganancias reales, no plata de terceros o impuestos.'},
+ {q:'El costo de un trabajador incluye…',op:['Solo el líquido','Sueldo + cotizaciones y cargas','Solo el bono','El IVA'],correcta:1,exp:'El costo empresa suma cotizaciones (AFP, salud, cesantía) y más.'},
+ {q:'Antes de contratar conviene verificar que…',op:['Tienes muchas tarjetas','El excedente sostiene el costo todos los meses','El local es grande','Pagas poco IVA'],correcta:1,exp:'La contratación debe ser sostenible con el excedente real.'},
+ {q:'Crecer sin caja puede provocar…',op:['Más liquidez','Problemas de liquidez y hasta quiebra','Menos costos','Más utilidad asegurada'],correcta:1,exp:'Más ventas con más costos sin caja es una causa típica de quiebre.'},
+ {q:'"Economías de escala" significa…',op:['Subir el costo unitario','Bajar el costo unitario al aumentar el volumen','Más impuestos','Menos ventas'],correcta:1,exp:'A mayor volumen, el costo por unidad tiende a bajar.'},
+ {q:'Un negocio que vende servicios manuales 1 a 1…',op:['Escala fácilmente','Crece más que escala','No puede crecer','No paga impuestos'],correcta:1,exp:'Depende de horas-persona: crece sumando capacidad, no escala sin más.'},
+ {q:'Reinvertir bien prioriza…',op:['Caprichos','Lo que mejora margen o capacidad','Gastos personales','Pagar dividendos siempre'],correcta:1,exp:'Reinvierte en lo que hace más eficiente o más grande al negocio.'},
+ {q:'Abrir un segundo local sin evaluar VAN/Payback es…',op:['Lo recomendable','Arriesgado: duplica costos sin garantía','Gratis','Obligatorio'],correcta:1,exp:'Conviene evaluarlo como inversión antes de comprometer recursos.'},
+ {q:'Crecer demasiado rápido puede…',op:['Mejorar siempre la calidad','Hacer perder calidad y control','Reducir costos','Eliminar riesgos'],correcta:1,exp:'El crecimiento desordenado afecta la calidad y la operación.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

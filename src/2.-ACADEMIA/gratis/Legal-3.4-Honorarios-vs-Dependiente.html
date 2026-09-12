@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L3.4 — Honorarios vs. dependientes</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 3 · Módulo L3.4</span>
+    <h1>Honorarios vs. trabajadores dependientes</h1>
+    <p>"Te hago una boleta" no siempre es legal. Si hay subordinación, corresponde contrato. Aquí aprendes a distinguir y a evitar la "falsa boleta" y sus multas.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L3.1 Contrato de trabajo</a><a>L3.2 Sueldo y cotizaciones</a><a>L3.3 Término y finiquito</a><a class="actual">L3.4 Honorarios vs dependiente</a><a>L3.5 Prevención y seguridad</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. La calificación de una relación depende de los hechos; ante dudas, consulta la DT.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Distinguir un <strong>prestador a honorarios</strong> de un <strong>trabajador dependiente</strong>.</li>
+      <li>Reconocer los indicios de <strong>subordinación</strong>.</li>
+      <li>Entender los riesgos de la <strong>"falsa boleta"</strong>.</li>
+      <li>Conocer las obligaciones del trabajador a honorarios (cotizaciones).</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈5–7 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Pagar a honorarios a alguien que en realidad es tu empleado puede salirte carísimo."</p>
+      <p><strong>1:00 Diferencia.</strong> Honorarios: servicio independiente, sin subordinación. Dependiente: horario, instrucciones, exclusividad.</p>
+      <p><strong>2:30 Falsa boleta.</strong> Si la DT detecta subordinación, reclasifica y debes pagar cotizaciones, multas e indemnizaciones.</p>
+      <p><strong>3:30 Honorarios bien usados.</strong> Para servicios puntuales e independientes; el prestador cotiza por su cuenta. Usa la actividad. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>La diferencia clave: subordinación</h2>
+    <p>Un <strong>prestador a honorarios</strong> presta un servicio de forma <strong>independiente</strong>: decide cómo y cuándo trabaja, no tiene jefe que le dé instrucciones de detalle, suele tener varios clientes y emite <strong>boleta de honorarios</strong>. Un <strong>trabajador dependiente</strong> está bajo <strong>subordinación</strong>: cumple horario, recibe instrucciones, usa los medios del empleador y suele ser exclusivo. Lo que define la relación son los <strong>hechos</strong>, no el nombre del documento.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>El riesgo de la "falsa boleta"</h2>
+    <p>Contratar a honorarios a alguien que en realidad es dependiente es una <strong>simulación</strong>. Si la <strong>Dirección del Trabajo</strong> o un tribunal lo detecta, <strong>reclasifica</strong> la relación como laboral: tendrás que pagar <strong>cotizaciones atrasadas</strong>, <strong>multas</strong>, y eventualmente <strong>indemnizaciones</strong>. Es una de las contingencias más caras para una pyme.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Honorarios bien usados</h2>
+    <p>Los honorarios son adecuados para servicios <strong>puntuales e independientes</strong> (un diseño, una asesoría, una reparación). El prestador emite boleta y <strong>cotiza por su cuenta</strong> (la ley avanza hacia la cotización obligatoria de honorarios vía la Operación Renta). Si necesitas a alguien de forma permanente y bajo tus instrucciones, corresponde contrato de trabajo.</p>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Clasifica</span>
+    <h2>¿Honorarios o contrato de trabajo?</h2>
+    <div class="tool">
+      <div class="dnd">
+        <div class="fichas" id="fichas">
+          <div class="ficha" draggable="true" data-id="hon">Diseñador hace tu logo (una vez)</div>
+          <div class="ficha" draggable="true" data-id="dep">Vendedor con horario fijo en tu tienda</div>
+          <div class="ficha" draggable="true" data-id="hon2">Contador externo que asesora mensualmente a varios clientes</div>
+          <div class="ficha" draggable="true" data-id="dep2">Cajero que cumple turnos y recibe instrucciones diarias</div>
+        </div>
+        <div class="zonas" id="zonas">
+          <div class="zona" data-acepta="hon"><div class="titulo">HONORARIOS (independiente)</div></div>
+          <div class="zona" data-acepta="dep"><div class="titulo">CONTRATO de trabajo</div></div>
+          <div class="zona" data-acepta="hon2"><div class="titulo">HONORARIOS (independiente)</div></div>
+          <div class="zona" data-acepta="dep2"><div class="titulo">CONTRATO de trabajo</div></div>
+        </div>
+      </div>
+      <p style="margin-top:14px"><button class="btn sec" onclick="reiniciarDnd()">Reiniciar</button></p>
+      <div class="resultado" id="dnd-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Boleta de honorarios</dt><dd>Documento que emite quien presta un servicio independiente.</dd>
+      <dt>Subordinación y dependencia</dt><dd>Horario, instrucciones, exclusividad y medios del empleador.</dd>
+      <dt>Falsa boleta</dt><dd>Pagar a honorarios una relación que en realidad es laboral.</dd>
+      <dt>Reclasificación</dt><dd>Cuando la DT/tribunal declara que sí había relación laboral.</dd>
+      <dt>Retención</dt><dd>Porcentaje del honorario que se retiene para impuestos/cotizaciones.</dd>
+      <dt>Operación Renta</dt><dd>Proceso anual donde se ajustan impuestos y cotizaciones de honorarios.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>El "asesor" de Tomás</h2>
+    <p>Tomás pagaba a honorarios a una persona que cumplía horario fijo, usaba el computador de la empresa y recibía instrucciones diarias: en los hechos, era dependiente. La DT lo reclasifica y Tomás debe pagar cotizaciones atrasadas y multas. Para servicios reales e independientes (su contador externo), los honorarios sí corresponden. Practica con la actividad.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Usar honorarios para evitar cotizaciones</strong> en una relación dependiente.</li>
+      <li><strong>Dar horario e instrucciones</strong> a un "honorario" como si fuera empleado.</li>
+      <li><strong>Creer que el documento define todo:</strong> mandan los hechos.</li>
+      <li><strong>Ignorar que el honorario debe cotizar</strong> (Operación Renta).</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.dt.gob.cl" target="_blank" rel="noopener">Dirección del Trabajo</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Boletas de honorarios</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Lo que define honorarios vs. contrato son los hechos: si hay subordinación, corresponde contrato. La "falsa boleta" es cara (cotizaciones, multas, indemnizaciones). Usa honorarios solo para servicios puntuales e independientes.</p>
+    <p><strong>Siguiente módulo →</strong> L3.5 Prevención y seguridad.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial, no asesoría jurídica (2026).</footer>
+</article>
+
+<script>
+let fichaTomada=null;
+function initDnd(){document.querySelectorAll('.ficha').forEach(f=>{f.addEventListener('dragstart',e=>e.dataTransfer.setData('id',f.dataset.id));f.addEventListener('click',()=>{if(f.classList.contains('usada'))return;document.querySelectorAll('.ficha').forEach(x=>x.classList.remove('tomada'));f.classList.add('tomada');fichaTomada=f;});});document.querySelectorAll('.zona').forEach(z=>{z.addEventListener('dragover',e=>{e.preventDefault();z.classList.add('sobre');});z.addEventListener('dragleave',()=>z.classList.remove('sobre'));z.addEventListener('drop',e=>{e.preventDefault();z.classList.remove('sobre');soltar(z,document.querySelector('.ficha[data-id="'+e.dataTransfer.getData('id')+'"]'));});z.addEventListener('click',()=>{if(fichaTomada)soltar(z,fichaTomada);});});}
+function soltar(z,f){if(!f||f.classList.contains('usada'))return;const prev=z.querySelector('.soltada');if(prev){const fp=document.querySelector('.ficha[data-id="'+prev.dataset.id+'"]');if(fp)fp.classList.remove('usada');prev.remove();}const et=document.createElement('div');et.className='soltada';et.textContent=f.textContent;et.dataset.id=f.dataset.id;z.appendChild(et);f.classList.add('usada');f.classList.remove('tomada');fichaTomada=null;evaluarDnd();}
+function evaluarDnd(){const zs=[...document.querySelectorAll('.zona')];if(zs.some(z=>!z.querySelector('.soltada')))return;let c=0;zs.forEach(z=>{const ok=z.querySelector('.soltada').dataset.id===z.dataset.acepta;z.classList.toggle('ok',ok);z.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('dnd-res');r.style.display='block';r.innerHTML=c===4?'✅ <strong>¡Perfecto!</strong>':'🔁 Acertaste <strong>'+c+' de 4</strong>. Revisa las rojas.';}
+function reiniciarDnd(){document.querySelectorAll('.zona').forEach(z=>{z.classList.remove('ok','mal');const s=z.querySelector('.soltada');if(s)s.remove();});document.querySelectorAll('.ficha').forEach(f=>f.classList.remove('usada','tomada'));fichaTomada=null;document.getElementById('dnd-res').style.display='none';}
+
+const preguntas=[
+ {q:'Lo que define si hay relación laboral son…',op:['El nombre del documento','Los hechos (subordinación)','La voluntad del jefe','El monto'],correcta:1,exp:'Manda la realidad: si hay subordinación, es relación laboral.'},
+ {q:'Un indicio de subordinación es…',op:['Tener varios clientes','Cumplir horario e instrucciones','Emitir boleta','Trabajar desde casa'],correcta:1,exp:'Horario, instrucciones y medios del empleador indican dependencia.'},
+ {q:'La "falsa boleta" ocurre cuando…',op:['Un independiente emite boleta','Se paga a honorarios una relación dependiente','Se firma contrato','Se paga el IVA'],correcta:1,exp:'Es simular con boleta una relación que es laboral.'},
+ {q:'Si la DT reclasifica la relación, debes pagar…',op:['Nada','Cotizaciones atrasadas, multas y a veces indemnizaciones','Solo el IVA','Un bono'],correcta:1,exp:'La reclasificación implica regularizar y pagar.'},
+ {q:'Los honorarios son adecuados para…',op:['Un empleado permanente con horario','Servicios puntuales e independientes','Cualquier caso','Evitar cotizaciones'],correcta:1,exp:'Para servicios independientes y acotados.'},
+ {q:'Un diseñador que hace tu logo una vez corresponde a…',op:['Contrato de trabajo','Honorarios','Sociedad','Despido'],correcta:1,exp:'Servicio puntual e independiente: honorarios.'},
+ {q:'Un cajero con turnos e instrucciones diarias corresponde a…',op:['Honorarios','Contrato de trabajo','Boleta','Factoring'],correcta:1,exp:'Hay subordinación: contrato de trabajo.'},
+ {q:'El trabajador a honorarios respecto de cotizaciones…',op:['Nunca cotiza','Debe cotizar (vía Operación Renta)','Cotiza el cliente','No existe'],correcta:1,exp:'La ley avanza a la cotización obligatoria de honorarios.'},
+ {q:'Dar horario e instrucciones a un "honorario"…',op:['Es correcto','Lo acerca a una relación dependiente','No tiene efecto','Baja el costo'],correcta:1,exp:'Esos elementos configuran subordinación.'},
+ {q:'La "falsa boleta" es para una pyme…',op:['Sin riesgo','Una de las contingencias más caras','Recomendable','Obligatoria'],correcta:1,exp:'Puede implicar pagos retroactivos altos y multas.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+initDnd();pintarQuiz();
+</script>
+</body>
+</html>

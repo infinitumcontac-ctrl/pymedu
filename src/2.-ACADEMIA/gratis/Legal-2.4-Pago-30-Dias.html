@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L2.4 — Ley de Pago a 30 días</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 2 · Módulo L2.4</span>
+    <h1>Ley de Pago a 30 días: cobra lo que te deben</h1>
+    <p>Si te pagan tarde, no estás indefenso. La ley fija plazos máximos de pago, intereses por mora y le da fuerza de cobro a tu factura. Aquí aprendes a usarla.</p>
+    <div class="meta"><span>⏱️ 35 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L2.1 Contratos</a><a>L2.2 Arriendo comercial</a><a>L2.3 Ley del Consumidor</a><a class="actual">L2.4 Pago a 30 días</a><a>L2.5 E-commerce</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general. Las tasas y plazos pueden actualizarse; confirma en la normativa vigente y, para cobros judiciales, asesórate con un abogado.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Explicar el <strong>plazo máximo de pago</strong> que fija la ley.</li>
+      <li>Calcular el <strong>interés por mora</strong> de una factura atrasada.</li>
+      <li>Entender el <strong>mérito ejecutivo</strong> de la factura.</li>
+      <li>Conocer los pasos para <strong>cobrar</strong> una factura impaga.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Te pagan a 90 días y tú aguantas. La Ley de Pago a 30 días te da herramientas para cobrar."</p>
+      <p><strong>1:00 La regla.</strong> Plazo general de pago de 30 días desde la recepción de la factura (salvo pacto excepcional, con tope).</p>
+      <p><strong>2:30 Mora e intereses.</strong> Si pagan tarde, corresponden intereses y una comisión por recuperación. Mostrar el simulador.</p>
+      <p><strong>3:30 Mérito ejecutivo.</strong> La factura, cumplidos los requisitos, permite cobrar judicialmente de forma más rápida.</p>
+      <p><strong>4:30 Pasos para cobrar.</strong> Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>El plazo máximo de pago</h2>
+    <p>La <strong>Ley de Pago a 30 días</strong> establece como regla general que las facturas deben pagarse <strong>dentro de 30 días</strong> contados desde su recepción. Las partes pueden pactar un plazo mayor solo de forma excepcional y registrada, con un <strong>tope</strong> (en general hasta 60 días). El objetivo es proteger la liquidez de las pymes, que antes esperaban 90 días o más.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Mora: intereses y comisión</h2>
+    <p>Si te pagan fuera de plazo, tienes derecho a cobrar <strong>intereses moratorios</strong> sobre el monto adeudado y, además, una <strong>comisión fija por recuperación</strong> de los gastos de cobranza. No es "mala onda" cobrarlos: es tu derecho y desincentiva el pago tardío.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Mérito ejecutivo y cómo cobrar</h2>
+    <p>La <strong>factura</strong>, cumplidos ciertos requisitos (recepción y plazo de reclamo vencido), tiene <strong>mérito ejecutivo</strong>: es un título que permite iniciar un cobro <strong>judicial más rápido</strong>, sin tener que probar de cero la deuda. Pasos típicos para cobrar:</p>
+    <ol class="limpia">
+      <li><strong>Recuerda y documenta:</strong> envía recordatorios y deja constancia.</li>
+      <li><strong>Cobranza extrajudicial:</strong> contacto formal, ofrece acuerdo de pago.</li>
+      <li><strong>Cobro judicial:</strong> con la factura con mérito ejecutivo (idealmente con abogado).</li>
+      <li><strong>Factoring:</strong> alternativa para no esperar y obtener liquidez ya (módulo financiero 2.1).</li>
+    </ol>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Simulador</span>
+    <h2>¿Cuánto te deben con intereses por mora?</h2>
+    <div class="tool">
+      <h3><span class="icono">⏱️</span> Interés por atraso (estimación)</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="m-monto">Monto de la factura (CLP)</label><input type="number" id="m-monto" value="2000000" step="100000"></div>
+        <div class="campo"><label for="m-dias">Días de atraso</label><input type="number" id="m-dias" value="45" min="1"></div>
+        <div class="campo"><label for="m-tasa">Interés moratorio mensual (%)</label><input type="number" id="m-tasa" value="2" step="0.1"></div>
+      </div>
+      <div class="campo"><label for="m-comision">Comisión fija por recuperación (CLP)</label><input type="number" id="m-comision" value="30000" step="5000"></div>
+      <button class="btn" onclick="calcMora()">Calcular</button>
+      <div class="resultado" id="m-res" style="display:none"></div>
+      <p style="margin:10px 0 0"><small>Estimación referencial. Verifica las tasas y montos vigentes de la ley al momento de cobrar.</small></p>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Ley de Pago a 30 días</dt><dd>Norma que fija plazos máximos de pago de facturas.</dd>
+      <dt>Mora</dt><dd>Atraso en el pago de una obligación.</dd>
+      <dt>Interés moratorio</dt><dd>Interés que se cobra por pagar fuera de plazo.</dd>
+      <dt>Comisión por recuperación</dt><dd>Monto fijo por gastos de cobranza ante atraso.</dd>
+      <dt>Mérito ejecutivo</dt><dd>Cualidad de un documento que permite un cobro judicial rápido.</dd>
+      <dt>Cobranza extrajudicial</dt><dd>Gestión de cobro previa a los tribunales.</dd>
+      <dt>Factoring</dt><dd>Vender la factura para obtener liquidez de inmediato.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>La factura impaga de Soledad</h2>
+    <p>A Soledad le deben $2.000.000 y van 45 días de atraso. Sabe que puede cobrar intereses moratorios y una comisión por recuperación. Primero envía un cobro formal; como no responden, evalúa el cobro judicial usando el mérito ejecutivo de la factura, o vender la factura a factoring para tener liquidez ya. Usa el simulador con sus cifras.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Aceptar plazos de 90 días</strong> creyendo que no hay alternativa.</li>
+      <li><strong>No cobrar los intereses</strong> por mora "para no incomodar".</li>
+      <li><strong>No documentar</strong> la recepción de la factura ni los recordatorios.</li>
+      <li><strong>Dejar prescribir</strong> el cobro por no actuar a tiempo.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.bcn.cl" target="_blank" rel="noopener">BCN — Ley de Pago a 30 días (21.131)</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Factura electrónica</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>La ley fija un plazo general de 30 días para pagar facturas; si se atrasan, cobras intereses y comisión por recuperación. La factura tiene mérito ejecutivo para un cobro judicial rápido, y el factoring es la salida para tener liquidez ya. No regales tus plazos.</p>
+    <p><strong>Siguiente módulo →</strong> L2.5 Términos y condiciones + e-commerce.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial, no asesoría jurídica (2026).</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+
+function calcMora(){const monto=+document.getElementById('m-monto').value,dias=+document.getElementById('m-dias').value,tasa=+document.getElementById('m-tasa').value/100,com=+document.getElementById('m-comision').value;const interes=monto*tasa*(dias/30);const total=monto+interes+com;const r=document.getElementById('m-res');r.style.display='block';r.innerHTML='Por '+dias+' días de atraso:<br>Interés moratorio: <strong>'+fmtCLP(interes)+'</strong> + comisión por recuperación: <strong>'+fmtCLP(com)+'</strong><div class="cifra">Total a cobrar: '+fmtCLP(total)+'</div><small>Cobrar estos montos es tu derecho y desincentiva el pago tardío.</small>';}
+
+const preguntas=[
+ {q:'La regla general de la Ley de Pago a 30 días es…',op:['Pagar a 90 días','Pagar las facturas dentro de 30 días','No pagar nunca','Pagar a 1 año'],correcta:1,exp:'El plazo general es 30 días desde la recepción de la factura.'},
+ {q:'Un plazo mayor a 30 días…',op:['Es libre','Solo de forma excepcional y con tope','Está prohibido siempre','Es de 5 años'],correcta:1,exp:'Se permite excepcionalmente, registrado y con un tope (en general 60 días).'},
+ {q:'Si te pagan tarde, puedes cobrar…',op:['Solo el monto','Intereses moratorios y comisión por recuperación','Una multa al SII','Nada'],correcta:1,exp:'Tienes derecho a intereses y a una comisión por recuperación.'},
+ {q:'El "mérito ejecutivo" de la factura significa que…',op:['No sirve para cobrar','Permite un cobro judicial más rápido','Es un impuesto','La anula'],correcta:1,exp:'Es un título que facilita el cobro judicial sin probar de cero la deuda.'},
+ {q:'El objetivo de la ley es…',op:['Subir impuestos','Proteger la liquidez de las pymes','Eliminar las facturas','Bajar sueldos'],correcta:1,exp:'Busca que las pymes no esperen pagos eternos.'},
+ {q:'Antes del cobro judicial conviene…',op:['No hacer nada','Cobranza extrajudicial y documentar','Cerrar la empresa','Subir precios'],correcta:1,exp:'Recordatorios y cobranza extrajudicial son el primer paso.'},
+ {q:'Una alternativa para tener liquidez sin esperar el pago es…',op:['Factoring','Pagar más IVA','Despedir personal','Cerrar'],correcta:0,exp:'El factoring adelanta el cobro de la factura.'},
+ {q:'No cobrar los intereses por mora…',op:['Es obligatorio','Es tu decisión, pero pierdes un derecho','Está prohibido','Lo cobra el SII'],correcta:1,exp:'Es un derecho; no cobrarlo es perder esa compensación.'},
+ {q:'Documentar la recepción de la factura sirve para…',op:['Nada','Contar el plazo y respaldar el cobro','Pagar menos','Evitar el IVA'],correcta:1,exp:'La recepción marca el inicio del plazo y respalda el cobro.'},
+ {q:'Dejar pasar mucho tiempo sin cobrar puede…',op:['Mejorar el cobro','Llevar a que prescriba la acción','Subir el interés infinito','No tener efecto'],correcta:1,exp:'Las acciones de cobro tienen plazos; conviene actuar a tiempo.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+pintarQuiz();
+</script>
+</body>
+</html>

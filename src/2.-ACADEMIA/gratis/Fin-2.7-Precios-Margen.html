@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu · Fin 2.7 — Precios y margen</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-fin">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Financiera · Nivel 2 · Módulo 2.7</span>
+    <h1>Cómo poner precio sin perder plata</h1>
+    <p>Muchos emprendimientos venden mucho y ganan poco porque pusieron mal el precio. Aquí aprendes margen vs. markup, a incluir el IVA y a no regalar tu trabajo.</p>
+    <div class="meta"><span>⏱️ 40 min</span><span>📶 Nivel intermedio</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>2.1 Flujo de caja</a><a>2.2 Costos</a><a>2.3 Herramientas digitales</a><a>2.4 Formalización</a><a>2.5 IVA/F29</a><a>2.6 Financiamiento</a><a class="actual">2.7 Precios</a><a>2.8 Personal vs negocio</a>
+  </nav>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Diferenciar <strong>margen</strong> de <strong>markup</strong> (y por qué confundirlos hace perder plata).</li>
+      <li>Construir un precio que cubra costos, gastos y utilidad.</li>
+      <li>Incluir correctamente el <strong>IVA</strong> en el precio final.</li>
+      <li>Reconocer estrategias de precio y errores típicos.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO -->🎬 Video del módulo (≈6–8 min)</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Si pones precio sumándole un porcentaje al costo, probablemente estás ganando menos de lo que crees."</p>
+      <p><strong>1:00 Margen vs markup.</strong> Markup es sobre el costo; margen es sobre el precio. Un 50% de markup NO es 50% de margen.</p>
+      <p><strong>2:30 Construir el precio.</strong> Costo + gastos + utilidad deseada. Mostrar la calculadora.</p>
+      <p><strong>3:30 El IVA.</strong> El precio final al consumidor incluye 19%. No te lo comas como utilidad.</p>
+      <p><strong>4:30 Errores.</strong> Copiar al competidor sin saber tus costos, regalar el trabajo propio. Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Margen vs. markup: el error que cuesta caro</h2>
+    <p>El <strong>markup</strong> es el porcentaje que le sumas <em>al costo</em>. El <strong>margen</strong> es el porcentaje de utilidad <em>sobre el precio de venta</em>. No son lo mismo:</p>
+    <ul class="limpia">
+      <li>Costo $1.000 + markup 50% → precio $1.500. Pero el <strong>margen</strong> de ese precio es solo 33% ($500/$1.500).</li>
+      <li>Si quieres un margen del 50%, el precio debe ser $2.000 (markup del 100%).</li>
+    </ul>
+    <div class="recuadro error"><h4>⚠️ Error típico</h4><p>"Le pongo 30% y listo". Si ese 30% es markup pero tú pensabas en margen, estás ganando bastante menos de lo que crees.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Construir un precio que funcione</h2>
+    <ol class="limpia">
+      <li><strong>Costo variable unitario:</strong> lo que te cuesta producir/comprar cada unidad.</li>
+      <li><strong>Aporte a gastos fijos:</strong> tu arriendo, sueldos, etc., repartidos entre tus ventas esperadas.</li>
+      <li><strong>Utilidad deseada:</strong> lo que quieres ganar.</li>
+      <li><strong>IVA (19%):</strong> se agrega al final para el precio al público.</li>
+    </ol>
+    <p>Regla simple: el precio debe cubrir el costo, aportar a los gastos fijos y dejarte utilidad. Si solo cubre el costo, estás trabajando gratis.</p>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Estrategias y realidades</h2>
+    <ul class="limpia">
+      <li><strong>Basado en costos:</strong> seguro, pero no considera cuánto valora el cliente.</li>
+      <li><strong>Basado en valor:</strong> cobras según el beneficio que entregas (útil en servicios).</li>
+      <li><strong>Competencia:</strong> mira el mercado, pero <em>nunca</em> bajes bajo tu costo para "competir".</li>
+      <li><strong>No regales tu trabajo:</strong> tu tiempo y tu mano de obra son un costo real.</li>
+    </ul>
+  </section>
+
+  <!-- INTERACTIVO -->
+  <section>
+    <span class="tag">Actividad 1 · Calculadora</span>
+    <h2>Construye tu precio</h2>
+    <div class="tool">
+      <h3><span class="icono">🏷️</span> Calculadora de precio</h3>
+      <div class="fila tres">
+        <div class="campo"><label for="pr-costo">Costo variable unitario (CLP)</label><input type="number" id="pr-costo" value="1200" step="50"></div>
+        <div class="campo"><label for="pr-gasto">Aporte a gastos fijos por unidad (CLP)</label><input type="number" id="pr-gasto" value="300" step="50"></div>
+        <div class="campo"><label for="pr-margen">Margen deseado sobre precio neto (%)</label><input type="number" id="pr-margen" value="30" step="1"></div>
+      </div>
+      <button class="btn" onclick="calcPrecio()">Calcular precio</button>
+      <div class="resultado" id="pr-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 2 · Conversor</span>
+    <h2>Markup ↔ Margen</h2>
+    <div class="tool">
+      <h3><span class="icono">🔁</span> Traduce uno en el otro</h3>
+      <div class="fila">
+        <div class="campo"><label for="mk-markup">Si aplico un markup de (%)</label><input type="number" id="mk-markup" value="50" step="1" oninput="markToMargin()"></div>
+        <div class="campo"><label for="mk-margin">…obtengo un margen de (%)</label><input type="number" id="mk-margin" value="33.3" step="0.1" oninput="marginToMark()"></div>
+      </div>
+      <div class="resultado" id="mk-res"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Markup</dt><dd>Porcentaje que se suma sobre el costo.</dd>
+      <dt>Margen</dt><dd>Utilidad como porcentaje del precio de venta.</dd>
+      <dt>Precio neto</dt><dd>Precio sin IVA.</dd>
+      <dt>Precio final / bruto</dt><dd>Precio con IVA, el que paga el consumidor.</dd>
+      <dt>Costo variable unitario</dt><dd>Lo que cuesta producir/comprar cada unidad.</dd>
+      <dt>Precio basado en valor</dt><dd>Fijar precio según el beneficio percibido por el cliente.</dd>
+      <dt>Punto de equilibrio</dt><dd>Ventas necesarias para cubrir todos los costos (módulo 3.2).</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Las tortas de Valentina</h2>
+    <p>Valentina vendía sus tortas a $12.000 "porque el vecino cobra eso". Al calcular, su costo variable era $7.000 y el aporte a gastos fijos $2.000: su margen real era mínimo y, descontando su tiempo, perdía. Recalcula con un margen del 35% y un precio que sí la remunera, e incluye el IVA. Usa la calculadora 1 con sus números.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Confundir markup con margen.</strong> Ganas menos de lo que crees.</li>
+      <li><strong>Copiar el precio del competidor</strong> sin conocer tus costos.</li>
+      <li><strong>No cobrar tu propio trabajo.</strong> Tu tiempo es un costo.</li>
+      <li><strong>Comerte el IVA</strong> como si fuera utilidad.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.sercotec.cl" target="_blank" rel="noopener">Sercotec — Gestión comercial</a>
+    <a href="https://www.sii.cl/destacados/iva/" target="_blank" rel="noopener">SII — IVA en el precio</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>Un buen precio cubre el costo, aporta a tus gastos fijos y te deja utilidad — sin confundir markup con margen y agregando el IVA al final. Conocer tus costos te da poder para cobrar lo justo y no regalar tu trabajo.</p>
+    <p><strong>Siguiente módulo →</strong> 2.8 Separar finanzas personales y del negocio.</p>
+  </section>
+
+  <footer>PymEdu · Academia Financiera · Contenido referencial · Datos al 30-05-2026.</footer>
+</article>
+
+<script>
+const fmtCLP=n=>'$'+Math.round(n).toLocaleString('es-CL');
+const fmtNum=(n,d=2)=>Number(n).toLocaleString('es-CL',{minimumFractionDigits:d,maximumFractionDigits:d});
+const IVA=0.19;
+
+function calcPrecio(){const cv=+document.getElementById('pr-costo').value,gf=+document.getElementById('pr-gasto').value,mg=+document.getElementById('pr-margen').value/100;const costoTotal=cv+gf;let neto;if(mg<1){neto=costoTotal/(1-mg);}else{neto=costoTotal;}const utilidad=neto-costoTotal;const final=neto*(1+IVA);const r=document.getElementById('pr-res');r.style.display='block';r.innerHTML='Precio NETO (sin IVA): <strong>'+fmtCLP(neto)+'</strong><br>Utilidad por unidad: <strong>'+fmtCLP(utilidad)+'</strong> (margen '+fmtNum(mg*100,0)+'%)<div class="cifra">Precio al público (con IVA): '+fmtCLP(final)+'</div><small>Costo + gasto fijo por unidad: '+fmtCLP(costoTotal)+'. El IVA se agrega al final y no es utilidad.</small>';}
+
+function markToMargin(){const mk=+document.getElementById('mk-markup').value/100;const mg=mk/(1+mk)*100;document.getElementById('mk-margin').value=fmtNum(mg,1);document.getElementById('mk-res').innerHTML='Un markup de '+fmtNum(mk*100,0)+'% equivale a un margen de <strong>'+fmtNum(mg,1)+'%</strong>.';}
+function marginToMark(){const mg=+document.getElementById('mk-margin').value/100;if(mg>=1){document.getElementById('mk-res').innerHTML='El margen debe ser menor a 100%.';return;}const mk=mg/(1-mg)*100;document.getElementById('mk-markup').value=fmtNum(mk,1);document.getElementById('mk-res').innerHTML='Un margen de '+fmtNum(mg*100,0)+'% requiere un markup de <strong>'+fmtNum(mk,1)+'%</strong>.';}
+
+const preguntas=[
+ {q:'El markup se calcula sobre…',op:['El precio de venta','El costo','El IVA','La utilidad'],correcta:1,exp:'El markup es el porcentaje que se suma sobre el costo.'},
+ {q:'El margen se calcula sobre…',op:['El costo','El precio de venta','El arriendo','Las ventas del año'],correcta:1,exp:'El margen es la utilidad como porcentaje del precio de venta.'},
+ {q:'Un markup del 50% equivale a un margen de…',op:['50%','33,3%','25%','100%'],correcta:1,exp:'Markup 50% sobre costo da un margen de 33,3% sobre el precio.'},
+ {q:'Para lograr un margen del 50% necesitas un markup de…',op:['50%','100%','25%','19%'],correcta:1,exp:'Margen 50% requiere duplicar el costo (markup 100%).'},
+ {q:'Un buen precio debe cubrir…',op:['Solo el costo','Costo, aporte a gastos fijos y utilidad','Solo el IVA','Solo la competencia'],correcta:1,exp:'Debe cubrir el costo, aportar a gastos fijos y dejar utilidad.'},
+ {q:'El IVA en el precio final…',op:['Es tu utilidad','Se agrega al final y no es utilidad','No existe','Lo paga el negocio'],correcta:1,exp:'El 19% lo paga el consumidor; no es tu ganancia.'},
+ {q:'Copiar el precio del competidor sin conocer tus costos…',op:['Es lo ideal','Puede hacerte vender bajo costo','Garantiza ganar','No tiene riesgo'],correcta:1,exp:'Sin conocer tus costos podrías estar perdiendo en cada venta.'},
+ {q:'El precio "basado en valor" se fija según…',op:['El costo','El beneficio percibido por el cliente','El IVA','El arriendo'],correcta:1,exp:'Cobras según el valor que el cliente percibe, útil en servicios.'},
+ {q:'No cobrar tu propio trabajo es un error porque…',op:['El tiempo no es un costo','Tu tiempo y mano de obra sí son un costo real','Mejora el margen','Sube el IVA'],correcta:1,exp:'Tu trabajo es un costo; ignorarlo distorsiona el precio.'},
+ {q:'Si el precio solo cubre el costo, entonces…',op:['Ganas bien','Estás trabajando gratis','Pagas menos IVA','Subió tu margen'],correcta:1,exp:'Sin utilidad, el negocio no te remunera: trabajas gratis.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+markToMargin();pintarQuiz();
+</script>
+</body>
+</html>

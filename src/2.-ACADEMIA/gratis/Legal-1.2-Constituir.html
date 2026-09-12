@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PymEdu Legal · L1.2 — Constituir paso a paso</title>
+<link rel="stylesheet" href="pymedu-estilos.css">
+</head>
+<body class="academia-legal">
+<article class="modulo">
+
+  <header class="hero">
+    <span class="tag">Academia Legal · Nivel 1 · Módulo L1.2</span>
+    <h1>Constituye tu empresa paso a paso</h1>
+    <p>Lo hacemos juntos en "Empresa en un Día": del formulario al RUT, las boletas y la patente. Trámite en línea, gratis y en pocos días.</p>
+    <div class="meta"><span>⏱️ 40 min</span><span>📶 Nivel inicial</span><span>📍 Chile · 2026</span><span>✅ Quiz de 10 preguntas</span></div>
+  </header>
+
+  <nav class="ruta">
+    <a>L1.1 Forma legal</a><a class="actual">L1.2 Constituir</a><a>L1.3 Patentes y permisos</a><a>L1.4 RUT y firma digital</a>
+  </nav>
+
+  <section>
+    <div class="recuadro aviso"><h4>⚖️ Recuerda</h4><p>Educación legal general, no asesoría para tu caso. Los pasos y costos pueden variar; confírmalos en los sitios oficiales al momento de constituir.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Objetivos de aprendizaje</span>
+    <h2>Al finalizar el módulo serás capaz de…</h2>
+    <ul class="objetivos">
+      <li>Distinguir el <strong>régimen simplificado</strong> (Empresa en un Día) del tradicional.</li>
+      <li>Reconocer qué necesitas: <strong>ClaveÚnica</strong>, estatutos, firma.</li>
+      <li>Ordenar los <strong>pasos</strong> de constitución hasta poder facturar.</li>
+      <li>Estimar <strong>tiempos y costos</strong>.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Video del módulo</span>
+    <h2>Clase grabada</h2>
+    <div class="video-cont" id="video-modulo"><!-- VIDEO: idealmente, una grabación de pantalla del proceso real en registrodeempresasysociedades.cl -->🎬 Video del módulo (≈7–9 min). Sugerencia: graba la pantalla del trámite real.</div>
+    <details class="guion"><summary>📋 Guion para el relator</summary><div class="cuerpo">
+      <p><strong>0:00 Gancho.</strong> "Constituir una empresa en Chile hoy es gratis y puede tomar pocos días. Te muestro cómo, paso a paso."</p>
+      <p><strong>1:00 Dos regímenes.</strong> Empresa en un Día (en línea, gratis) vs tradicional (notaría, Diario Oficial, Conservador).</p>
+      <p><strong>2:00 Qué necesitas.</strong> ClaveÚnica, decidir tipo de empresa, estatutos (hay plantillas), firma electrónica avanzada o ante notario.</p>
+      <p><strong>3:30 El paso a paso en pantalla.</strong> Formulario, RUT automático, inicio de actividades, patente, boletas. Usa la actividad de ordenar.</p>
+      <p><strong>6:00 Tiempos y costos.</strong> Cierre con el quiz.</p>
+    </div></details>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 1</span>
+    <h2>Dos caminos para constituir</h2>
+    <ul class="limpia">
+      <li><strong>Régimen simplificado — "Empresa en un Día":</strong> en línea, en el Registro de Empresas y Sociedades (registrodeempresasysociedades.cl), con ClaveÚnica. Es <strong>gratuito</strong> y rápido (suele tomar de 1 a algunos días). Cubre EIRL, SpA, Ltda, SA y otras.</li>
+      <li><strong>Régimen tradicional:</strong> escritura ante notario, publicación en el Diario Oficial e inscripción en el Conservador de Bienes Raíces. Tiene costos y puede tardar semanas. Se usa para estructuras más complejas.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 2</span>
+    <h2>Qué necesitas a mano</h2>
+    <ul class="limpia">
+      <li><strong>ClaveÚnica</strong> de cada socio (la entrega el Registro Civil / ChileAtiende).</li>
+      <li><strong>Decisión del tipo de empresa</strong> (módulo L1.1).</li>
+      <li><strong>Estatutos:</strong> objeto social, capital y aportes, administración. El sistema ofrece <strong>plantillas</strong> para EIRL y SpA.</li>
+      <li><strong>Firma:</strong> firma electrónica avanzada (FEA) o firma ante notario.</li>
+    </ul>
+  </section>
+
+  <section>
+    <span class="tag">Contenido · 3</span>
+    <h2>Después de constituir</h2>
+    <p>Constituir es el primer hito, pero para <strong>operar</strong> necesitas además: obtener el <strong>RUT</strong> e <strong>iniciar actividades</strong> en el SII, sacar la <strong>patente municipal</strong>, habilitar <strong>boletas y facturas electrónicas</strong> y, si corresponde, permisos del giro (módulo L1.3).</p>
+    <div class="recuadro dato"><h4>⏱️ Tiempos y costos</h4><p>Simplificado: constitución y publicación <strong>gratuitas</strong>; pagas la patente municipal. 1 a algunos días. Tradicional: notaría + publicación + registro; semanas.</p></div>
+  </section>
+
+  <section>
+    <span class="tag">Actividad 1 · Ordena</span>
+    <h2>Pasos para constituir y operar</h2>
+    <div class="tool">
+      <ol class="pasos" id="pasos"></ol>
+      <p style="margin-top:14px"><button class="btn" onclick="verificarPasos()">Verificar orden</button> <button class="btn sec" onclick="mezclarPasos()">Mezclar</button></p>
+      <div class="resultado" id="pasos-res" style="display:none"></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="tag">Glosario</span>
+    <h2>Términos clave</h2>
+    <dl class="glosario">
+      <dt>Empresa en un Día</dt><dd>Régimen simplificado y gratuito para constituir en línea.</dd>
+      <dt>Registro de Empresas y Sociedades</dt><dd>Plataforma estatal donde se constituye.</dd>
+      <dt>ClaveÚnica</dt><dd>Identidad digital del Estado para hacer trámites.</dd>
+      <dt>Estatutos</dt><dd>Reglas de la sociedad: objeto, capital, administración.</dd>
+      <dt>Firma electrónica avanzada (FEA)</dt><dd>Firma digital con validez legal equivalente a la manuscrita.</dd>
+      <dt>Inicio de actividades</dt><dd>Aviso al SII de que comenzarás tu giro.</dd>
+      <dt>Diario Oficial</dt><dd>Publicación legal usada en el régimen tradicional.</dd>
+      <dt>Conservador de Bienes Raíces</dt><dd>Registro donde se inscriben ciertas sociedades en el régimen tradicional.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <span class="tag">Caso práctico</span>
+    <h2>Catalina constituye su SpA</h2>
+    <p>Catalina entra a registrodeempresasysociedades.cl con su ClaveÚnica, elige SpA, usa la plantilla de estatutos, firma con FEA y obtiene el RUT de la empresa. Luego inicia actividades en el SII, saca su patente municipal y habilita boletas electrónicas. En pocos días ya puede facturar. Ordena los pasos en la actividad.</p>
+  </section>
+
+  <section>
+    <span class="tag">Errores frecuentes</span>
+    <h2>Lo que conviene NO hacer</h2>
+    <div class="recuadro error"><ul class="limpia">
+      <li><strong>Constituir y creer que ya puedes facturar:</strong> falta iniciar actividades, patente y boletas.</li>
+      <li><strong>Estatutos copiados sin revisar</strong> el objeto social y la administración.</li>
+      <li><strong>Olvidar la patente municipal</strong> o los permisos del giro.</li>
+      <li><strong>Ir al régimen tradicional</strong> (caro y lento) sin necesitarlo.</li>
+    </ul></div>
+  </section>
+
+  <section>
+    <span class="tag">Evaluación</span>
+    <h2>Quiz del módulo (10 preguntas)</h2>
+    <p>Necesitas 6 de 10 para aprobar.</p>
+    <form id="quiz"></form>
+    <button class="btn" onclick="corregirQuiz()">Corregir quiz</button>
+    <div class="puntaje" id="quiz-puntaje"></div>
+  </section>
+
+  <section class="recursos">
+    <span class="tag">Recursos oficiales</span>
+    <h2>Para profundizar</h2>
+    <a href="https://www.registrodeempresasysociedades.cl" target="_blank" rel="noopener">Empresa en un Día</a>
+    <a href="https://claveunica.gob.cl" target="_blank" rel="noopener">ClaveÚnica</a>
+    <a href="https://www.sii.cl" target="_blank" rel="noopener">SII — Inicio de actividades</a>
+    <a href="https://www.chileatiende.gob.cl" target="_blank" rel="noopener">ChileAtiende</a>
+  </section>
+
+  <section class="cierre">
+    <span class="tag">Cierre</span>
+    <h2>Síntesis</h2>
+    <p>El régimen simplificado deja constituir gratis y en línea con ClaveÚnica y estatutos. Pero recuerda: constituir no es todo; para operar necesitas RUT, inicio de actividades, patente y boletas. Lo demás (permisos) viene en el próximo módulo.</p>
+    <p><strong>Siguiente módulo →</strong> L1.3 Patentes y permisos.</p>
+  </section>
+
+  <footer>PymEdu Legal · Educación legal referencial · Verifica trámites vigentes (2026).</footer>
+</article>
+
+<script>
+const pasosCorrectos=['Decide el tipo de empresa (EIRL, SpA, Ltda, SA)','Obtén ClaveÚnica y entra al Registro de Empresas y Sociedades','Completa y firma los estatutos (FEA o ante notario)','Obtén el RUT de la empresa','Inicia actividades en el SII','Solicita la patente municipal','Habilita boletas y facturas electrónicas'];
+let ordenActual=[];
+function pintarPasos(){const ol=document.getElementById('pasos');ol.innerHTML='';ordenActual.forEach((t,i)=>{const li=document.createElement('li');li.className='paso';li.innerHTML='<span class="num">'+(i+1)+'</span><span class="txt">'+t+'</span><button onclick="moverPaso('+i+',-1)">▲</button><button onclick="moverPaso('+i+',1)">▼</button>';ol.appendChild(li);});}
+function moverPaso(i,d){const j=i+d;if(j<0||j>=ordenActual.length)return;[ordenActual[i],ordenActual[j]]=[ordenActual[j],ordenActual[i]];pintarPasos();document.getElementById('pasos-res').style.display='none';}
+function mezclarPasos(){ordenActual=[...pasosCorrectos];for(let i=ordenActual.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[ordenActual[i],ordenActual[j]]=[ordenActual[j],ordenActual[i]];}if(ordenActual.every((t,k)=>t===pasosCorrectos[k]))[ordenActual[0],ordenActual[1]]=[ordenActual[1],ordenActual[0]];pintarPasos();document.getElementById('pasos-res').style.display='none';}
+function verificarPasos(){let c=0;document.querySelectorAll('#pasos .paso').forEach((li,i)=>{const ok=ordenActual[i]===pasosCorrectos[i];li.classList.toggle('ok',ok);li.classList.toggle('mal',!ok);if(ok)c++;});const r=document.getElementById('pasos-res');r.style.display='block';r.innerHTML=c===pasosCorrectos.length?'✅ <strong>¡Orden perfecto!</strong>':'Llevas <strong>'+c+' de '+pasosCorrectos.length+'</strong>. Ajusta las rojas.';}
+
+const preguntas=[
+ {q:'El régimen simplificado para constituir se llama…',op:['Diario Oficial','Empresa en un Día','Conservador','Patente exprés'],correcta:1,exp:'Empresa en un Día, en el Registro de Empresas y Sociedades.'},
+ {q:'Para constituir en línea necesitas…',op:['Pasaporte','ClaveÚnica','Carné de socio','Licencia de conducir'],correcta:1,exp:'La ClaveÚnica identifica a cada socio en el trámite.'},
+ {q:'Los estatutos contienen…',op:['Tus deudas','Objeto social, capital y administración','El IVA','El sueldo del dueño'],correcta:1,exp:'Definen las reglas de la sociedad.'},
+ {q:'La firma electrónica avanzada (FEA)…',op:['No tiene validez','Equivale legalmente a la firma manuscrita','Solo sirve para correos','Es ilegal'],correcta:1,exp:'Tiene validez legal equivalente a la firma de puño y letra.'},
+ {q:'El régimen tradicional implica…',op:['Trámite gratis en línea','Notaría, Diario Oficial y Conservador','Solo ClaveÚnica','Nada'],correcta:1,exp:'Es más lento y con costos; para estructuras complejas.'},
+ {q:'Constituir la empresa, por sí solo, ¿te permite facturar?',op:['Sí, de inmediato','No: falta iniciar actividades, patente y boletas','Solo si es SA','Nunca podrás facturar'],correcta:1,exp:'Constituir es el primer paso; faltan SII, patente y boletas.'},
+ {q:'El inicio de actividades se hace en…',op:['La municipalidad','El SII','El Conservador','El banco'],correcta:1,exp:'Avisas al SII que comenzarás tu giro.'},
+ {q:'En el régimen simplificado, la constitución es…',op:['Cara','Gratuita','Solo para SA','Imposible'],correcta:1,exp:'Es gratuita; pagas la patente municipal aparte.'},
+ {q:'¿Qué se necesita para operar además de constituir?',op:['Solo el RUT','RUT, inicio de actividades, patente y boletas','Solo la patente','Solo boletas'],correcta:1,exp:'Varios pasos habilitan la operación completa.'},
+ {q:'El Diario Oficial se usa en…',op:['Empresa en un Día','El régimen tradicional','El SII','La patente'],correcta:1,exp:'La publicación en el Diario Oficial es parte del régimen tradicional.'}
+];
+function pintarQuiz(){const form=document.getElementById('quiz');preguntas.forEach((p,i)=>{let h='<div class="pregunta" data-i="'+i+'"><p class="enunciado">'+(i+1)+'. '+p.q+'</p>';p.op.forEach((o,j)=>h+='<label class="opcion"><input type="radio" name="p'+i+'" value="'+j+'">'+o+'</label>');h+='<div class="feedback"></div></div>';form.insertAdjacentHTML('beforeend',h);});}
+function corregirQuiz(){let a=0;preguntas.forEach((p,i)=>{const c=document.querySelector('.pregunta[data-i="'+i+'"]'),sel=c.querySelector('input[name="p'+i+'"]:checked'),fb=c.querySelector('.feedback'),L=c.querySelectorAll('.opcion');L.forEach(o=>o.classList.remove('correcta','incorrecta'));L[p.correcta].classList.add('correcta');fb.className='feedback ver';if(sel&&+sel.value===p.correcta){a++;fb.classList.add('bien');fb.textContent='✔️ Correcto. '+p.exp;}else{if(sel)L[+sel.value].classList.add('incorrecta');fb.classList.add('mal');fb.textContent='✖️ '+(sel?'Incorrecto. ':'Sin responder. ')+p.exp;}});const pj=document.getElementById('quiz-puntaje'),ok=a>=6;pj.style.color=ok?'var(--color-ok)':'var(--color-error)';pj.textContent='Puntaje: '+a+' / '+preguntas.length+(ok?' · ¡Aprobado! 🎉':' · Repasa y reintenta.');}
+mezclarPasos();pintarQuiz();
+</script>
+</body>
+</html>

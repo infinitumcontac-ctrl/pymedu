@@ -1,0 +1,22 @@
+# Blueprint para desplegar la API de PymEdu en Render (Vercel+Render).
+# Uso: conectar el repo en Render -> New -> Blueprint, o crear un Web Service
+# manual con rootDir = server.
+services:
+  - type: web
+    name: pymedu-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: node src/index.js
+    plan: free
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: FRONT_URL
+        sync: false
+      - key: API_PUBLIC_URL
+        sync: false
