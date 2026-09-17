@@ -7,7 +7,9 @@
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
     "preview": "vite preview",
-    "server": "cd server && npm run dev"
+    "server": "cd server && npm run dev",
+    "postinstall": "npm --prefix server install --no-audit --no-fund",
+    "start": "node server/src/index.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.110.8",

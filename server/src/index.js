@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 import { fileURLToPath } from 'url';
 import path from 'path';
 import authRouter, { requireAuth } from './auth.js';
@@ -142,6 +142,18 @@ app.get('/api/perfiles/stats', requireAuth, (_req, res) => {
     res.status(500).json({ error: 'Error interno del servidor' });
   }
 });
+
+// ── Frontend compilado (produccion) ──────────────────────────
+// Sirve el build de Vite (dist/) desde el mismo origen, de modo que
+// el dominio www.pymedu.cl atiende frontend + API en una sola app.
+const distPath = path.join(__dirname, '..', '..', 'dist');
+if (existsSync(path.join(distPath, 'index.html'))) {
+  app.use(express.static(distPath));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) return next();
+    res.sendFile(path.join(distPath, 'index.html'));
+  });
+}
 
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`PymEdu API corriendo en http://0.0.0.0:${PORT}`);

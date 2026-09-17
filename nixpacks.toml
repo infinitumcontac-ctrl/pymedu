@@ -1,0 +1,13 @@
+# Build y start determinista para Nixpacks (utilizado por Railway).
+# Instala deps de la raiz (frontend) + server (via postinstall),
+# compila el frontend con Vite y levanta la app Express que sirve
+# el frontend buildado + la API en el mismo origen.
+[phases.setup]
+nixPkgs = ["nodejs_22"]
+cmds = ["npm install --no-audit --no-fund"]
+
+[phases.install]
+cmds = ["npm run build"]
+
+[start]
+cmd = "node server/src/index.js"
